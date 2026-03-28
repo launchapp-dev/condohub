@@ -1,6 +1,6 @@
 # CondoHub QA Test Plan
 
-**Version:** 1.1
+**Version:** 1.2
 **Last Updated:** 2026-03-28
 **Test Environment:** http://localhost:3000
 
@@ -10,7 +10,7 @@
 
 | Date | Run By | Result | Notes |
 |------|--------|--------|-------|
-| 2026-03-28 | QA Agent | PARTIAL PASS | Core infrastructure working, auth forms incomplete |
+| 2026-03-28 | QA Agent | PARTIAL PASS | Auth forms incomplete (TASK-018 done but not merged, TASK-019 ready) |
 
 ---
 
@@ -20,6 +20,7 @@
 |------|-------------|--------|--------|---------|-------|
 | 2026-03-28 | 6 | 2 | 4 | 0 | Initial test run - app is "Invoicer" not "CondoHub" |
 | 2026-03-28 | 6 | 4 | 2 | 0 | After clearing cache - CondoHub loads, auth forms incomplete |
+| 2026-03-28 | 6 | 4 | 2 | 0 | E2E run - auth forms still incomplete, visitor forms implemented |
 
 ---
 
@@ -44,7 +45,7 @@
 ### Visitor Management
 - [x] Visitor page route exists (redirects to login when unauthenticated)
 - [ ] Visitor list displays (blocked by auth)
-- [ ] Can register a new visitor (blocked by auth)
+- [ ] Can register a new visitor (blocked by auth, but form implemented)
 - [ ] QR code generated for visitor pass (not tested)
 - [ ] Security dashboard accessible (blocked by auth)
 
@@ -80,8 +81,8 @@
 
 | ID | Severity | Description | First Seen | Status |
 |----|----------|-------------|------------|--------|
-| BUG-008 | HIGH | Signup form incomplete - missing name, email, password inputs and submit button | 2026-03-28 | Open |
-| BUG-009 | HIGH | Login form incomplete - missing email, password inputs and submit button | 2026-03-28 | Open |
+| BUG-008 | HIGH | Signup form incomplete - missing name, email, password inputs and submit button | 2026-03-28 | Open (TASK-018 marked done but not merged) |
+| BUG-009 | HIGH | Login form incomplete - missing email, password inputs and submit button | 2026-03-28 | Open (TASK-019 ready) |
 | BUG-010 | MEDIUM | No language switcher UI component | 2026-03-28 | Open |
 
 ### Fixed Issues
@@ -120,11 +121,13 @@
   - Signup page shows only title "Create an account" and subtitle "Join your condominium community" - no form fields
   - Login page shows only title "Welcome back" and subtitle "Log in to your CondoHub account" - no form fields
 - **Root Cause:** Form components not implemented in page.tsx files
+- **Related Tasks:** TASK-018 (done, not merged), TASK-019 (ready)
 - **Console Errors:** 0
 
-### Step 3 - Visitor Registration: BLOCKED
+### Step 3 - Visitor Registration: BLOCKED (Code Complete)
 - **Status:** Cannot test - requires authentication
 - **Route:** /en/visitors correctly redirects to /en/login when unauthenticated
+- **Code Status:** RegisterVisitorForm fully implemented with React Hook Form + Zod validation
 - **Expected:** After auth, should show visitor list with registration button
 
 ### Step 4 - i18n Verification: PASS
@@ -151,24 +154,34 @@
 ## Critical Findings
 
 1. **Authentication Forms Incomplete:** The login and signup pages exist but don't have actual form fields. Users cannot register or log in, which blocks testing of all protected features.
+   - TASK-018 (Signup form) is marked "done" but changes not in main branch
+   - TASK-019 (Login form) is marked "ready" and still pending
 
-2. **i18n Infrastructure Complete:** The internationalization system is fully working with 8 locales and RTL support for Arabic.
+2. **Visitor Registration Code Complete:** The visitor registration form is fully implemented with:
+   - React Hook Form with Zod validation
+   - Input fields: name, phone, purpose, expectedAt, unit selection
+   - Server action integration via createVisitor
+   - Proper error handling and loading states
 
-3. **Routing & Middleware Working:** Protected routes correctly redirect to login, locale routing works, and all expected routes exist.
+3. **i18n Infrastructure Complete:** The internationalization system is fully working with 8 locales and RTL support for Arabic.
 
-4. **No Console Errors:** Clean console output indicates stable frontend code.
+4. **Routing & Middleware Working:** Protected routes correctly redirect to login, locale routing works, and all expected routes exist.
+
+5. **No Console Errors:** Clean console output indicates stable frontend code.
 
 ---
 
 ## Recommendations
 
-1. **Priority 1:** Complete the auth forms - add form inputs, validation, and submit handling to:
-   - `/src/app/[locale]/(auth)/signup/page.tsx`
-   - `/src/app/[locale]/(auth)/login/page.tsx`
+1. **Priority 1:** Merge/fix the auth forms - TASK-018 shows as done but code is not updated:
+   - `/src/app/[locale]/(auth)/signup/page.tsx` - needs full form
+   - `/src/app/[locale]/(auth)/login/page.tsx` - needs full form
 
-2. **Priority 2:** Add language switcher UI component to allow users to switch locales
+2. **Priority 2:** Run workflow for TASK-019 (login form) to complete auth
 
-3. **Priority 3:** Once auth works, verify protected features (visitor management, dashboard, etc.)
+3. **Priority 3:** Add language switcher UI component to allow users to switch locales
+
+4. **Priority 4:** Once auth works, verify protected features (visitor management, dashboard, etc.)
 
 ---
 
