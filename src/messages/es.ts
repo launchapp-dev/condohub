@@ -200,9 +200,85 @@ export default {
     "title": "Finanzas",
     "balance": "Saldo",
     "dues": "Cuotas mensuales",
-    "payments": "Pagos",
     "budgets": "Presupuestos",
-    "payNow": "Pagar ahora"
+    "payNow": "Pagar ahora",
+    "unit": "Unidad",
+    "floor": "Piso",
+    "tabs": {
+      "overview": "Resumen",
+      "fees": "Seguimiento de Cuotas",
+      "payments": "Pagos",
+      "reports": "Informes"
+    },
+    "stats": {
+      "totalBudget": "Presupuesto Total",
+      "currentYear": "Año actual",
+      "totalDues": "Cuotas Totales",
+      "ytdFees": "Cuotas año a la fecha",
+      "collected": "Recaudado",
+      "collectionRate": "tasa de recaudación",
+      "pending": "Pendiente",
+      "outstandingFees": "cuotas pendientes"
+    },
+    "budget": {
+      "title": "Resumen del Presupuesto",
+      "description": "Presupuesto planificado vs gasto real por categoría"
+    },
+    "fees": {
+      "title": "Seguimiento de Cuotas",
+      "description": "Seguimiento de cuotas mensuales y estado de pago",
+      "unit": "Unidad",
+      "title_col": "Título",
+      "amount": "Monto",
+      "dueDate": "Fecha de Vencimiento",
+      "status": "Estado",
+      "paid": "Pagado",
+      "overdue": "Vencido",
+      "noFees": "No se encontraron cuotas",
+      "due": "Vence"
+    },
+    "payments": {
+      "title": "Historial de Pagos",
+      "description": "Ver todos los pagos y filtrar por fecha o unidad",
+      "date": "Fecha",
+      "unit": "Unidad",
+      "fee": "Cuota",
+      "amount": "Monto",
+      "payer": "Pagador",
+      "noPayments": "No se encontraron pagos"
+    },
+    "filters": {
+      "unit": "Unidad",
+      "allUnits": "Todas las unidades",
+      "from": "Desde",
+      "to": "Hasta"
+    },
+    "actions": {
+      "exportCSV": "Exportar CSV",
+      "payNow": "Pagar Ahora"
+    },
+    "reports": {
+      "monthlySummary": "Resumen Mensual",
+      "monthlyDescription": "Tasas de recaudación por mes",
+      "annualSummary": "Resumen Anual",
+      "annualDescription": "Rendimiento financiero año a la fecha",
+      "month": "Mes",
+      "totalDues": "Cuotas Totales",
+      "collected": "Recaudado",
+      "pending": "Pendiente",
+      "collectionRate": "Tasa de Recaudación",
+      "noData": "No hay datos disponibles",
+      "totalCollected": "Total Recaudado",
+      "byCategory": "Gastos por Categoría"
+    },
+    "resident": {
+      "outstanding": "Saldo Pendiente",
+      "pendingFees": "cuotas pendientes",
+      "paidYTD": "Pagado Año a la Fecha",
+      "paidFees": "cuotas pagadas",
+      "outstandingFees": "Cuotas Pendientes",
+      "payByDueDate": "Pague antes de la fecha de vencimiento para evitar recargos"
+    }
   },
   "documents": {
     "title": "Documentos",

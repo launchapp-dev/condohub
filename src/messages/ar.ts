@@ -200,9 +200,75 @@ export default {
     "title": "الماليات",
     "balance": "الرصيد",
     "dues": "الرسوم الشهرية",
-    "payments": "المدفوعات",
     "budgets": "الميزانيات",
-    "payNow": "ادفع الآن"
+    "payNow": "ادفع الآن",
+    "unit": "الوحدة",
+    "floor": "الطابق",
+    "tabs": {
+      "overview": "نظرة عامة",
+      "fees": "تتبع الرسوم",
+      "payments": "المدفوعات",
+      "reports": "التقارير"
+    },
+    "stats": {
+      "totalBudget": "الميزانية الإجمالية",
+      "currentYear": "السنة الحالية",
+      "totalDues": "إجمالي الرسوم",
+      "ytdFees": "رسوم السنة حتى الآن",
+      "collected": "المحصل",
+      "collectionRate": "معدل التحصيل",
+      "pending": "معلق",
+      "outstandingFees": "رسوم معلقة"
+    },
+    "budget": {
+      "title": "نظرة عامة على الميزانية",
+      "description": "الميزانية المخططة مقابل الإنفاق الفعلي حسب الفئة"
+    },
+    "fees": {
+      "title": "تتبع الرسوم",
+      "description": "تتبع الرسوم الشهرية وحالة الدفع",
+      "unit": "الوحدة",
+      "title_col": "العنوان",
+      "amount": "المبلغ",
+      "dueDate": "تاريخ الاستحقاق",
+      "status": "الحالة",
+      "paid": "مدفوع",
+      "overdue": "متأخر",
+      "noFees": "لم يتم العثور على رسوم",
+      "due": "يستحق"
+    },
+    "filters": {
+      "unit": "الوحدة",
+      "allUnits": "جميع الوحدات",
+      "from": "من",
+      "to": "إلى"
+    },
+    "actions": {
+      "exportCSV": "تصدير CSV",
+      "payNow": "ادفع الآن"
+    },
+    "reports": {
+      "monthlySummary": "الملخص الشهري",
+      "monthlyDescription": "معدلات التحصيل حسب الشهر",
+      "annualSummary": "الملخص السنوي",
+      "annualDescription": "الأداء المالي للسنة حتى الآن",
+      "month": "الشهر",
+      "totalDues": "إجمالي الرسوم",
+      "collected": "المحصل",
+      "pending": "معلق",
+      "collectionRate": "معدل التحصيل",
+      "noData": "لا توجد بيانات متاحة",
+      "totalCollected": "إجمالي المحصل",
+      "byCategory": "الإنفاق حسب الفئة"
+    },
+    "resident": {
+      "outstanding": "الرصيد المعلق",
+      "pendingFees": "رسوم معلقة",
+      "paidYTD": "مدفوع السنة حتى الآن",
+      "paidFees": "رسوم مدفوعة",
+      "outstandingFees": "الرسوم المعلقة",
+      "payByDueDate": "يرجى الدفع قبل تاريخ الاستحقاق لتجنب رسوم التأخير"
+    }
   },
   "documents": {
     "title": "المستندات",

@@ -200,9 +200,85 @@ export default {
     "title": "Finances",
     "balance": "Balance",
     "dues": "Monthly dues",
-    "payments": "Payments",
     "budgets": "Budgets",
-    "payNow": "Pay now"
+    "payNow": "Pay now",
+    "unit": "Unit",
+    "floor": "Floor",
+    "tabs": {
+      "overview": "Overview",
+      "fees": "Fee Tracking",
+      "payments": "Payments",
+      "reports": "Reports"
+    },
+    "stats": {
+      "totalBudget": "Total Budget",
+      "currentYear": "Current year",
+      "totalDues": "Total Dues",
+      "ytdFees": "Year-to-date fees",
+      "collected": "Collected",
+      "collectionRate": "collection rate",
+      "pending": "Pending",
+      "outstandingFees": "outstanding fees"
+    },
+    "budget": {
+      "title": "Budget Overview",
+      "description": "Planned vs actual spending by category"
+    },
+    "fees": {
+      "title": "Fee Tracking",
+      "description": "Track monthly fees and payment status",
+      "unit": "Unit",
+      "title_col": "Title",
+      "amount": "Amount",
+      "dueDate": "Due Date",
+      "status": "Status",
+      "paid": "Paid",
+      "overdue": "Overdue",
+      "noFees": "No fees found",
+      "due": "Due"
+    },
+    "payments": {
+      "title": "Payment History",
+      "description": "View all payments and filter by date or unit",
+      "date": "Date",
+      "unit": "Unit",
+      "fee": "Fee",
+      "amount": "Amount",
+      "payer": "Payer",
+      "noPayments": "No payments found"
+    },
+    "filters": {
+      "unit": "Unit",
+      "allUnits": "All units",
+      "from": "From",
+      "to": "To"
+    },
+    "actions": {
+      "exportCSV": "Export CSV",
+      "payNow": "Pay Now"
+    },
+    "reports": {
+      "monthlySummary": "Monthly Summary",
+      "monthlyDescription": "Collection rates by month",
+      "annualSummary": "Annual Summary",
+      "annualDescription": "Year-to-date financial performance",
+      "month": "Month",
+      "totalDues": "Total Dues",
+      "collected": "Collected",
+      "pending": "Pending",
+      "collectionRate": "Collection Rate",
+      "noData": "No data available",
+      "totalCollected": "Total Collected",
+      "byCategory": "Spending by Category"
+    },
+    "resident": {
+      "outstanding": "Outstanding Balance",
+      "pendingFees": "pending fees",
+      "paidYTD": "Paid YTD",
+      "paidFees": "paid fees",
+      "outstandingFees": "Outstanding Fees",
+      "payByDueDate": "Please pay by the due date to avoid late fees"
+    }
   },
   "documents": {
     "title": "Documents",

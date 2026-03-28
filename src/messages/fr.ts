@@ -200,9 +200,85 @@ export default {
     "title": "Finances",
     "balance": "Solde",
     "dues": "Cotisations mensuelles",
-    "payments": "Paiements",
     "budgets": "Budgets",
-    "payNow": "Payer maintenant"
+    "payNow": "Payer maintenant",
+    "unit": "Unité",
+    "floor": "Étage",
+    "tabs": {
+      "overview": "Aperçu",
+      "fees": "Suivi des Frais",
+      "payments": "Paiements",
+      "reports": "Rapports"
+    },
+    "stats": {
+      "totalBudget": "Budget Total",
+      "currentYear": "Année en cours",
+      "totalDues": "Cotisations Totales",
+      "ytdFees": "Frais année à ce jour",
+      "collected": "Collecté",
+      "collectionRate": "taux de collecte",
+      "pending": "En attente",
+      "outstandingFees": "frais en suspens"
+    },
+    "budget": {
+      "title": "Aperçu du Budget",
+      "description": "Budget prévu vs dépenses réelles par catégorie"
+    },
+    "fees": {
+      "title": "Suivi des Frais",
+      "description": "Suivi des frais mensuels et statut de paiement",
+      "unit": "Unité",
+      "title_col": "Titre",
+      "amount": "Montant",
+      "dueDate": "Date d'Échéance",
+      "status": "Statut",
+      "paid": "Payé",
+      "overdue": "En retard",
+      "noFees": "Aucun frais trouvé",
+      "due": "Échéance"
+    },
+    "payments": {
+      "title": "Historique des Paiements",
+      "description": "Voir tous les paiements et filtrer par date ou unité",
+      "date": "Date",
+      "unit": "Unité",
+      "fee": "Frais",
+      "amount": "Montant",
+      "payer": "Payeur",
+      "noPayments": "Aucun paiement trouvé"
+    },
+    "filters": {
+      "unit": "Unité",
+      "allUnits": "Toutes les unités",
+      "from": "De",
+      "to": "À"
+    },
+    "actions": {
+      "exportCSV": "Exporter CSV",
+      "payNow": "Payer Maintenant"
+    },
+    "reports": {
+      "monthlySummary": "Résumé Mensuel",
+      "monthlyDescription": "Taux de collecte par mois",
+      "annualSummary": "Résumé Annuel",
+      "annualDescription": "Performance financière année à ce jour",
+      "month": "Mois",
+      "totalDues": "Cotisations Totales",
+      "collected": "Collecté",
+      "pending": "En Attente",
+      "collectionRate": "Taux de Collecte",
+      "noData": "Aucune donnée disponible",
+      "totalCollected": "Total Collecté",
+      "byCategory": "Dépenses par Catégorie"
+    },
+    "resident": {
+      "outstanding": "Solde En Suspens",
+      "pendingFees": "frais en attente",
+      "paidYTD": "Payé Année à ce Jour",
+      "paidFees": "frais payés",
+      "outstandingFees": "Frais En Suspens",
+      "payByDueDate": "Veuillez payer avant la date d'échéance pour éviter les frais de retard"
+    }
   },
   "documents": {
     "title": "Documents",
