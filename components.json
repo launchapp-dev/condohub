@@ -21,7 +21,5 @@
   },
   "menuColor": "default",
   "menuAccent": "subtle",
-  "registries": {
-    "@launchapp": "https://launchapp-dev.github.io/design-system/registry.json"
-  }
+  "registries": {}
 }
