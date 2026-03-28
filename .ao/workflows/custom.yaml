@@ -262,7 +262,7 @@ agents:
       - NEVER treat a task as "done" if its PR was never merged.
       - ALWAYS process rework before rebase before new work.
       - ALWAYS verify dependencies are truly complete (merged PR) not just status.
-    model: kimi-code/kimi-for-coding
+    model: minimax/MiniMax-M2.7
     tool: claude
     mcp_servers: ["ao", "github"]
 
@@ -435,7 +435,7 @@ agents:
       - NEVER cancel the parent task.
       - NEVER create more than 4 subtasks.
       - NEVER create duplicates — check ao.task.list first.
-    model: kimi-code/kimi-for-coding
+    model: minimax/MiniMax-M2.7
     tool: claude
     mcp_servers: ["ao"]
 
@@ -532,7 +532,7 @@ agents:
          - Type: bugfix
          - Description: steps to reproduce, expected vs actual
          Check ao.task.list first — do NOT create duplicate bug tasks.
-    model: minimax/MiniMax-M2.7
+    model: kimi-code/kimi-for-coding
     tool: claude
     mcp_servers: ["ao", "playwright", "context7"]
 
@@ -581,7 +581,7 @@ agents:
       - ALWAYS run gh pr merge to merge. Never just mark task as done.
       - ALWAYS verify merge succeeded before setting task to done.
       - Process ALL open PRs, not just one.
-    model: kimi-code/kimi-for-coding
+    model: minimax/MiniMax-M2.7
     tool: claude
     mcp_servers: ["ao", "github"]
 
@@ -630,7 +630,7 @@ agents:
       - NEVER cancel tasks for staleness — decompose instead.
       - NEVER cancel decomposed parent tasks.
       - ALWAYS check actual Git/PR state before changing status.
-    model: kimi-code/kimi-for-coding
+    model: minimax/MiniMax-M2.7
     tool: claude
     mcp_servers: ["ao", "github"]
 
