@@ -306,7 +306,9 @@ export function RegisterVisitorForm({ units }: RegisterVisitorFormProps) {
                 </Label>
                 <Select
                   value={watch("unitId") || ""}
-                  onValueChange={(value) => setValue("unitId", value)}
+                  onValueChange={(value) =>
+                    setValue("unitId", value || undefined)
+                  }
                 >
                   <SelectTrigger id="unitId">
                     <SelectValue placeholder={t("selectUnit")} />

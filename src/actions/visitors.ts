@@ -6,7 +6,6 @@ import { visitorSchema, CreateVisitorInput } from "@/lib/validators/visitor";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import QRCode from "qrcode";
-import { randomUUID } from "crypto";
 import { revalidatePath } from "next/cache";
 import { eq } from "drizzle-orm";
 import { communityMembers, units } from "@/db/schema";
@@ -36,6 +35,15 @@ export interface CreateVisitorResult {
   };
 }
 
+const purposeMap: Record<string, "Guest" | "Delivery" | "Contractor" | "Service Provider" | "Real Estate Agent" | "Other"> = {
+  guest: "Guest",
+  delivery: "Delivery",
+  contractor: "Contractor",
+  service_provider: "Service Provider",
+  real_estate_agent: "Real Estate Agent",
+  other: "Other",
+};
+
 export async function createVisitor(
   formData: CreateVisitorInput
 ): Promise<CreateVisitorResult> {
@@ -54,7 +62,6 @@ export async function createVisitor(
     throw new Error("No community found");
   }
 
-  const visitorId = randomUUID();
   const expectedAt = new Date(validatedData.expectedAt);
 
   if (isNaN(expectedAt.getTime())) {
@@ -62,7 +69,7 @@ export async function createVisitor(
   }
 
   const qrData = JSON.stringify({
-    visitorId,
+    visitorId: "temp",
     name: validatedData.name,
     expectedAt: expectedAt.toISOString(),
   });
@@ -79,13 +86,12 @@ export async function createVisitor(
   const [visitor] = await db
     .insert(visitors)
     .values({
-      id: visitorId,
       communityId: community.id,
       hostId: session.user.id,
       unitId: validatedData.unitId || null,
       name: validatedData.name,
       phone: validatedData.phone || null,
-      purpose: validatedData.purpose,
+      purpose: purposeMap[validatedData.purpose],
       expectedAt,
       qrCode,
       status: "expected",
