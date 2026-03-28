@@ -63,7 +63,22 @@ export default {
     "securityView": "Security gate",
     "checkIn": "Check in",
     "checkOut": "Check out",
-    "noVisitors": "No visitors found"
+    "noVisitors": "No visitors found",
+    "visitorList": "Visitor list",
+    "statusCheckedIn": "Checked in",
+    "statusCheckedOut": "Checked out",
+    "statusExpected": "Expected",
+    "required": "Required",
+    "selectUnit": "Select unit",
+    "registering": "Registering...",
+    "registerSuccess": "Visitor registered successfully",
+    "todayVisitors": "Today's visitors",
+    "actions": "Actions",
+    "visitorDetails": "Visitor details",
+    "history": "History",
+    "checkedInAt": "Checked in at",
+    "checkedOutAt": "Checked out at",
+    "noQrPass": "No QR pass available"
   },
   "announcements": {
     "title": "Announcements",

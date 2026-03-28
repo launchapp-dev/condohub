@@ -63,7 +63,22 @@ export default {
     "securityView": "门禁视图",
     "checkIn": "签到",
     "checkOut": "签退",
-    "noVisitors": "未找到访客"
+    "noVisitors": "未找到访客",
+    "visitorList": "访客列表",
+    "statusCheckedIn": "已签到",
+    "statusCheckedOut": "已签退",
+    "statusExpected": "预计到达",
+    "required": "必填",
+    "selectUnit": "选择单元",
+    "registering": "登记中...",
+    "registerSuccess": "访客登记成功",
+    "todayVisitors": "今日访客",
+    "actions": "操作",
+    "visitorDetails": "访客详情",
+    "history": "历史记录",
+    "checkedInAt": "签到时间",
+    "checkedOutAt": "签退时间",
+    "noQrPass": "无可用的二维码通行码"
   },
   "announcements": {
     "title": "公告",

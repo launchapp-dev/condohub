@@ -63,7 +63,22 @@ export default {
     "securityView": "경비 게이트",
     "checkIn": "입실",
     "checkOut": "퇴실",
-    "noVisitors": "방문객을 찾을 수 없습니다"
+    "noVisitors": "방문객을 찾을 수 없습니다",
+    "visitorList": "방문객 목록",
+    "statusCheckedIn": "입실 중",
+    "statusCheckedOut": "퇴실 완료",
+    "statusExpected": "예정",
+    "required": "필수",
+    "selectUnit": "호수 선택",
+    "registering": "등록 중...",
+    "registerSuccess": "방문객 등록이 완료되었습니다",
+    "todayVisitors": "오늘의 방문객",
+    "actions": "작업",
+    "visitorDetails": "방문객 상세 정보",
+    "history": "기록",
+    "checkedInAt": "입실 시간",
+    "checkedOutAt": "퇴실 시간",
+    "noQrPass": "사용 가능한 QR 패스가 없습니다"
   },
   "announcements": {
     "title": "공지사항",

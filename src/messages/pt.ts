@@ -63,7 +63,22 @@ export default {
     "securityView": "Portaria",
     "checkIn": "Entrada",
     "checkOut": "Saída",
-    "noVisitors": "Nenhum visitante encontrado"
+    "noVisitors": "Nenhum visitante encontrado",
+    "visitorList": "Lista de visitantes",
+    "statusCheckedIn": "Dentro",
+    "statusCheckedOut": "Fora",
+    "statusExpected": "Esperado",
+    "required": "Obrigatório",
+    "selectUnit": "Selecionar unidade",
+    "registering": "Registrando...",
+    "registerSuccess": "Visitante registrado com sucesso",
+    "todayVisitors": "Visitantes de hoje",
+    "actions": "Ações",
+    "visitorDetails": "Detalhes do visitante",
+    "history": "Histórico",
+    "checkedInAt": "Entrada às",
+    "checkedOutAt": "Saída às",
+    "noQrPass": "Nenhum passe QR disponível"
   },
   "announcements": {
     "title": "Comunicados",
