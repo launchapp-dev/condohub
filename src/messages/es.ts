@@ -152,6 +152,7 @@ export default {
   },
   "common": {
     "loading": "Cargando...",
+    "or": "O",
     "save": "Guardar",
     "cancel": "Cancelar",
     "delete": "Eliminar",
