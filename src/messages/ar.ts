@@ -38,6 +38,9 @@ export default {
       "accountExists": "يوجد حساب مسبقاً بهذا البريد الإلكتروني",
       "weakPassword": "كلمة المرور ضعيفة جداً",
       "passwordsMismatch": "كلمتا المرور غير متطابقتين",
+      "requiredField": "هذا الحقل مطلوب",
+      "invalidEmail": "يرجى إدخال بريد إلكتروني صحيح",
+      "passwordTooShort": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
       "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
     }
   },
