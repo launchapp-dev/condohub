@@ -89,7 +89,30 @@ export default {
     "priority": "الأولوية",
     "publish": "نشر",
     "comments": "التعليقات",
-    "noAnnouncements": "لا توجد إعلانات بعد"
+    "noAnnouncements": "لا توجد إعلانات بعد",
+    "form": {
+      "titleLabel": "العنوان",
+      "titlePlaceholder": "أدخل عنوان الإعلان",
+      "titleError": "يجب أن يكون العنوان 3 أحرف على الأقل",
+      "contentLabel": "المحتوى",
+      "contentPlaceholder": "أدخل محتوى الإعلان (يدعم markdown)",
+      "contentError": "يجب أن يكون المحتوى 10 أحرف على الأقل",
+      "categoryLabel": "الفئة",
+      "category": {
+        "general": "عام",
+        "maintenance": "صيانة",
+        "emergency": "طارئ",
+        "event": "فعالية",
+        "financial": "مالي",
+        "rules": "قواعد"
+      },
+      "pinToTop": "تثبيت في الأعلى",
+      "scheduledAt": "جدولة لوقت لاحق",
+      "scheduledAtHint": "اتركه فارغاً للنشر فوراً",
+      "submit": "إنشاء إعلان",
+      "submitting": "جاري الإنشاء...",
+      "success": "تم إنشاء الإعلان بنجاح"
+    }
   },
   "maintenance": {
     "title": "الصيانة",

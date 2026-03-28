@@ -89,7 +89,30 @@ export default {
     "priority": "Prioridade",
     "publish": "Publicar",
     "comments": "Comentários",
-    "noAnnouncements": "Ainda não há comunicados"
+    "noAnnouncements": "Ainda não há comunicados",
+    "form": {
+      "titleLabel": "Título",
+      "titlePlaceholder": "Digite o título do comunicado",
+      "titleError": "O título deve ter pelo menos 3 caracteres",
+      "contentLabel": "Conteúdo",
+      "contentPlaceholder": "Digite o conteúdo do comunicado (suporta markdown)",
+      "contentError": "O conteúdo deve ter pelo menos 10 caracteres",
+      "categoryLabel": "Categoria",
+      "category": {
+        "general": "Geral",
+        "maintenance": "Manutenção",
+        "emergency": "Emergência",
+        "event": "Evento",
+        "financial": "Financeiro",
+        "rules": "Regras"
+      },
+      "pinToTop": "Fixar no topo",
+      "scheduledAt": "Agendar para depois",
+      "scheduledAtHint": "Deixe vazio para publicar imediatamente",
+      "submit": "Criar comunicado",
+      "submitting": "Criando...",
+      "success": "Comunicado criado com sucesso"
+    }
   },
   "maintenance": {
     "title": "Manutenção",

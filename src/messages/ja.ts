@@ -89,7 +89,30 @@ export default {
     "priority": "優先度",
     "publish": "公開",
     "comments": "コメント",
-    "noAnnouncements": "お知らせはまだありません"
+    "noAnnouncements": "お知らせはまだありません",
+    "form": {
+      "titleLabel": "タイトル",
+      "titlePlaceholder": "お知らせのタイトルを入力",
+      "titleError": "タイトルは3文字以上必要です",
+      "contentLabel": "内容",
+      "contentPlaceholder": "お知らせの内容を入力（マークダウン対応）",
+      "contentError": "内容は10文字以上必要です",
+      "categoryLabel": "カテゴリ",
+      "category": {
+        "general": "一般",
+        "maintenance": "メンテナンス",
+        "emergency": "緊急",
+        "event": "イベント",
+        "financial": "財務",
+        "rules": "規則"
+      },
+      "pinToTop": "トップに固定",
+      "scheduledAt": "後で予約",
+      "scheduledAtHint": "すぐに公開する場合は空欄にしてください",
+      "submit": "お知らせを作成",
+      "submitting": "作成中...",
+      "success": "お知らせを作成しました"
+    }
   },
   "maintenance": {
     "title": "メンテナンス",

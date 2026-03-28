@@ -89,7 +89,30 @@ export default {
     "priority": "Priorité",
     "publish": "Publier",
     "comments": "Commentaires",
-    "noAnnouncements": "Aucune annonce pour l'instant"
+    "noAnnouncements": "Aucune annonce pour l'instant",
+    "form": {
+      "titleLabel": "Titre",
+      "titlePlaceholder": "Entrez le titre de l'annonce",
+      "titleError": "Le titre doit contenir au moins 3 caractères",
+      "contentLabel": "Contenu",
+      "contentPlaceholder": "Entrez le contenu de l'annonce (supporte markdown)",
+      "contentError": "Le contenu doit contenir au moins 10 caractères",
+      "categoryLabel": "Catégorie",
+      "category": {
+        "general": "Général",
+        "maintenance": "Maintenance",
+        "emergency": "Urgence",
+        "event": "Événement",
+        "financial": "Financier",
+        "rules": "Règles"
+      },
+      "pinToTop": "Épingler en haut",
+      "scheduledAt": "Planifier pour plus tard",
+      "scheduledAtHint": "Laissez vide pour publier immédiatement",
+      "submit": "Créer l'annonce",
+      "submitting": "Création...",
+      "success": "Annonce créée avec succès"
+    }
   },
   "maintenance": {
     "title": "Entretien",

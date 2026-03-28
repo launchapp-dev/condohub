@@ -89,7 +89,30 @@ export default {
     "priority": "Priority",
     "publish": "Publish",
     "comments": "Comments",
-    "noAnnouncements": "No announcements yet"
+    "noAnnouncements": "No announcements yet",
+    "form": {
+      "titleLabel": "Title",
+      "titlePlaceholder": "Enter announcement title",
+      "titleError": "Title must be at least 3 characters",
+      "contentLabel": "Content",
+      "contentPlaceholder": "Enter announcement content (supports markdown)",
+      "contentError": "Content must be at least 10 characters",
+      "categoryLabel": "Category",
+      "category": {
+        "general": "General",
+        "maintenance": "Maintenance",
+        "emergency": "Emergency",
+        "event": "Event",
+        "financial": "Financial",
+        "rules": "Rules"
+      },
+      "pinToTop": "Pin to top",
+      "scheduledAt": "Schedule for later",
+      "scheduledAtHint": "Leave empty to publish immediately",
+      "submit": "Create announcement",
+      "submitting": "Creating...",
+      "success": "Announcement created successfully"
+    }
   },
   "maintenance": {
     "title": "Maintenance",
