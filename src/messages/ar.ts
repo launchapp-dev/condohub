@@ -295,6 +295,104 @@ export default {
     "roles": "إدارة الأدوار",
     "save": "حفظ التغييرات"
   },
+  "onboarding": {
+    "title": "إعداد مجتمعك",
+    "subtitle": "قم بتكوين مبناك للبدء مع CondoHub",
+    "progress": "الخطوة {step} من {total}",
+    "steps": {
+      "profile": "ملف المجتمع",
+      "building": "هيكل المبنى",
+      "amenities": "المرافق",
+      "logo": "شعار المجتمع",
+      "invites": "دعوة المقيمين"
+    },
+    "profile": {
+      "title": "ملف المجتمع",
+      "description": "أدخل المعلومات الأساسية لمجتمعك",
+      "nameLabel": "اسم المجتمع",
+      "namePlaceholder": "مثال، أوشن فيو ريزيدنسز",
+      "addressLabel": "العنوان",
+      "addressPlaceholder": "العنوان الكامل",
+      "timezoneLabel": "المنطقة الزمنية",
+      "languageLabel": "اللغة الافتراضية",
+      "currencyLabel": "العملة"
+    },
+    "building": {
+      "title": "هيكل المبنى",
+      "description": "حدد تخطيط وحدات مبناك",
+      "hasTowersLabel": "المبنى يحتوي على أبراج/كتل متعددة",
+      "towerNameLabel": "اسم البرج/الكتلة",
+      "towerNamePlaceholder": "مثال، البرج أ",
+      "addTower": "إضافة برج",
+      "removeTower": "إزالة",
+      "unitNumberLabel": "رقم الوحدة",
+      "unitNumberPlaceholder": "مثال، 101",
+      "floorLabel": "الطابق (اختياري)",
+      "addUnit": "إضافة وحدة",
+      "removeUnit": "إزالة",
+      "unitsLabel": "الوحدات",
+      "bulkAddLabel": "إضافة وحدات متعددة",
+      "bulkAddPlaceholder": "مثال، 101-110، 201-210",
+      "bulkAddHelp": "أدخل نطاقات مثل 101-110 أو أرقام مفصولة بفواصل",
+      "atLeastOneUnit": "أضف وحدة واحدة على الأقل"
+    },
+    "amenities": {
+      "title": "المرافق",
+      "description": "حدد المرافق المتوفرة في مجتمعك",
+      "predefinedLabel": "المرافق الشائعة",
+      "partyRoom": "قاعة الحفلات",
+      "gym": "الصالة الرياضية/مركز اللياقة",
+      "pool": "المسبح",
+      "bbq": "منطقة الشواء",
+      "guestParking": "موقف الزوار",
+      "coworking": "مساحة العمل المشتركة",
+      "tennis": "ملعب التنس",
+      "playground": "ملعب الأطفال",
+      "petArea": "منطقة الحيوانات الأليفة",
+      "storage": "وحدات التخزين",
+      "elevator": "المصعد",
+      "concierge": "البواب",
+      "customLabel": "مرفق مخصص",
+      "customPlaceholder": "أدخل اسم المرفق",
+      "addCustom": "إضافة مرفق مخصص",
+      "requiresApproval": "يتطلب موافقة للحجز",
+      "noAmenities": "لم يتم اختيار أي مرافق بعد"
+    },
+    "logo": {
+      "title": "شعار المجتمع",
+      "description": "قم بتحميل شعار مجتمعك (اختياري)",
+      "uploadLabel": "رفع الشعار",
+      "dragDrop": "اسحب وأفلت شعارك هنا، أو انقر للاستعراض",
+      "fileTypes": "المتاح: JPEG، PNG، WebP (بحد أقصى 5 ميجابايت)",
+      "removeLogo": "إزالة الشعار",
+      "changeLogo": "تغيير الشعار"
+    },
+    "invites": {
+      "title": "دعوة المقيمين",
+      "description": "ادعُ المقيمين الأوائل للانضمام إلى مجتمعك (اختياري)",
+      "emailLabel": "عنوان البريد الإلكتروني",
+      "emailPlaceholder": "resident@example.com",
+      "unitLabel": "تعيين إلى وحدة (اختياري)",
+      "addInvite": "إضافة آخر",
+      "skipInvites": "تخطي الآن",
+      "invalidEmail": "يرجى إدخال بريد إلكتروني صحيح"
+    },
+    "navigation": {
+      "back": "رجوع",
+      "next": "التالي",
+      "finish": "إنهاء",
+      "saving": "جاري الحفظ..."
+    },
+    "errors": {
+      "required": "هذا الحقل مطلوب",
+      "invalidEmail": "يرجى إدخال بريد إلكتروني صحيح",
+      "saveFailed": "فشل الحفظ. يرجى المحاولة مرة أخرى."
+    },
+    "success": {
+      "title": "اكتمل الإعداد!",
+      "message": "تم تكوين مجتمعك بنجاح. جاري التوجيه إلى لوحة التحكم..."
+    }
+  },
   "roles": {
     "resident": "مقيم",
     "board_member": "عضو مجلس الإدارة",
@@ -332,82 +430,5 @@ export default {
     "no": "لا",
     "optional": "اختياري",
     "required": "مطلوب"
-  },
-  "onboarding": {
-    "title": "إعداد مجتمعك",
-    "welcome": "مرحباً، {name}! دعنا ننشئ مجتمعك السكني.",
-    "steps": {
-      "community": "المجتمع",
-      "units": "الوحدات",
-      "amenities": "المرافق",
-      "review": "المراجعة"
-    },
-    "community": {
-      "title": "معلومات المجتمع",
-      "subtitle": "أخبرنا عن مجمعك السكني",
-      "name": "اسم المجتمع",
-      "namePlaceholder": "مثال: مجمع الشروق",
-      "address": "العنوان",
-      "addressPlaceholder": "مثال: شارع الرئيسي 123، المدينة",
-      "language": "اللغة الافتراضية",
-      "languagePlaceholder": "اختر لغة",
-      "timezone": "المنطقة الزمنية",
-      "timezonePlaceholder": "اختر منطقة زمنية"
-    },
-    "languages": {
-      "en": "الإنجليزية",
-      "es": "الإسبانية",
-      "pt": "البرتغالية",
-      "fr": "الفرنسية",
-      "ar": "العربية",
-      "zh": "الصينية (المبسطة)",
-      "ja": "اليابانية",
-      "ko": "الكورية"
-    },
-    "units": {
-      "title": "هيكل المبنى",
-      "subtitle": "أضف وحداتك أو شققك أو منازلك",
-      "unitNumber": "رقم الوحدة",
-      "unitNumberPlaceholder": "مثال: 101، أ-12",
-      "floor": "الطابق",
-      "add": "إضافة وحدة",
-      "remove": "إزالة"
-    },
-    "amenities": {
-      "title": "المرافق",
-      "subtitle": "أضف المرافق المتاحة للمقيمين (اختياري)",
-      "name": "اسم المرفق",
-      "namePlaceholder": "مثال: مسبح، صالة رياضية",
-      "description": "الوصف",
-      "descriptionPlaceholder": "وصف موجز للمرفق",
-      "requiresApproval": "يتطلب موافقة للحجز",
-      "add": "إضافة مرفق",
-      "remove": "إزالة",
-      "skipHint": "يمكنك تخطي هذه الخطوة وإضافة المرافق لاحقاً"
-    },
-    "review": {
-      "title": "المراجعة والإكمال",
-      "subtitle": "يرجى مراجعة تفاصيل مجتمعك قبل الإنشاء",
-      "communityInfo": "معلومات المجتمع",
-      "name": "الاسم",
-      "address": "العنوان",
-      "language": "اللغة",
-      "timezone": "المنطقة الزمنية",
-      "unitsInfo": "الوحدات",
-      "unitsCount": "{count} وحدة",
-      "amenitiesInfo": "المرافق",
-      "amenitiesCount": "{count} مرفق",
-      "noAmenities": "لم تتم إضافة مرافق"
-    },
-    "complete": "إنشاء المجتمع",
-    "errors": {
-      "communityNameRequired": "اسم المجتمع مطلوب",
-      "addressRequired": "العنوان مطلوب",
-      "unitNumberRequired": "رقم الوحدة مطلوب",
-      "floorRequired": "يجب أن يكون الطابق 0 أو أعلى",
-      "atLeastOneUnit": "يرجى إضافة وحدة واحدة على الأقل",
-      "amenityNameRequired": "اسم المرفق مطلوب",
-      "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
-    }
   }
 } as const;

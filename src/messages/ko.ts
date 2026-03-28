@@ -305,6 +305,104 @@ export default {
     "roles": "역할 관리",
     "save": "변경 사항 저장"
   },
+  "onboarding": {
+    "title": "커뮤니티 설정",
+    "subtitle": "CondoHub를 시작하려면 건물을 구성하세요",
+    "progress": "{total}단계 중 {step}단계",
+    "steps": {
+      "profile": "커뮤니티 프로필",
+      "building": "건물 구조",
+      "amenities": "편의시설",
+      "logo": "커뮤니티 로고",
+      "invites": "입주민 초대"
+    },
+    "profile": {
+      "title": "커뮤니티 프로필",
+      "description": "커뮤니티의 기본 정보를 입력하세요",
+      "nameLabel": "커뮤니티 이름",
+      "namePlaceholder": "예: 오션 뷰 레지던스",
+      "addressLabel": "주소",
+      "addressPlaceholder": "전체 주소",
+      "timezoneLabel": "시간대",
+      "languageLabel": "기본 언어",
+      "currencyLabel": "통화"
+    },
+    "building": {
+      "title": "건물 구조",
+      "description": "건물의 레이아웃과 호수를 정의하세요",
+      "hasTowersLabel": "건물에 여러 타워/블록이 있음",
+      "towerNameLabel": "타워/블록 이름",
+      "towerNamePlaceholder": "예: A 타워",
+      "addTower": "타워 추가",
+      "removeTower": "제거",
+      "unitNumberLabel": "호수",
+      "unitNumberPlaceholder": "예: 101",
+      "floorLabel": "층 (선택사항)",
+      "addUnit": "호수 추가",
+      "removeUnit": "제거",
+      "unitsLabel": "호수",
+      "bulkAddLabel": "호수 일괄 추가",
+      "bulkAddPlaceholder": "예: 101-110, 201-210",
+      "bulkAddHelp": "101-110과 같은 범위나 쉼표로 구분된 숫자를 입력하세요",
+      "atLeastOneUnit": "최소 한 개의 호수를 추가하세요"
+    },
+    "amenities": {
+      "title": "편의시설",
+      "description": "커뮤니티에서 이용 가능한 편의시설을 선택하세요",
+      "predefinedLabel": "일반 편의시설",
+      "partyRoom": "파티룸",
+      "gym": "체육관/피트니스 센터",
+      "pool": "수영장",
+      "bbq": "바베큐 공간",
+      "guestParking": "방문객 주차장",
+      "coworking": "코워킹 공간",
+      "tennis": "테니스 코트",
+      "playground": "놀이터",
+      "petArea": "반려동물 공간",
+      "storage": "창고",
+      "elevator": "엘리베이터",
+      "concierge": "컨시어지",
+      "customLabel": "맞춤 편의시설",
+      "customPlaceholder": "편의시설 이름을 입력하세요",
+      "addCustom": "맞춤 편의시설 추가",
+      "requiresApproval": "예약 시 승인 필요",
+      "noAmenities": "아직 선택된 편의시설이 없습니다"
+    },
+    "logo": {
+      "title": "커뮤니티 로고",
+      "description": "커뮤니티 로고를 업로드하세요 (선택사항)",
+      "uploadLabel": "로고 업로드",
+      "dragDrop": "로고를 여기에 끌어다 놓거나 클릭하여 찾아보세요",
+      "fileTypes": "지원 형식: JPEG, PNG, WebP (최대 5MB)",
+      "removeLogo": "로고 제거",
+      "changeLogo": "로고 변경"
+    },
+    "invites": {
+      "title": "입주민 초대",
+      "description": "초기 입주민을 커뮤니티에 초대하세요 (선택사항)",
+      "emailLabel": "이메일 주소",
+      "emailPlaceholder": "resident@example.com",
+      "unitLabel": "호수에 할당 (선택사항)",
+      "addInvite": "추가하기",
+      "skipInvites": "지금은 건너뛰기",
+      "invalidEmail": "유효한 이메일 주소를 입력하세요"
+    },
+    "navigation": {
+      "back": "뒤로",
+      "next": "다음",
+      "finish": "완료",
+      "saving": "저장 중..."
+    },
+    "errors": {
+      "required": "이 필드는 필수입니다",
+      "invalidEmail": "유효한 이메일 주소를 입력하세요",
+      "saveFailed": "저장에 실패했습니다. 다시 시도해 주세요."
+    },
+    "success": {
+      "title": "설정 완료!",
+      "message": "커뮤니티가 성공적으로 구성되었습니다. 대시보드로 이동 중..."
+    }
+  },
   "roles": {
     "resident": "입주민",
     "board_member": "이사회 멤버",
@@ -342,82 +440,5 @@ export default {
     "no": "아니오",
     "optional": "선택",
     "required": "필수"
-  },
-  "onboarding": {
-    "title": "커뮤니티 설정",
-    "welcome": "환영합니다, {name}님! 콘도미니엄 커뮤니티를 만들어 보겠습니다.",
-    "steps": {
-      "community": "커뮤니티",
-      "units": "호수",
-      "amenities": "편의시설",
-      "review": "검토"
-    },
-    "community": {
-      "title": "커뮤니티 정보",
-      "subtitle": "콘도미니엄에 대해 알려주세요",
-      "name": "커뮤니티 이름",
-      "namePlaceholder": "예: 선라이즈 레지던스",
-      "address": "주소",
-      "addressPlaceholder": "예: 메인스트리트 123, 시티",
-      "language": "기본 언어",
-      "languagePlaceholder": "언어 선택",
-      "timezone": "시간대",
-      "timezonePlaceholder": "시간대 선택"
-    },
-    "languages": {
-      "en": "영어",
-      "es": "스페인어",
-      "pt": "포르투갈어",
-      "fr": "프랑스어",
-      "ar": "아랍어",
-      "zh": "중국어(간체)",
-      "ja": "일본어",
-      "ko": "한국어"
-    },
-    "units": {
-      "title": "건물 구조",
-      "subtitle": "호수, 아파트 또는 주택을 추가하세요",
-      "unitNumber": "호수",
-      "unitNumberPlaceholder": "예: 101, A-12",
-      "floor": "층",
-      "add": "호수 추가",
-      "remove": "삭제"
-    },
-    "amenities": {
-      "title": "편의시설",
-      "subtitle": "입주민이 이용할 수 있는 시설을 추가하세요(선택사항)",
-      "name": "편의시설 이름",
-      "namePlaceholder": "예: 수영장, 헬스장",
-      "description": "설명",
-      "descriptionPlaceholder": "편의시설에 대한 간략한 설명",
-      "requiresApproval": "예약에 승인 필요",
-      "add": "편의시설 추가",
-      "remove": "삭제",
-      "skipHint": "이 단계를 건너뛰고 나중에 편의시설을 추가할 수 있습니다"
-    },
-    "review": {
-      "title": "검토 및 완료",
-      "subtitle": "생성하기 전에 커뮤니티 세부 정보를 검토하세요",
-      "communityInfo": "커뮤니티 정보",
-      "name": "이름",
-      "address": "주소",
-      "language": "언어",
-      "timezone": "시간대",
-      "unitsInfo": "호수",
-      "unitsCount": "{count}개 호수",
-      "amenitiesInfo": "편의시설",
-      "amenitiesCount": "{count}개 편의시설",
-      "noAmenities": "추가된 편의시설 없음"
-    },
-    "complete": "커뮤니티 생성",
-    "errors": {
-      "communityNameRequired": "커뮤니티 이름은 필수입니다",
-      "addressRequired": "주소는 필수입니다",
-      "unitNumberRequired": "호수는 필수입니다",
-      "floorRequired": "층은 0 이상이어야 합니다",
-      "atLeastOneUnit": "최소 한 개의 호수를 추가하세요",
-      "amenityNameRequired": "편의시설 이름은 필수입니다",
-      "generic": "문제가 발생했습니다. 다시 시도해 주세요."
-    }
   }
 } as const;

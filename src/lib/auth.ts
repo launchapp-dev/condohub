@@ -4,6 +4,11 @@ import { headers } from "next/headers";
 import { db } from "@/db";
 import { communityMembers, type roleEnum } from "@/db/schema";
 import { eq } from "drizzle-orm";
+import { randomBytes } from "crypto";
+
+export function generateId(): string {
+  return randomBytes(16).toString("hex");
+}
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {

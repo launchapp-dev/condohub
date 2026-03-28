@@ -305,6 +305,104 @@ export default {
     "roles": "Gestion des rôles",
     "save": "Enregistrer les modifications"
   },
+  "onboarding": {
+    "title": "Configurez votre Communauté",
+    "subtitle": "Configurez votre immeuble pour commencer avec CondoHub",
+    "progress": "Étape {step} sur {total}",
+    "steps": {
+      "profile": "Profil de la Communauté",
+      "building": "Structure de l'Immeuble",
+      "amenities": "Commodités",
+      "logo": "Logo de la Communauté",
+      "invites": "Inviter des Résidents"
+    },
+    "profile": {
+      "title": "Profil de la Communauté",
+      "description": "Entrez les informations de base de votre communauté",
+      "nameLabel": "Nom de la Communauté",
+      "namePlaceholder": "ex., Résidences Ocean View",
+      "addressLabel": "Adresse",
+      "addressPlaceholder": "Adresse complète",
+      "timezoneLabel": "Fuseau Horaire",
+      "languageLabel": "Langue par Défaut",
+      "currencyLabel": "Devise"
+    },
+    "building": {
+      "title": "Structure de l'Immeuble",
+      "description": "Définissez la disposition et les unités de votre immeuble",
+      "hasTowersLabel": "L'immeuble a plusieurs tours/blocs",
+      "towerNameLabel": "Nom de la Tour/Bloc",
+      "towerNamePlaceholder": "ex., Tour A",
+      "addTower": "Ajouter une Tour",
+      "removeTower": "Supprimer",
+      "unitNumberLabel": "Numéro d'Unité",
+      "unitNumberPlaceholder": "ex., 101",
+      "floorLabel": "Étage (facultatif)",
+      "addUnit": "Ajouter une Unité",
+      "removeUnit": "Supprimer",
+      "unitsLabel": "Unités",
+      "bulkAddLabel": "Ajouter des Unités en Bloc",
+      "bulkAddPlaceholder": "ex., 101-110, 201-210",
+      "bulkAddHelp": "Entrez des plages comme 101-110 ou des numéros séparés par des virgules",
+      "atLeastOneUnit": "Ajoutez au moins une unité"
+    },
+    "amenities": {
+      "title": "Commodités",
+      "description": "Sélectionnez les commodités disponibles dans votre communauté",
+      "predefinedLabel": "Commodités Communes",
+      "partyRoom": "Salle de Fête",
+      "gym": "Salle de Sport/Centre Fitness",
+      "pool": "Piscine",
+      "bbq": "Espace BBQ",
+      "guestParking": "Parking Visiteurs",
+      "coworking": "Espace de Co-working",
+      "tennis": "Court de Tennis",
+      "playground": "Aire de Jeux",
+      "petArea": "Espace pour Animaux",
+      "storage": "Box de Stockage",
+      "elevator": "Ascenseur",
+      "concierge": "Conciergerie",
+      "customLabel": "Commodité Personnalisée",
+      "customPlaceholder": "Entrez le nom de la commodité",
+      "addCustom": "Ajouter une Commodité Personnalisée",
+      "requiresApproval": "Nécessite une approbation pour réserver",
+      "noAmenities": "Aucune commodité sélectionnée pour l'instant"
+    },
+    "logo": {
+      "title": "Logo de la Communauté",
+      "description": "Téléchargez le logo de votre communauté (facultatif)",
+      "uploadLabel": "Télécharger le Logo",
+      "dragDrop": "Glissez-déposez votre logo ici, ou cliquez pour parcourir",
+      "fileTypes": "Pris en charge : JPEG, PNG, WebP (max 5 Mo)",
+      "removeLogo": "Supprimer le Logo",
+      "changeLogo": "Changer le Logo"
+    },
+    "invites": {
+      "title": "Inviter des Résidents",
+      "description": "Invitez les résidents initiaux à rejoindre votre communauté (facultatif)",
+      "emailLabel": "Adresse E-mail",
+      "emailPlaceholder": "resident@exemple.com",
+      "unitLabel": "Attribuer à l'Unité (facultatif)",
+      "addInvite": "Ajouter un Autre",
+      "skipInvites": "Passer pour l'instant",
+      "invalidEmail": "Veuillez entrer une adresse e-mail valide"
+    },
+    "navigation": {
+      "back": "Retour",
+      "next": "Suivant",
+      "finish": "Terminer",
+      "saving": "Enregistrement..."
+    },
+    "errors": {
+      "required": "Ce champ est obligatoire",
+      "invalidEmail": "Veuillez entrer une adresse e-mail valide",
+      "saveFailed": "Échec de l'enregistrement. Veuillez réessayer."
+    },
+    "success": {
+      "title": "Configuration Terminée !",
+      "message": "Votre communauté a été configurée avec succès. Redirection vers le tableau de bord..."
+    }
+  },
   "roles": {
     "resident": "Résident",
     "board_member": "Membre du conseil",
@@ -342,82 +440,5 @@ export default {
     "no": "Non",
     "optional": "Facultatif",
     "required": "Obligatoire"
-  },
-  "onboarding": {
-    "title": "Configurez votre communauté",
-    "welcome": "Bienvenue, {name}! Créons votre communauté de condominiums.",
-    "steps": {
-      "community": "Communauté",
-      "units": "Unités",
-      "amenities": "Commodités",
-      "review": "Vérification"
-    },
-    "community": {
-      "title": "Informations sur la Communauté",
-      "subtitle": "Parlez-nous de votre condominium",
-      "name": "Nom de la communauté",
-      "namePlaceholder": "ex., Résidences Soleil",
-      "address": "Adresse",
-      "addressPlaceholder": "ex., 123 Rue Principale, Ville",
-      "language": "Langue par défaut",
-      "languagePlaceholder": "Sélectionnez une langue",
-      "timezone": "Fuseau horaire",
-      "timezonePlaceholder": "Sélectionnez un fuseau horaire"
-    },
-    "languages": {
-      "en": "Anglais",
-      "es": "Espagnol",
-      "pt": "Portugais",
-      "fr": "Français",
-      "ar": "Arabe",
-      "zh": "Chinois (Simplifié)",
-      "ja": "Japonais",
-      "ko": "Coréen"
-    },
-    "units": {
-      "title": "Structure du Bâtiment",
-      "subtitle": "Ajoutez vos unités, appartements ou maisons",
-      "unitNumber": "Numéro d'unité",
-      "unitNumberPlaceholder": "ex., 101, A-12",
-      "floor": "Étage",
-      "add": "Ajouter une unité",
-      "remove": "Supprimer"
-    },
-    "amenities": {
-      "title": "Commodités",
-      "subtitle": "Ajoutez les installations disponibles pour les résidents (facultatif)",
-      "name": "Nom de la commodité",
-      "namePlaceholder": "ex., Piscine, Salle de sport",
-      "description": "Description",
-      "descriptionPlaceholder": "Brève description de la commodité",
-      "requiresApproval": "Nécessite une approbation pour la réservation",
-      "add": "Ajouter une commodité",
-      "remove": "Supprimer",
-      "skipHint": "Vous pouvez ignorer cette étape et ajouter des commodités plus tard"
-    },
-    "review": {
-      "title": "Vérifier et Terminer",
-      "subtitle": "Veuillez vérifier les détails de votre communauté avant de créer",
-      "communityInfo": "Informations sur la Communauté",
-      "name": "Nom",
-      "address": "Adresse",
-      "language": "Langue",
-      "timezone": "Fuseau horaire",
-      "unitsInfo": "Unités",
-      "unitsCount": "{count} unités",
-      "amenitiesInfo": "Commodités",
-      "amenitiesCount": "{count} commodités",
-      "noAmenities": "Aucune commodité ajoutée"
-    },
-    "complete": "Créer la communauté",
-    "errors": {
-      "communityNameRequired": "Le nom de la communauté est obligatoire",
-      "addressRequired": "L'adresse est obligatoire",
-      "unitNumberRequired": "Le numéro d'unité est obligatoire",
-      "floorRequired": "L'étage doit être 0 ou plus",
-      "atLeastOneUnit": "Veuillez ajouter au moins une unité",
-      "amenityNameRequired": "Le nom de la commodité est obligatoire",
-      "generic": "Une erreur s'est produite. Veuillez réessayer."
-    }
   }
 } as const;
