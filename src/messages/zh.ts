@@ -33,6 +33,9 @@ export default {
     "signupButton": "注册",
     "loginWithGoogle": "使用 Google 继续",
     "loginWithGitHub": "使用 GitHub 继续",
+    "common": {
+      "loading": "加载中..."
+    },
     "errors": {
       "invalidCredentials": "电子邮箱或密码无效",
       "accountExists": "该电子邮箱已被注册",

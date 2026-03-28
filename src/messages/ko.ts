@@ -33,6 +33,9 @@ export default {
     "signupButton": "회원가입",
     "loginWithGoogle": "Google로 계속",
     "loginWithGitHub": "GitHub으로 계속",
+    "common": {
+      "loading": "로딩 중..."
+    },
     "errors": {
       "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다",
       "accountExists": "이 이메일로 등록된 계정이 이미 존재합니다",
