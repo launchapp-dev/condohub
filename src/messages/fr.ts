@@ -63,7 +63,22 @@ export default {
     "securityView": "Contrôle d'accès",
     "checkIn": "Entrée",
     "checkOut": "Sortie",
-    "noVisitors": "Aucun visiteur trouvé"
+    "noVisitors": "Aucun visiteur trouvé",
+    "visitorList": "Liste des visiteurs",
+    "statusCheckedIn": "Présent",
+    "statusCheckedOut": "Parti",
+    "statusExpected": "Attendu",
+    "required": "Obligatoire",
+    "selectUnit": "Sélectionner une unité",
+    "registering": "Enregistrement...",
+    "registerSuccess": "Visiteur enregistré avec succès",
+    "todayVisitors": "Visiteurs du jour",
+    "actions": "Actions",
+    "visitorDetails": "Détails du visiteur",
+    "history": "Historique",
+    "checkedInAt": "Entrée à",
+    "checkedOutAt": "Sortie à",
+    "noQrPass": "Aucun pass QR disponible"
   },
   "announcements": {
     "title": "Annonces",

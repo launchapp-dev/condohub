@@ -63,7 +63,22 @@ export default {
     "securityView": "بوابة الأمن",
     "checkIn": "تسجيل الدخول",
     "checkOut": "تسجيل الخروج",
-    "noVisitors": "لم يتم العثور على زوار"
+    "noVisitors": "لم يتم العثور على زوار",
+    "visitorList": "قائمة الزوار",
+    "statusCheckedIn": "داخل",
+    "statusCheckedOut": "خارج",
+    "statusExpected": "متوقع",
+    "required": "مطلوب",
+    "selectUnit": "اختيار الوحدة",
+    "registering": "جاري التسجيل...",
+    "registerSuccess": "تم تسجيل الزائر بنجاح",
+    "todayVisitors": "زوار اليوم",
+    "actions": "إجراءات",
+    "visitorDetails": "تفاصيل الزائر",
+    "history": "السجل",
+    "checkedInAt": "تم تسجيل الدخول في",
+    "checkedOutAt": "تم تسجيل الخروج في",
+    "noQrPass": "لا يوجد رمز دخول متاح"
   },
   "announcements": {
     "title": "الإعلانات",

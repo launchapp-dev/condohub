@@ -63,7 +63,22 @@ export default {
     "securityView": "セキュリティゲート",
     "checkIn": "入室",
     "checkOut": "退室",
-    "noVisitors": "来客が見つかりません"
+    "noVisitors": "来客が見つかりません",
+    "visitorList": "来客一覧",
+    "statusCheckedIn": "入居中",
+    "statusCheckedOut": "退室済",
+    "statusExpected": "予定",
+    "required": "必須",
+    "selectUnit": "部屋番号を選択",
+    "registering": "登録中...",
+    "registerSuccess": "来客を登録しました",
+    "todayVisitors": "本日の来客",
+    "actions": "操作",
+    "visitorDetails": "来客詳細",
+    "history": "履歴",
+    "checkedInAt": "入室時刻",
+    "checkedOutAt": "退室時刻",
+    "noQrPass": "QRパスはありません"
   },
   "announcements": {
     "title": "お知らせ",
