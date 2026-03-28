@@ -1,0 +1,167 @@
+export default {
+  "meta": {
+    "title": "CondoHub",
+    "description": "近代的なマンション管理プラットフォーム"
+  },
+  "nav": {
+    "dashboard": "ダッシュボード",
+    "visitors": "来客",
+    "announcements": "お知らせ",
+    "maintenance": "メンテナンス",
+    "amenities": "施設",
+    "finances": "財務",
+    "documents": "書類",
+    "community": "コミュニティ",
+    "settings": "設定",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "signup": "登録"
+  },
+  "auth": {
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワードを確認",
+    "name": "氏名",
+    "loginTitle": "お帰りなさい",
+    "loginSubtitle": "CondoHub アカウントにログイン",
+    "signupTitle": "アカウントを作成",
+    "signupSubtitle": "マンションのコミュニティに参加",
+    "forgotPassword": "パスワードを忘れましたか？",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "hasAccount": "すでにアカウントをお持ちですか？",
+    "loginButton": "ログイン",
+    "signupButton": "登録",
+    "loginWithGoogle": "Google で続ける",
+    "loginWithGitHub": "GitHub で続ける",
+    "errors": {
+      "invalidCredentials": "メールアドレスまたはパスワードが無効です",
+      "accountExists": "このメールアドレスのアカウントは既に存在します",
+      "weakPassword": "パスワードが弱すぎます",
+      "passwordsMismatch": "パスワードが一致しません",
+      "generic": "問題が発生しました。もう一度お試しください。"
+    }
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "welcome": "ようこそ、{name}さん",
+    "recentVisitors": "最近の来客",
+    "recentAnnouncements": "最近のお知らせ",
+    "pendingMaintenance": "保留中のメンテナンス",
+    "upcomingBookings": "今後の予約"
+  },
+  "visitors": {
+    "title": "来客",
+    "register": "来客を登録",
+    "registerTitle": "来客を登録",
+    "name": "来客名",
+    "phone": "電話番号",
+    "purpose": "来訪目的",
+    "expectedAt": "到着予定時刻",
+    "unit": "部屋番号",
+    "status": "ステータス",
+    "qrPass": "QRパス",
+    "securityView": "セキュリティゲート",
+    "checkIn": "入室",
+    "checkOut": "退室",
+    "noVisitors": "来客が見つかりません"
+  },
+  "announcements": {
+    "title": "お知らせ",
+    "new": "新規お知らせ",
+    "newTitle": "お知らせを作成",
+    "subject": "件名",
+    "body": "メッセージ",
+    "priority": "優先度",
+    "publish": "公開",
+    "comments": "コメント",
+    "noAnnouncements": "お知らせはまだありません"
+  },
+  "maintenance": {
+    "title": "メンテナンス",
+    "newRequest": "新規リクエスト",
+    "newTitle": "メンテナンス依頼を送信",
+    "category": "カテゴリ",
+    "description": "説明",
+    "urgency": "緊急度",
+    "submit": "依頼を送信",
+    "statusPending": "保留中",
+    "statusInProgress": "進行中",
+    "statusCompleted": "完了",
+    "noRequests": "メンテナンス依頼はありません"
+  },
+  "amenities": {
+    "title": "施設",
+    "book": "施設を予約",
+    "bookingTitle": "{name}を予約",
+    "date": "日付",
+    "time": "時間",
+    "duration": "利用時間",
+    "confirmBooking": "予約を確定",
+    "noAmenities": "利用可能な施設はありません"
+  },
+  "finances": {
+    "title": "財務",
+    "balance": "残高",
+    "dues": "月会費",
+    "payments": "支払い",
+    "budgets": "予算",
+    "payNow": "今すぐ支払う"
+  },
+  "documents": {
+    "title": "書類",
+    "upload": "書類をアップロード",
+    "noDocuments": "利用可能な書類はありません"
+  },
+  "community": {
+    "title": "コミュニティ",
+    "info": "コミュニティ情報",
+    "units": "部屋番号",
+    "members": "メンバー",
+    "contact": "連絡先"
+  },
+  "settings": {
+    "title": "設定",
+    "profile": "プロフィール",
+    "language": "言語",
+    "notifications": "通知",
+    "communitySettings": "コミュニティ設定",
+    "roles": "ロール管理",
+    "save": "変更を保存"
+  },
+  "roles": {
+    "resident": "居住者",
+    "board_member": "理事会メンバー",
+    "admin": "管理者",
+    "security": "警備",
+    "maintenance": "メンテナンス"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "create": "作成",
+    "search": "検索",
+    "filter": "絞り込み",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "close": "閉じる",
+    "open": "開く",
+    "view": "表示",
+    "download": "ダウンロード",
+    "share": "共有",
+    "copy": "コピー",
+    "success": "成功",
+    "error": "エラー",
+    "warning": "警告",
+    "info": "情報",
+    "confirm": "確認",
+    "yes": "はい",
+    "no": "いいえ",
+    "optional": "任意",
+    "required": "必須"
+  }
+} as const;

@@ -1,0 +1,167 @@
+export default {
+  "meta": {
+    "title": "CondoHub",
+    "description": "منصة حديثة لإدارة المجمعات السكنية"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "visitors": "الزوار",
+    "announcements": "الإعلانات",
+    "maintenance": "الصيانة",
+    "amenities": "المرافق",
+    "finances": "الماليات",
+    "documents": "المستندات",
+    "community": "المجتمع",
+    "settings": "الإعدادات",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "signup": "إنشاء حساب"
+  },
+  "auth": {
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "name": "الاسم الكامل",
+    "loginTitle": "مرحباً بعودتك",
+    "loginSubtitle": "قم بتسجيل الدخول إلى حساب CondoHub الخاص بك",
+    "signupTitle": "إنشاء حساب",
+    "signupSubtitle": "انضم إلى مجتمع سكنك",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "noAccount": "ليس لديك حساب؟",
+    "hasAccount": "لديك حساب بالفعل؟",
+    "loginButton": "تسجيل الدخول",
+    "signupButton": "إنشاء حساب",
+    "loginWithGoogle": "المتابعة باستخدام Google",
+    "loginWithGitHub": "المتابعة باستخدام GitHub",
+    "errors": {
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+      "accountExists": "يوجد حساب مسبقاً بهذا البريد الإلكتروني",
+      "weakPassword": "كلمة المرور ضعيفة جداً",
+      "passwordsMismatch": "كلمتا المرور غير متطابقتين",
+      "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
+    }
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "welcome": "مرحباً، {name}",
+    "recentVisitors": "الزوار الأخيرون",
+    "recentAnnouncements": "الإعلانات الأخيرة",
+    "pendingMaintenance": "الصيانة المعلقة",
+    "upcomingBookings": "الحجوزات القادمة"
+  },
+  "visitors": {
+    "title": "الزوار",
+    "register": "تسجيل زائر",
+    "registerTitle": "تسجيل زائر",
+    "name": "اسم الزائر",
+    "phone": "رقم الهاتف",
+    "purpose": "غرض الزيارة",
+    "expectedAt": "وقت الوصول المتوقع",
+    "unit": "الوحدة",
+    "status": "الحالة",
+    "qrPass": "رمز الدخول QR",
+    "securityView": "بوابة الأمن",
+    "checkIn": "تسجيل الدخول",
+    "checkOut": "تسجيل الخروج",
+    "noVisitors": "لم يتم العثور على زوار"
+  },
+  "announcements": {
+    "title": "الإعلانات",
+    "new": "إعلان جديد",
+    "newTitle": "إنشاء إعلان",
+    "subject": "الموضوع",
+    "body": "الرسالة",
+    "priority": "الأولوية",
+    "publish": "نشر",
+    "comments": "التعليقات",
+    "noAnnouncements": "لا توجد إعلانات بعد"
+  },
+  "maintenance": {
+    "title": "الصيانة",
+    "newRequest": "طلب جديد",
+    "newTitle": "إرسال طلب صيانة",
+    "category": "الفئة",
+    "description": "الوصف",
+    "urgency": "الاستعجال",
+    "submit": "إرسال الطلب",
+    "statusPending": "معلق",
+    "statusInProgress": "قيد التنفيذ",
+    "statusCompleted": "مكتمل",
+    "noRequests": "لا توجد طلبات صيانة"
+  },
+  "amenities": {
+    "title": "المرافق",
+    "book": "حجز مرافق",
+    "bookingTitle": "حجز {name}",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "duration": "المدة",
+    "confirmBooking": "تأكيد الحجز",
+    "noAmenities": "لا توجد مرافق متاحة"
+  },
+  "finances": {
+    "title": "الماليات",
+    "balance": "الرصيد",
+    "dues": "الرسوم الشهرية",
+    "payments": "المدفوعات",
+    "budgets": "الميزانيات",
+    "payNow": "ادفع الآن"
+  },
+  "documents": {
+    "title": "المستندات",
+    "upload": "رفع مستند",
+    "noDocuments": "لا توجد مستندات متاحة"
+  },
+  "community": {
+    "title": "المجتمع",
+    "info": "معلومات المجتمع",
+    "units": "الوحدات",
+    "members": "الأعضاء",
+    "contact": " التواصل"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "profile": "الملف الشخصي",
+    "language": "اللغة",
+    "notifications": "الإشعارات",
+    "communitySettings": "إعدادات المجتمع",
+    "roles": "إدارة الأدوار",
+    "save": "حفظ التغييرات"
+  },
+  "roles": {
+    "resident": "مقيم",
+    "board_member": "عضو مجلس الإدارة",
+    "admin": "مسؤول",
+    "security": "أمن",
+    "maintenance": "صيانة"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "search": "بحث",
+    "filter": "تصفية",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "close": "إغلاق",
+    "open": "فتح",
+    "view": "عرض",
+    "download": "تحميل",
+    "share": "مشاركة",
+    "copy": "نسخ",
+    "success": "نجاح",
+    "error": "خطأ",
+    "warning": "تحذير",
+    "info": "معلومات",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا",
+    "optional": "اختياري",
+    "required": "مطلوب"
+  }
+} as const;
