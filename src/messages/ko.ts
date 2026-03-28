@@ -148,7 +148,30 @@ export default {
     "priority": "우선순위",
     "publish": "게시",
     "comments": "댓글",
-    "noAnnouncements": "아직 공지사항이 없습니다"
+    "noAnnouncements": "아직 공지사항이 없습니다",
+    "form": {
+      "titleLabel": "제목",
+      "titlePlaceholder": "공지사항 제목을 입력하세요",
+      "titleError": "제목은 3자 이상이어야 합니다",
+      "contentLabel": "내용",
+      "contentPlaceholder": "공지사항 내용을 입력하세요 (마크다운 지원)",
+      "contentError": "내용은 10자 이상이어야 합니다",
+      "categoryLabel": "카테고리",
+      "category": {
+        "general": "일반",
+        "maintenance": "유지보수",
+        "emergency": "긴급",
+        "event": "이벤트",
+        "financial": "재무",
+        "rules": "규칙"
+      },
+      "pinToTop": "상단 고정",
+      "scheduledAt": "나중에 예약",
+      "scheduledAtHint": "즉시 게시하려면 비워두세요",
+      "submit": "공지사항 생성",
+      "submitting": "생성 중...",
+      "success": "공지사항이 성공적으로 생성되었습니다"
+    }
   },
   "maintenance": {
     "title": "유지보수",

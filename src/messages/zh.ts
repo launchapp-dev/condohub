@@ -148,7 +148,30 @@ export default {
     "priority": "优先级",
     "publish": "发布",
     "comments": "评论",
-    "noAnnouncements": "暂无公告"
+    "noAnnouncements": "暂无公告",
+    "form": {
+      "titleLabel": "标题",
+      "titlePlaceholder": "输入公告标题",
+      "titleError": "标题至少需要3个字符",
+      "contentLabel": "内容",
+      "contentPlaceholder": "输入公告内容（支持 markdown）",
+      "contentError": "内容至少需要10个字符",
+      "categoryLabel": "类别",
+      "category": {
+        "general": "一般",
+        "maintenance": "维修",
+        "emergency": "紧急",
+        "event": "活动",
+        "financial": "财务",
+        "rules": "规定"
+      },
+      "pinToTop": "置顶",
+      "scheduledAt": "定时发布",
+      "scheduledAtHint": "留空则立即发布",
+      "submit": "创建公告",
+      "submitting": "创建中...",
+      "success": "公告创建成功"
+    }
   },
   "maintenance": {
     "title": "维修",
