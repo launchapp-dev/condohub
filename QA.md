@@ -10,7 +10,7 @@
 
 | Date | Run By | Result | Notes |
 |------|--------|--------|-------|
-| 2026-03-28 | QA Agent | PARTIAL PASS | Signup form FIXED but API 500 error, Login form still broken, New i18n bug found |
+| 2026-03-28 | QA Agent | PARTIAL PASS | Login form FIXED, Signup API still 500, i18n keys missing |
 
 ---
 
@@ -22,6 +22,7 @@
 | 2026-03-28 | 6 | 4 | 2 | 0 | After clearing cache - CondoHub loads, auth forms incomplete |
 | 2026-03-28 | 6 | 4 | 2 | 0 | E2E run - auth forms still incomplete, visitor forms implemented |
 | 2026-03-28 | 6 | 4 | 2 | 1 | Signup form complete but 500 error on API, login form still incomplete |
+| 2026-03-28 | 6 | 5 | 1 | 0 | Login form FIXED, Signup API still 500, i18n auth keys missing |
 
 ---
 
@@ -37,9 +38,9 @@
 - [x] Signup page accessible
 - [x] Signup form has all input fields (FIXED: full form now present)
 - [x] Login page accessible
-- [ ] Login form has all input fields (FAIL: still missing - BUG-009)
+- [x] Login form has all input fields (FIXED: full form now present - email, password, submit, social auth)
 - [ ] Can register new user with email/password (FAIL: 500 error on API - BUG-012)
-- [ ] Can login with valid credentials (blocked by incomplete form)
+- [ ] Can login with valid credentials (blocked by signup failure - no user exists)
 - [x] Protected routes redirect to login
 - [ ] Logout clears session and redirects (not tested - blocked)
 
@@ -82,15 +83,16 @@
 
 | ID | Severity | Description | First Seen | Status |
 |----|----------|-------------|------------|--------|
-| BUG-012 | HIGH | Signup API returns 500 error - `/api/auth/sign-up/email` fails | 2026-03-28 | **NEW** |
-| BUG-011 | MEDIUM | Missing i18n translation key `auth.common:loading` causing console errors | 2026-03-28 | **NEW** |
-| BUG-009 | HIGH | Login form incomplete - missing email, password inputs and submit button | 2026-03-28 | **STILL OPEN** (TASK-019 marked done but not working) |
+| BUG-012 | HIGH | Signup API returns 500 error - `/api/auth/sign-up/email` fails | 2026-03-28 | **OPEN** |
+| BUG-011 | MEDIUM | Missing i18n translation key `auth.common:loading` causing console errors | 2026-03-28 | **OPEN** |
+| BUG-013 | MEDIUM | Missing i18n translation key `auth.common.or` causing console errors | 2026-03-28 | **NEW** |
 | BUG-010 | MEDIUM | No language switcher UI component | 2026-03-28 | Open |
 
 ### Fixed Issues
 
 | ID | Severity | Description | First Seen | Fixed Date |
 |----|----------|-------------|------------|------------|
+| BUG-009 | HIGH | Login form incomplete - missing email, password inputs and submit button | 2026-03-28 | 2026-03-28 (TASK-019 FIXED - form now complete) |
 | BUG-008 | HIGH | Signup form incomplete - missing name, email, password inputs and submit button | 2026-03-28 | 2026-03-28 (FORM FIXED - but API has new issue BUG-012) |
 | BUG-001 | CRITICAL | Wrong app running: "Invoicer" instead of "CondoHub" | 2026-03-28 | 2026-03-28 (cleared Next.js cache) |
 | BUG-002 | CRITICAL | Missing dependencies: @radix-ui/react-popover | 2026-03-28 | 2026-03-28 |
@@ -118,18 +120,21 @@
 - **Console Errors:** 0
 - **Screenshot:** qa-step1-smoke-test.png
 
-### Step 2 - Auth Flow: PARTIAL (MIXED RESULTS)
-- **Status:** Signup form FIXED, Login form STILL BROKEN, Signup API FAILS
+### Step 2 - Auth Flow: PARTIAL (SIGNUP API FAILS, LOGIN FIXED)
+- **Status:** Both Signup and Login forms COMPLETE, but Signup API returns 500 error
 - **Signup Page:**
   - ✅ All form fields present: Full name, Email, Password, Confirm password
   - ✅ Submit button present
-  - ❌ Submit fails with 500 error on `/api/auth/sign-up/email`
-  - ❌ Missing i18n key `auth.common:loading` causes console errors
+  - ❌ Submit fails with 500 error on `/api/auth/sign-up/email` (BUG-012)
 - **Login Page:**
-  - ❌ Still incomplete - only shows title "Welcome back" and subtitle
-  - ❌ No email/password fields, no submit button (BUG-009 persists)
-- **Related Tasks:** TASK-018 marked done and form IS fixed, TASK-019 marked done but login NOT working
-- **New Bugs:** BUG-011 (i18n), BUG-012 (API 500)
+  - ✅ FIXED: All form fields present: Email, Password
+  - ✅ FIXED: Submit button present
+  - ✅ FIXED: Social auth buttons present (Google, GitHub)
+  - ❌ Missing i18n key `auth.common.or` causes console errors (BUG-013)
+- **Login Test:**
+  - Attempted login with qa-test@condohub.dev → "Invalid email or password" (expected, user doesn't exist)
+- **Related Tasks:** TASK-018 and TASK-019 both COMPLETE - forms are working
+- **Open Bugs:** BUG-011 (auth.common:loading), BUG-012 (API 500), BUG-013 (auth.common:or)
 
 ### Step 3 - Visitor Registration: BLOCKED
 - **Status:** Cannot test - requires authentication
@@ -150,43 +155,43 @@
 - **Protected Routes:** /en/dashboard, /en/visitors, /en/announcements, /en/maintenance, /en/amenities, /en/finances all correctly redirect to login
 - **Console Errors:** 0
 
-### Step 6 - Console & Network Audit: FAIL
-- **Console Errors:** Multiple `IntlError: MISSING_MESSAGE: Could not resolve 'auth.common:loading'` errors
-- **Network Failures:** POST `/api/auth/sign-up/email` returns 500 Internal Server Error
+### Step 6 - Console & Network Audit: FAIL (KNOWN ISSUES)
+- **Console Errors:** Multiple missing i18n keys in auth namespace:
+  - `IntlError: MISSING_MESSAGE: Could not resolve 'auth.common:loading'` (BUG-011)
+  - `IntlError: MISSING_MESSAGE: Could not resolve 'auth.common:or'` (BUG-013)
+- **Network Failures:** POST `/api/auth/sign-up/email` returns 500 Internal Server Error (BUG-012)
 - **Root Cause:**
-  1. i18n messages missing `auth.common:loading` key in auth namespace
+  1. Auth forms using i18n keys that don't exist in message files
   2. Better Auth API endpoint failing on signup (possible DB issue or config error)
 
 ---
 
 ## Critical Findings
 
-1. **Signup Form FIXED but API BROKEN:**
-   - TASK-018 is actually complete - the signup form now has all fields
-   - BUT the signup API returns 500 error, preventing user registration
-   - Missing i18n key `auth.common:loading` causes console spam during submission
+1. **Login Form FIXED (TASK-019 Complete):**
+   - Login page now has complete form with email, password, submit button, and social auth
+   - BUG-009 is RESOLVED
 
-2. **Login Form STILL BROKEN:**
-   - TASK-019 marked as "done" but login page still only shows title/subtitle
-   - No input fields or submit button present
-   - This blocks all authenticated testing
+2. **Signup Form Complete but API BROKEN:**
+   - TASK-018 is complete - signup form has all required fields
+   - BUT the signup API returns 500 error, preventing user registration (BUG-012)
 
-3. **Better Auth Integration Issues:**
-   - Signup API endpoint `/api/auth/sign-up/email` returns 500
-   - May be database schema issue, auth config error, or missing env vars
+3. **i18n Auth Namespace Missing Keys:**
+   - Auth forms reference keys `auth.common:loading` and `auth.common.or` that don't exist
+   - Need to add these keys to en.json and other locale files (BUG-011, BUG-013)
 
-4. **i18n Namespace Gap:**
-   - Auth forms using `auth.common:loading` key that doesn't exist
-   - Need to add auth namespace to i18n messages or update form code
+4. **Authentication is the Main Blocker:**
+   - Cannot test protected features (visitor management, dashboard, etc.) until signup API is fixed
+   - Once BUG-012 is resolved, full E2E testing of authenticated features can proceed
 
 ---
 
 ## Recommendations
 
-1. **Priority 1:** Fix signup API 500 error (BUG-012) - check Better Auth config and database
-2. **Priority 2:** Fix login form - TASK-019 shows done but code is not working
-3. **Priority 3:** Add missing i18n key `auth.common:loading` to en.json and other locales
-4. **Priority 4:** Once auth works, verify protected features (visitor management, dashboard, etc.)
+1. **Priority 1:** Fix signup API 500 error (BUG-012) - check Better Auth config, database schema, and environment variables
+2. **Priority 2:** Add missing i18n keys `auth.common:loading` and `auth.common.or` to en.json and other locales (BUG-011, BUG-013)
+3. **Priority 3:** Once auth works, verify protected features (visitor management, dashboard, etc.)
+4. **Priority 4:** Add language switcher UI component (BUG-010)
 
 ---
 
