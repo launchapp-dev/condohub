@@ -33,6 +33,9 @@ export default {
     "signupButton": "Cadastrar-se",
     "loginWithGoogle": "Continuar com Google",
     "loginWithGitHub": "Continuar com GitHub",
+    "common": {
+      "loading": "Carregando..."
+    },
     "errors": {
       "invalidCredentials": "E-mail ou senha inválidos",
       "accountExists": "Já existe uma conta com este e-mail",

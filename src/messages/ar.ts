@@ -33,6 +33,9 @@ export default {
     "signupButton": "إنشاء حساب",
     "loginWithGoogle": "المتابعة باستخدام Google",
     "loginWithGitHub": "المتابعة باستخدام GitHub",
+    "common": {
+      "loading": "جاري التحميل..."
+    },
     "errors": {
       "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
       "accountExists": "يوجد حساب مسبقاً بهذا البريد الإلكتروني",

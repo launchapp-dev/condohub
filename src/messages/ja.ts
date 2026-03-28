@@ -33,6 +33,9 @@ export default {
     "signupButton": "登録",
     "loginWithGoogle": "Google で続ける",
     "loginWithGitHub": "GitHub で続ける",
+    "common": {
+      "loading": "読み込み中..."
+    },
     "errors": {
       "invalidCredentials": "メールアドレスまたはパスワードが無効です",
       "accountExists": "このメールアドレスのアカウントは既に存在します",
