@@ -1,0 +1,167 @@
+export default {
+  "meta": {
+    "title": "CondoHub",
+    "description": "Modern condominium management platform"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "visitors": "Visitors",
+    "announcements": "Announcements",
+    "maintenance": "Maintenance",
+    "amenities": "Amenities",
+    "finances": "Finances",
+    "documents": "Documents",
+    "community": "Community",
+    "settings": "Settings",
+    "login": "Log in",
+    "logout": "Log out",
+    "signup": "Sign up"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "name": "Full name",
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Log in to your CondoHub account",
+    "signupTitle": "Create an account",
+    "signupSubtitle": "Join your condominium community",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginButton": "Log in",
+    "signupButton": "Sign up",
+    "loginWithGoogle": "Continue with Google",
+    "loginWithGitHub": "Continue with GitHub",
+    "errors": {
+      "invalidCredentials": "Invalid email or password",
+      "accountExists": "An account with this email already exists",
+      "weakPassword": "Password is too weak",
+      "passwordsMismatch": "Passwords do not match",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome, {name}",
+    "recentVisitors": "Recent visitors",
+    "recentAnnouncements": "Recent announcements",
+    "pendingMaintenance": "Pending maintenance",
+    "upcomingBookings": "Upcoming bookings"
+  },
+  "visitors": {
+    "title": "Visitors",
+    "register": "Register visitor",
+    "registerTitle": "Register a visitor",
+    "name": "Visitor name",
+    "phone": "Phone number",
+    "purpose": "Purpose of visit",
+    "expectedAt": "Expected arrival",
+    "unit": "Unit",
+    "status": "Status",
+    "qrPass": "QR Pass",
+    "securityView": "Security gate",
+    "checkIn": "Check in",
+    "checkOut": "Check out",
+    "noVisitors": "No visitors found"
+  },
+  "announcements": {
+    "title": "Announcements",
+    "new": "New announcement",
+    "newTitle": "Create announcement",
+    "subject": "Subject",
+    "body": "Message",
+    "priority": "Priority",
+    "publish": "Publish",
+    "comments": "Comments",
+    "noAnnouncements": "No announcements yet"
+  },
+  "maintenance": {
+    "title": "Maintenance",
+    "newRequest": "New request",
+    "newTitle": "Submit maintenance request",
+    "category": "Category",
+    "description": "Description",
+    "urgency": "Urgency",
+    "submit": "Submit request",
+    "statusPending": "Pending",
+    "statusInProgress": "In progress",
+    "statusCompleted": "Completed",
+    "noRequests": "No maintenance requests"
+  },
+  "amenities": {
+    "title": "Amenities",
+    "book": "Book amenity",
+    "bookingTitle": "Book {name}",
+    "date": "Date",
+    "time": "Time",
+    "duration": "Duration",
+    "confirmBooking": "Confirm booking",
+    "noAmenities": "No amenities available"
+  },
+  "finances": {
+    "title": "Finances",
+    "balance": "Balance",
+    "dues": "Monthly dues",
+    "payments": "Payments",
+    "budgets": "Budgets",
+    "payNow": "Pay now"
+  },
+  "documents": {
+    "title": "Documents",
+    "upload": "Upload document",
+    "noDocuments": "No documents available"
+  },
+  "community": {
+    "title": "Community",
+    "info": "Community info",
+    "units": "Units",
+    "members": "Members",
+    "contact": "Contact"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "language": "Language",
+    "notifications": "Notifications",
+    "communitySettings": "Community settings",
+    "roles": "Role management",
+    "save": "Save changes"
+  },
+  "roles": {
+    "resident": "Resident",
+    "board_member": "Board member",
+    "admin": "Admin",
+    "security": "Security",
+    "maintenance": "Maintenance"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "filter": "Filter",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "close": "Close",
+    "open": "Open",
+    "view": "View",
+    "download": "Download",
+    "share": "Share",
+    "copy": "Copy",
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "optional": "Optional",
+    "required": "Required"
+  }
+} as const;

@@ -1,0 +1,167 @@
+export default {
+  "meta": {
+    "title": "CondoHub",
+    "description": "현대적인 콘도미니엄 관리 플랫폼"
+  },
+  "nav": {
+    "dashboard": "대시보드",
+    "visitors": "방문객",
+    "announcements": "공지사항",
+    "maintenance": "유지보수",
+    "amenities": "편의시설",
+    "finances": "재무",
+    "documents": "문서",
+    "community": "커뮤니티",
+    "settings": "설정",
+    "login": "로그인",
+    "logout": "로그아웃",
+    "signup": "회원가입"
+  },
+  "auth": {
+    "email": "이메일",
+    "password": "비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "name": "성명",
+    "loginTitle": "돌아오신 것을 환영합니다",
+    "loginSubtitle": "CondoHub 계정에 로그인하세요",
+    "signupTitle": "계정 만들기",
+    "signupSubtitle": "콘도미니엄 커뮤니티에 참여하세요",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "noAccount": "계정이 없으신가요?",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "loginButton": "로그인",
+    "signupButton": "회원가입",
+    "loginWithGoogle": "Google로 계속",
+    "loginWithGitHub": "GitHub으로 계속",
+    "errors": {
+      "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다",
+      "accountExists": "이 이메일로 등록된 계정이 이미 존재합니다",
+      "weakPassword": "비밀번호가 너무 약합니다",
+      "passwordsMismatch": "비밀번호가 일치하지 않습니다",
+      "generic": "문제가 발생했습니다. 다시 시도해 주세요."
+    }
+  },
+  "dashboard": {
+    "title": "대시보드",
+    "welcome": "환영합니다, {name}님",
+    "recentVisitors": "최근 방문객",
+    "recentAnnouncements": "최근 공지사항",
+    "pendingMaintenance": "대기 중인 유지보수",
+    "upcomingBookings": "다가오는 예약"
+  },
+  "visitors": {
+    "title": "방문객",
+    "register": "방문객 등록",
+    "registerTitle": "방문객 등록",
+    "name": "방문객 이름",
+    "phone": "전화번호",
+    "purpose": "방문 목적",
+    "expectedAt": "예상 도착 시간",
+    "unit": "호수",
+    "status": "상태",
+    "qrPass": "QR 패스",
+    "securityView": "경비 게이트",
+    "checkIn": "입실",
+    "checkOut": "퇴실",
+    "noVisitors": "방문객을 찾을 수 없습니다"
+  },
+  "announcements": {
+    "title": "공지사항",
+    "new": "새 공지",
+    "newTitle": "공지사항 작성",
+    "subject": "제목",
+    "body": "내용",
+    "priority": "우선순위",
+    "publish": "게시",
+    "comments": "댓글",
+    "noAnnouncements": "아직 공지사항이 없습니다"
+  },
+  "maintenance": {
+    "title": "유지보수",
+    "newRequest": "새 요청",
+    "newTitle": "유지보수 요청 제출",
+    "category": "카테고리",
+    "description": "설명",
+    "urgency": "긴급도",
+    "submit": "요청 제출",
+    "statusPending": "대기 중",
+    "statusInProgress": "진행 중",
+    "statusCompleted": "완료",
+    "noRequests": "유지보수 요청이 없습니다"
+  },
+  "amenities": {
+    "title": "편의시설",
+    "book": "편의시설 예약",
+    "bookingTitle": "{name} 예약",
+    "date": "날짜",
+    "time": "시간",
+    "duration": "이용 시간",
+    "confirmBooking": "예약 확정",
+    "noAmenities": "이용 가능한 편의시설이 없습니다"
+  },
+  "finances": {
+    "title": "재무",
+    "balance": "잔액",
+    "dues": "월 관리비",
+    "payments": "결제",
+    "budgets": "예산",
+    "payNow": "지금 결제"
+  },
+  "documents": {
+    "title": "문서",
+    "upload": "문서 업로드",
+    "noDocuments": "이용 가능한 문서가 없습니다"
+  },
+  "community": {
+    "title": "커뮤니티",
+    "info": "커뮤니티 정보",
+    "units": "호수",
+    "members": "구성원",
+    "contact": "연락처"
+  },
+  "settings": {
+    "title": "설정",
+    "profile": "프로필",
+    "language": "언어",
+    "notifications": "알림",
+    "communitySettings": "커뮤니티 설정",
+    "roles": "역할 관리",
+    "save": "변경 사항 저장"
+  },
+  "roles": {
+    "resident": "입주민",
+    "board_member": "이사회 멤버",
+    "admin": "관리자",
+    "security": "경비",
+    "maintenance": "유지보수"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "edit": "수정",
+    "create": "생성",
+    "search": "검색",
+    "filter": "필터",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "submit": "제출",
+    "close": "닫기",
+    "open": "열기",
+    "view": "보기",
+    "download": "다운로드",
+    "share": "공유",
+    "copy": "복사",
+    "success": "성공",
+    "error": "오류",
+    "warning": "경고",
+    "info": "정보",
+    "confirm": "확인",
+    "yes": "예",
+    "no": "아니오",
+    "optional": "선택",
+    "required": "필수"
+  }
+} as const;

@@ -1,0 +1,167 @@
+export default {
+  "meta": {
+    "title": "CondoHub",
+    "description": "现代化公寓管理平台"
+  },
+  "nav": {
+    "dashboard": "仪表盘",
+    "visitors": "访客",
+    "announcements": "公告",
+    "maintenance": "维修",
+    "amenities": "设施",
+    "finances": "财务",
+    "documents": "文件",
+    "community": "社区",
+    "settings": "设置",
+    "login": "登录",
+    "logout": "退出登录",
+    "signup": "注册"
+  },
+  "auth": {
+    "email": "电子邮箱",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "name": "姓名",
+    "loginTitle": "欢迎回来",
+    "loginSubtitle": "登录您的 CondoHub 账户",
+    "signupTitle": "创建账户",
+    "signupSubtitle": "加入您的公寓社区",
+    "forgotPassword": "忘记密码？",
+    "noAccount": "还没有账户？",
+    "hasAccount": "已有账户？",
+    "loginButton": "登录",
+    "signupButton": "注册",
+    "loginWithGoogle": "使用 Google 继续",
+    "loginWithGitHub": "使用 GitHub 继续",
+    "errors": {
+      "invalidCredentials": "电子邮箱或密码无效",
+      "accountExists": "该电子邮箱已被注册",
+      "weakPassword": "密码强度太弱",
+      "passwordsMismatch": "两次输入的密码不一致",
+      "generic": "出了点问题，请重试。"
+    }
+  },
+  "dashboard": {
+    "title": "仪表盘",
+    "welcome": "欢迎，{name}",
+    "recentVisitors": "最近访客",
+    "recentAnnouncements": "最近公告",
+    "pendingMaintenance": "待处理维修",
+    "upcomingBookings": "即将到来的预订"
+  },
+  "visitors": {
+    "title": "访客",
+    "register": "登记访客",
+    "registerTitle": "登记访客",
+    "name": "访客姓名",
+    "phone": "电话号码",
+    "purpose": "来访目的",
+    "expectedAt": "预计到达时间",
+    "unit": "单元",
+    "status": "状态",
+    "qrPass": "二维码通行",
+    "securityView": "门禁视图",
+    "checkIn": "签到",
+    "checkOut": "签退",
+    "noVisitors": "未找到访客"
+  },
+  "announcements": {
+    "title": "公告",
+    "new": "新建公告",
+    "newTitle": "创建公告",
+    "subject": "主题",
+    "body": "内容",
+    "priority": "优先级",
+    "publish": "发布",
+    "comments": "评论",
+    "noAnnouncements": "暂无公告"
+  },
+  "maintenance": {
+    "title": "维修",
+    "newRequest": "新建请求",
+    "newTitle": "提交维修请求",
+    "category": "类别",
+    "description": "描述",
+    "urgency": "紧急程度",
+    "submit": "提交请求",
+    "statusPending": "待处理",
+    "statusInProgress": "进行中",
+    "statusCompleted": "已完成",
+    "noRequests": "暂无维修请求"
+  },
+  "amenities": {
+    "title": "设施",
+    "book": "预订设施",
+    "bookingTitle": "预订 {name}",
+    "date": "日期",
+    "time": "时间",
+    "duration": "时长",
+    "confirmBooking": "确认预订",
+    "noAmenities": "暂无可用设施"
+  },
+  "finances": {
+    "title": "财务",
+    "balance": "余额",
+    "dues": "月费",
+    "payments": "付款",
+    "budgets": "预算",
+    "payNow": "立即支付"
+  },
+  "documents": {
+    "title": "文件",
+    "upload": "上传文件",
+    "noDocuments": "暂无可用文件"
+  },
+  "community": {
+    "title": "社区",
+    "info": "社区信息",
+    "units": "单元",
+    "members": "成员",
+    "contact": "联系"
+  },
+  "settings": {
+    "title": "设置",
+    "profile": "个人资料",
+    "language": "语言",
+    "notifications": "通知",
+    "communitySettings": "社区设置",
+    "roles": "角色管理",
+    "save": "保存更改"
+  },
+  "roles": {
+    "resident": "住户",
+    "board_member": "董事会成员",
+    "admin": "管理员",
+    "security": "安保",
+    "maintenance": "维修人员"
+  },
+  "common": {
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "search": "搜索",
+    "filter": "筛选",
+    "back": "返回",
+    "next": "下一页",
+    "previous": "上一页",
+    "submit": "提交",
+    "close": "关闭",
+    "open": "打开",
+    "view": "查看",
+    "download": "下载",
+    "share": "分享",
+    "copy": "复制",
+    "success": "成功",
+    "error": "错误",
+    "warning": "警告",
+    "info": "信息",
+    "confirm": "确认",
+    "yes": "是",
+    "no": "否",
+    "optional": "可选",
+    "required": "必填"
+  }
+} as const;

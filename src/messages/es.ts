@@ -1,0 +1,167 @@
+export default {
+  "meta": {
+    "title": "CondoHub",
+    "description": "Plataforma moderna de gestión de condominios"
+  },
+  "nav": {
+    "dashboard": "Panel",
+    "visitors": "Visitantes",
+    "announcements": "Anuncios",
+    "maintenance": "Mantenimiento",
+    "amenities": "Amenidades",
+    "finances": "Finanzas",
+    "documents": "Documentos",
+    "community": "Comunidad",
+    "settings": "Configuración",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "signup": "Registrarse"
+  },
+  "auth": {
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "name": "Nombre completo",
+    "loginTitle": "Bienvenido de nuevo",
+    "loginSubtitle": "Inicia sesión en tu cuenta de CondoHub",
+    "signupTitle": "Crear una cuenta",
+    "signupSubtitle": "Únete a la comunidad de tu condominio",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes una cuenta?",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "loginButton": "Iniciar sesión",
+    "signupButton": "Registrarse",
+    "loginWithGoogle": "Continuar con Google",
+    "loginWithGitHub": "Continuar con GitHub",
+    "errors": {
+      "invalidCredentials": "Correo o contraseña inválidos",
+      "accountExists": "Ya existe una cuenta con este correo",
+      "weakPassword": "La contraseña es demasiado débil",
+      "passwordsMismatch": "Las contraseñas no coinciden",
+      "generic": "Algo salió mal. Por favor, inténtalo de nuevo."
+    }
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "Bienvenido, {name}",
+    "recentVisitors": "Visitantes recientes",
+    "recentAnnouncements": "Anuncios recientes",
+    "pendingMaintenance": "Mantenimiento pendiente",
+    "upcomingBookings": "Próximas reservas"
+  },
+  "visitors": {
+    "title": "Visitantes",
+    "register": "Registrar visitante",
+    "registerTitle": "Registrar un visitante",
+    "name": "Nombre del visitante",
+    "phone": "Teléfono",
+    "purpose": "Propósito de la visita",
+    "expectedAt": "Llegada esperada",
+    "unit": "Unidad",
+    "status": "Estado",
+    "qrPass": "Pase QR",
+    "securityView": "Control de acceso",
+    "checkIn": "Entrada",
+    "checkOut": "Salida",
+    "noVisitors": "No se encontraron visitantes"
+  },
+  "announcements": {
+    "title": "Anuncios",
+    "new": "Nuevo anuncio",
+    "newTitle": "Crear anuncio",
+    "subject": "Asunto",
+    "body": "Mensaje",
+    "priority": "Prioridad",
+    "publish": "Publicar",
+    "comments": "Comentarios",
+    "noAnnouncements": "Aún no hay anuncios"
+  },
+  "maintenance": {
+    "title": "Mantenimiento",
+    "newRequest": "Nueva solicitud",
+    "newTitle": "Enviar solicitud de mantenimiento",
+    "category": "Categoría",
+    "description": "Descripción",
+    "urgency": "Urgencia",
+    "submit": "Enviar solicitud",
+    "statusPending": "Pendiente",
+    "statusInProgress": "En progreso",
+    "statusCompleted": "Completado",
+    "noRequests": "No hay solicitudes de mantenimiento"
+  },
+  "amenities": {
+    "title": "Amenidades",
+    "book": "Reservar amenidad",
+    "bookingTitle": "Reservar {name}",
+    "date": "Fecha",
+    "time": "Hora",
+    "duration": "Duración",
+    "confirmBooking": "Confirmar reserva",
+    "noAmenities": "No hay amenidades disponibles"
+  },
+  "finances": {
+    "title": "Finanzas",
+    "balance": "Saldo",
+    "dues": "Cuotas mensuales",
+    "payments": "Pagos",
+    "budgets": "Presupuestos",
+    "payNow": "Pagar ahora"
+  },
+  "documents": {
+    "title": "Documentos",
+    "upload": "Subir documento",
+    "noDocuments": "No hay documentos disponibles"
+  },
+  "community": {
+    "title": "Comunidad",
+    "info": "Información de la comunidad",
+    "units": "Unidades",
+    "members": "Miembros",
+    "contact": "Contacto"
+  },
+  "settings": {
+    "title": "Configuración",
+    "profile": "Perfil",
+    "language": "Idioma",
+    "notifications": "Notificaciones",
+    "communitySettings": "Configuración de la comunidad",
+    "roles": "Gestión de roles",
+    "save": "Guardar cambios"
+  },
+  "roles": {
+    "resident": "Residente",
+    "board_member": "Miembro de la junta",
+    "admin": "Administrador",
+    "security": "Seguridad",
+    "maintenance": "Mantenimiento"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "view": "Ver",
+    "download": "Descargar",
+    "share": "Compartir",
+    "copy": "Copiar",
+    "success": "Éxito",
+    "error": "Error",
+    "warning": "Advertencia",
+    "info": "Información",
+    "confirm": "Confirmar",
+    "yes": "Sí",
+    "no": "No",
+    "optional": "Opcional",
+    "required": "Obligatorio"
+  }
+} as const;
