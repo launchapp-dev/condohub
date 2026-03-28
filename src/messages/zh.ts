@@ -38,6 +38,9 @@ export default {
       "accountExists": "该电子邮箱已被注册",
       "weakPassword": "密码强度太弱",
       "passwordsMismatch": "两次输入的密码不一致",
+      "requiredField": "此字段为必填项",
+      "invalidEmail": "请输入有效的电子邮箱地址",
+      "passwordTooShort": "密码必须至少包含8个字符",
       "generic": "出了点问题，请重试。"
     }
   },

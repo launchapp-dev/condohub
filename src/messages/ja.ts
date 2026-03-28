@@ -38,6 +38,9 @@ export default {
       "accountExists": "このメールアドレスのアカウントは既に存在します",
       "weakPassword": "パスワードが弱すぎます",
       "passwordsMismatch": "パスワードが一致しません",
+      "requiredField": "この項目は必須です",
+      "invalidEmail": "有効なメールアドレスを入力してください",
+      "passwordTooShort": "パスワードは8文字以上である必要があります",
       "generic": "問題が発生しました。もう一度お試しください。"
     }
   },

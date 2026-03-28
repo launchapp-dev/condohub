@@ -38,6 +38,9 @@ export default {
       "accountExists": "이 이메일로 등록된 계정이 이미 존재합니다",
       "weakPassword": "비밀번호가 너무 약합니다",
       "passwordsMismatch": "비밀번호가 일치하지 않습니다",
+      "requiredField": "이 필드는 필수입니다",
+      "invalidEmail": "유효한 이메일 주소를 입력하세요",
+      "passwordTooShort": "비밀번호는 최소 8자 이상이어야 합니다",
       "generic": "문제가 발생했습니다. 다시 시도해 주세요."
     }
   },

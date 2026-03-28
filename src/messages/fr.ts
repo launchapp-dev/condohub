@@ -38,6 +38,9 @@ export default {
       "accountExists": "Un compte avec cet e-mail existe déjà",
       "weakPassword": "Le mot de passe est trop faible",
       "passwordsMismatch": "Les mots de passe ne correspondent pas",
+      "requiredField": "Ce champ est obligatoire",
+      "invalidEmail": "Veuillez entrer une adresse e-mail valide",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
       "generic": "Une erreur s'est produite. Veuillez réessayer."
     }
   },

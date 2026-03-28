@@ -38,6 +38,9 @@ export default {
       "accountExists": "Ya existe una cuenta con este correo",
       "weakPassword": "La contraseña es demasiado débil",
       "passwordsMismatch": "Las contraseñas no coinciden",
+      "requiredField": "Este campo es obligatorio",
+      "invalidEmail": "Por favor ingresa un correo válido",
+      "passwordTooShort": "La contraseña debe tener al menos 8 caracteres",
       "generic": "Algo salió mal. Por favor, inténtalo de nuevo."
     }
   },
