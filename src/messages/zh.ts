@@ -310,6 +310,7 @@ export default {
   },
   "common": {
     "loading": "加载中...",
+    "or": "或",
     "save": "保存",
     "cancel": "取消",
     "delete": "删除",

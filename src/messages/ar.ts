@@ -300,6 +300,7 @@ export default {
   },
   "common": {
     "loading": "جاري التحميل...",
+    "or": "أو",
     "save": "حفظ",
     "cancel": "إلغاء",
     "delete": "حذف",

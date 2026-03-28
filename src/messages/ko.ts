@@ -310,6 +310,7 @@ export default {
   },
   "common": {
     "loading": "로딩 중...",
+    "or": "또는",
     "save": "저장",
     "cancel": "취소",
     "delete": "삭제",

@@ -310,6 +310,7 @@ export default {
   },
   "common": {
     "loading": "Chargement...",
+    "or": "Ou",
     "save": "Enregistrer",
     "cancel": "Annuler",
     "delete": "Supprimer",

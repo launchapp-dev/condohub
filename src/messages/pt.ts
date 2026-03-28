@@ -310,6 +310,7 @@ export default {
   },
   "common": {
     "loading": "Carregando...",
+    "or": "Ou",
     "save": "Salvar",
     "cancel": "Cancelar",
     "delete": "Excluir",
