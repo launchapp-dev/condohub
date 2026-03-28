@@ -200,9 +200,85 @@ export default {
     "title": "재무",
     "balance": "잔액",
     "dues": "월 관리비",
-    "payments": "결제",
     "budgets": "예산",
-    "payNow": "지금 결제"
+    "payNow": "지금 결제",
+    "unit": "호수",
+    "floor": "층",
+    "tabs": {
+      "overview": "개요",
+      "fees": "비용 추적",
+      "payments": "결제 내역",
+      "reports": "보고서"
+    },
+    "stats": {
+      "totalBudget": "총 예산",
+      "currentYear": "올해",
+      "totalDues": "총 비용",
+      "ytdFees": "연초부터 누적 비용",
+      "collected": "수납 완료",
+      "collectionRate": "수납률",
+      "pending": "미수금",
+      "outstandingFees": "미납 비용"
+    },
+    "budget": {
+      "title": "예산 개요",
+      "description": "카테고리별 계획 예산 대비 실제 지출"
+    },
+    "fees": {
+      "title": "비용 추적",
+      "description": "월간 비용 및 결제 상태 추적",
+      "unit": "호수",
+      "title_col": "제목",
+      "amount": "금액",
+      "dueDate": "납부 기한",
+      "status": "상태",
+      "paid": "납부 완료",
+      "overdue": "연체",
+      "noFees": "비용을 찾을 수 없습니다",
+      "due": "납부 기한"
+    },
+    "payments": {
+      "title": "결제 내역",
+      "description": "모든 결제를 보고 날짜 또는 호수로 필터링",
+      "date": "날짜",
+      "unit": "호수",
+      "fee": "비용",
+      "amount": "금액",
+      "payer": "납부자",
+      "noPayments": "결제 내역을 찾을 수 없습니다"
+    },
+    "filters": {
+      "unit": "호수",
+      "allUnits": "모든 호수",
+      "from": "부터",
+      "to": "까지"
+    },
+    "actions": {
+      "exportCSV": "CSV 내보내기",
+      "payNow": "지금 결제"
+    },
+    "reports": {
+      "monthlySummary": "월간 요약",
+      "monthlyDescription": "월별 수납률",
+      "annualSummary": "연간 요약",
+      "annualDescription": "연초부터 누적 재무 실적",
+      "month": "월",
+      "totalDues": "총 비용",
+      "collected": "수납 완료",
+      "pending": "미수금",
+      "collectionRate": "수납률",
+      "noData": "사용 가능한 데이터가 없습니다",
+      "totalCollected": "총 수납액",
+      "byCategory": "카테고리별 지출"
+    },
+    "resident": {
+      "outstanding": "미납 잔액",
+      "pendingFees": "건의 미납 비용",
+      "paidYTD": "연초부터 납부액",
+      "paidFees": "건의 납부 완료 비용",
+      "outstandingFees": "미납 비용",
+      "payByDueDate": "연체료를 피하기 위해 납부 기한까지 결제하세요"
+    }
   },
   "documents": {
     "title": "문서",

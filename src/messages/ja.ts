@@ -200,9 +200,85 @@ export default {
     "title": "財務",
     "balance": "残高",
     "dues": "月会費",
-    "payments": "支払い",
     "budgets": "予算",
-    "payNow": "今すぐ支払う"
+    "payNow": "今すぐ支払う",
+    "unit": "部屋",
+    "floor": "階",
+    "tabs": {
+      "overview": "概要",
+      "fees": "費用追跡",
+      "payments": "支払い",
+      "reports": "レポート"
+    },
+    "stats": {
+      "totalBudget": "総予算",
+      "currentYear": "今年度",
+      "totalDues": "費用合計",
+      "ytdFees": "年初来の費用",
+      "collected": "徴収済み",
+      "collectionRate": "徴収率",
+      "pending": "未払い",
+      "outstandingFees": "未払い費用"
+    },
+    "budget": {
+      "title": "予算概要",
+      "description": "カテゴリ別の計画予算と実際の支出の比較"
+    },
+    "fees": {
+      "title": "費用追跡",
+      "description": "月次費用と支払い状況の追跡",
+      "unit": "部屋",
+      "title_col": "タイトル",
+      "amount": "金額",
+      "dueDate": "支払期限",
+      "status": "ステータス",
+      "paid": "支払済み",
+      "overdue": "延滞",
+      "noFees": "費用が見つかりません",
+      "due": "期限"
+    },
+    "payments": {
+      "title": "支払い履歴",
+      "description": "すべての支払いを表示し、日付または部屋で絞り込み",
+      "date": "日付",
+      "unit": "部屋",
+      "fee": "費用",
+      "amount": "金額",
+      "payer": "支払者",
+      "noPayments": "支払いが見つかりません"
+    },
+    "filters": {
+      "unit": "部屋",
+      "allUnits": "すべての部屋",
+      "from": "から",
+      "to": "まで"
+    },
+    "actions": {
+      "exportCSV": "CSVエクスポート",
+      "payNow": "今すぐ支払う"
+    },
+    "reports": {
+      "monthlySummary": "月次サマリー",
+      "monthlyDescription": "月別徴収率",
+      "annualSummary": "年次サマリー",
+      "annualDescription": "年初来の財務実績",
+      "month": "月",
+      "totalDues": "費用合計",
+      "collected": "徴収済み",
+      "pending": "未払い",
+      "collectionRate": "徴収率",
+      "noData": "データがありません",
+      "totalCollected": "総徴収額",
+      "byCategory": "カテゴリ別支出"
+    },
+    "resident": {
+      "outstanding": "未払い残高",
+      "pendingFees": "件の未払い費用",
+      "paidYTD": "年初来支払額",
+      "paidFees": "件の支払済み費用",
+      "outstandingFees": "未払い費用",
+      "payByDueDate": "遅延料金を避けるため、支払期限までにお支払いください"
+    }
   },
   "documents": {
     "title": "書類",

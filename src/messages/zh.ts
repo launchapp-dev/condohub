@@ -200,9 +200,85 @@ export default {
     "title": "财务",
     "balance": "余额",
     "dues": "月费",
-    "payments": "付款",
     "budgets": "预算",
-    "payNow": "立即支付"
+    "payNow": "立即支付",
+    "unit": "单元",
+    "floor": "楼层",
+    "tabs": {
+      "overview": "概览",
+      "fees": "费用追踪",
+      "payments": "付款记录",
+      "reports": "报告"
+    },
+    "stats": {
+      "totalBudget": "总预算",
+      "currentYear": "本年度",
+      "totalDues": "总费用",
+      "ytdFees": "年度至今费用",
+      "collected": "已收",
+      "collectionRate": "收缴率",
+      "pending": "待收",
+      "outstandingFees": "未缴费用"
+    },
+    "budget": {
+      "title": "预算概览",
+      "description": "按类别划分的计划预算与实际支出对比"
+    },
+    "fees": {
+      "title": "费用追踪",
+      "description": "追踪月度费用和付款状态",
+      "unit": "单元",
+      "title_col": "标题",
+      "amount": "金额",
+      "dueDate": "到期日",
+      "status": "状态",
+      "paid": "已付",
+      "overdue": "逾期",
+      "noFees": "未找到费用",
+      "due": "到期"
+    },
+    "payments": {
+      "title": "付款历史",
+      "description": "查看所有付款并按日期或单元筛选",
+      "date": "日期",
+      "unit": "单元",
+      "fee": "费用",
+      "amount": "金额",
+      "payer": "付款人",
+      "noPayments": "未找到付款记录"
+    },
+    "filters": {
+      "unit": "单元",
+      "allUnits": "所有单元",
+      "from": "从",
+      "to": "到"
+    },
+    "actions": {
+      "exportCSV": "导出 CSV",
+      "payNow": "立即支付"
+    },
+    "reports": {
+      "monthlySummary": "月度摘要",
+      "monthlyDescription": "每月收缴率",
+      "annualSummary": "年度摘要",
+      "annualDescription": "年度至今财务表现",
+      "month": "月份",
+      "totalDues": "总费用",
+      "collected": "已收",
+      "pending": "待收",
+      "collectionRate": "收缴率",
+      "noData": "无可用数据",
+      "totalCollected": "总收款",
+      "byCategory": "按类别支出"
+    },
+    "resident": {
+      "outstanding": "未缴余额",
+      "pendingFees": "笔待缴费用",
+      "paidYTD": "年度至今已付",
+      "paidFees": "笔已付费用",
+      "outstandingFees": "未缴费用",
+      "payByDueDate": "请在到期日前付款以避免滞纳金"
+    }
   },
   "documents": {
     "title": "文件",

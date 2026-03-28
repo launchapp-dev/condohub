@@ -200,9 +200,85 @@ export default {
     "title": "Finanças",
     "balance": "Saldo",
     "dues": "Taxas mensais",
-    "payments": "Pagamentos",
     "budgets": "Orçamentos",
-    "payNow": "Pagar agora"
+    "payNow": "Pagar agora",
+    "unit": "Unidade",
+    "floor": "Andar",
+    "tabs": {
+      "overview": "Visão Geral",
+      "fees": "Acompanhamento de Taxas",
+      "payments": "Pagamentos",
+      "reports": "Relatórios"
+    },
+    "stats": {
+      "totalBudget": "Orçamento Total",
+      "currentYear": "Ano atual",
+      "totalDues": "Taxas Totais",
+      "ytdFees": "Taxas do ano até a data",
+      "collected": "Arrecadado",
+      "collectionRate": "taxa de arrecadação",
+      "pending": "Pendente",
+      "outstandingFees": "taxas pendentes"
+    },
+    "budget": {
+      "title": "Visão Geral do Orçamento",
+      "description": "Orçamento planejado vs gasto real por categoria"
+    },
+    "fees": {
+      "title": "Acompanhamento de Taxas",
+      "description": "Acompanhe taxas mensais e status de pagamento",
+      "unit": "Unidade",
+      "title_col": "Título",
+      "amount": "Valor",
+      "dueDate": "Data de Vencimento",
+      "status": "Status",
+      "paid": "Pago",
+      "overdue": "Atrasado",
+      "noFees": "Nenhuma taxa encontrada",
+      "due": "Vence"
+    },
+    "payments": {
+      "title": "Histórico de Pagamentos",
+      "description": "Ver todos os pagamentos e filtrar por data ou unidade",
+      "date": "Data",
+      "unit": "Unidade",
+      "fee": "Taxa",
+      "amount": "Valor",
+      "payer": "Pagador",
+      "noPayments": "Nenhum pagamento encontrado"
+    },
+    "filters": {
+      "unit": "Unidade",
+      "allUnits": "Todas as unidades",
+      "from": "De",
+      "to": "Até"
+    },
+    "actions": {
+      "exportCSV": "Exportar CSV",
+      "payNow": "Pagar Agora"
+    },
+    "reports": {
+      "monthlySummary": "Resumo Mensal",
+      "monthlyDescription": "Taxas de arrecadação por mês",
+      "annualSummary": "Resumo Anual",
+      "annualDescription": "Desempenho financeiro do ano até a data",
+      "month": "Mês",
+      "totalDues": "Taxas Totais",
+      "collected": "Arrecadado",
+      "pending": "Pendente",
+      "collectionRate": "Taxa de Arrecadação",
+      "noData": "Nenhum dado disponível",
+      "totalCollected": "Total Arrecadado",
+      "byCategory": "Gastos por Categoria"
+    },
+    "resident": {
+      "outstanding": "Saldo Pendente",
+      "pendingFees": "taxas pendentes",
+      "paidYTD": "Pago Ano a Data",
+      "paidFees": "taxas pagas",
+      "outstandingFees": "Taxas Pendentes",
+      "payByDueDate": "Pague até a data de vencimento para evitar multas"
+    }
   },
   "documents": {
     "title": "Documentos",
