@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "title": "CondoHub - Condominium Management",
+    "description": "Manage your condominium community with ease"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "visitors": "Visitors",
+    "registerVisitor": "Register Visitor",
+    "announcements": "Announcements",
+    "maintenance": "Maintenance",
+    "amenities": "Amenities",
+    "finances": "Finances",
+    "documents": "Documents",
+    "community": "Community",
+    "settings": "Settings"
+  },
+  "visitors": {
+    "title": "Visitor Management",
+    "description": "Manage and track visitors to your community",
+    "registerNew": "Register New Visitor",
+    "list": {
+      "title": "My Visitors",
+      "description": "View and manage your registered visitors",
+      "filter": {
+        "all": "All Visitors",
+        "upcoming": "Upcoming",
+        "past": "Past",
+        "checkedIn": "Checked In"
+      },
+      "columns": {
+        "name": "Visitor Name",
+        "type": "Type",
+        "arrival": "Expected Arrival",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "status": {
+        "pending": "Pending",
+        "checkedIn": "Checked In",
+        "checkedOut": "Checked Out",
+        "cancelled": "Cancelled"
+      },
+      "viewDetails": "View Details",
+      "viewQR": "View Pass",
+      "noVisitors": "No visitors found",
+      "noVisitorsDescription": "You haven't registered any visitors yet."
+    },
+    "register": {
+      "title": "Register Visitor",
+      "description": "Pre-register a visitor for your community",
+      "form": {
+        "visitorName": {
+          "label": "Visitor Name",
+          "placeholder": "Enter visitor's full name"
+        },
+        "idType": {
+          "label": "ID Type",
+          "placeholder": "Select ID type",
+          "options": {
+            "passport": "Passport",
+            "driverLicense": "Driver's License",
+            "nationalId": "National ID",
+            "other": "Other"
+          }
+        },
+        "idNumber": {
+          "label": "ID Number",
+          "placeholder": "Enter ID number"
+        },
+        "vehiclePlate": {
+          "label": "Vehicle Plate (Optional)",
+          "placeholder": "Enter vehicle plate number"
+        },
+        "arrivalDate": {
+          "label": "Expected Arrival Date",
+          "placeholder": "Select date"
+        },
+        "arrivalTime": {
+          "label": "Expected Arrival Time",
+          "placeholder": "Select time"
+        },
+        "purpose": {
+          "label": "Purpose of Visit",
+          "placeholder": "Select purpose",
+          "options": {
+            "guest": "Guest",
+            "delivery": "Delivery",
+            "contractor": "Contractor",
+            "serviceProvider": "Service Provider",
+            "realEstateAgent": "Real Estate Agent",
+            "other": "Other"
+          }
+        },
+        "unitNumber": {
+          "label": "Recipient Unit Number",
+          "placeholder": "Enter unit number"
+        },
+        "submit": "Register Visitor",
+        "submitting": "Registering..."
+      },
+      "validation": {
+        "visitorNameRequired": "Visitor name is required",
+        "idTypeRequired": "ID type is required",
+        "idNumberRequired": "ID number is required",
+        "arrivalDateRequired": "Arrival date is required",
+        "arrivalTimeRequired": "Arrival time is required",
+        "purposeRequired": "Purpose of visit is required",
+        "unitNumberRequired": "Unit number is required"
+      },
+      "success": {
+        "title": "Visitor Registered",
+        "description": "Your visitor has been registered successfully. Share the QR code pass with them."
+      },
+      "qrCode": {
+        "title": "Visitor Pass",
+        "description": "Share this QR code with your visitor",
+        "download": "Download Pass",
+        "print": "Print Pass"
+      }
+    },
+    "detail": {
+      "title": "Visitor Details",
+      "backToList": "Back to Visitors",
+      "visitorInfo": {
+        "title": "Visitor Information",
+        "name": "Name",
+        "idType": "ID Type",
+        "idNumber": "ID Number",
+        "vehiclePlate": "Vehicle Plate",
+        "purpose": "Purpose",
+        "unitNumber": "Unit Number",
+        "expectedArrival": "Expected Arrival"
+      },
+      "timeline": {
+        "title": "Status Timeline",
+        "registered": "Registered",
+        "checkedIn": "Checked In",
+        "checkedOut": "Checked Out",
+        "at": "at"
+      },
+      "actions": {
+        "checkIn": "Check In",
+        "checkOut": "Check Out",
+        "cancel": "Cancel Visitor"
+      },
+      "qrCode": {
+        "title": "Visitor Pass",
+        "scanInstructions": "Security personnel can scan this QR code to verify the visitor."
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "close": "Close"
+  }
+}

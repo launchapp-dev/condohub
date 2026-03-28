@@ -1,5 +1,6 @@
 import { sqliteTable, text, integer, real } from "drizzle-orm/sqlite-core";
 import { relations, sql } from "drizzle-orm";
+import { createId } from "@paralleldrive/cuid2";
 
 // Better Auth required tables
 export const user = sqliteTable("user", {
@@ -107,8 +108,9 @@ export const units = sqliteTable("units", {
   updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
 });
 
+// Enhanced visitors table with detailed fields from TASK-004
 export const visitors = sqliteTable("visitors", {
-  id: text("id").primaryKey(),
+  id: text("id").primaryKey().$defaultFn(() => createId()),
   communityId: text("community_id")
     .notNull()
     .references(() => communities.id, { onDelete: "cascade" }),
@@ -118,14 +120,30 @@ export const visitors = sqliteTable("visitors", {
   hostId: text("host_id")
     .notNull()
     .references(() => users.id, { onDelete: "cascade" }),
+  // Visitor details from TASK-004
   name: text("name").notNull(),
+  idType: text("id_type", {
+    enum: ["passport", "driver_license", "national_id", "other"],
+  }),
+  idNumber: text("id_number"),
+  vehiclePlate: text("vehicle_plate"),
+  expectedArrivalDate: text("expected_arrival_date"),
+  expectedArrivalTime: text("expected_arrival_time"),
+  purpose: text("purpose", {
+    enum: ["Guest", "Delivery", "Contractor", "Service Provider", "Real Estate Agent", "Other"],
+  }),
+  unitNumber: text("unit_number"),
+  // Contact info (legacy compatibility)
   phone: text("phone"),
-  purpose: text("purpose"),
-  expectedAt: integer("expected_at", { mode: "timestamp" }),
-  qrCode: text("qr_code"),
-  status: text("status", { enum: ["expected", "checked_in", "checked_out"] })
+  // Status tracking
+  status: text("status", { enum: ["pending", "expected", "checked_in", "checked_out", "cancelled"] })
     .notNull()
-    .default("expected"),
+    .default("pending"),
+  qrCode: text("qr_code"),
+  // Timestamps
+  checkedInAt: text("checked_in_at"),
+  checkedOutAt: text("checked_out_at"),
+  expectedAt: integer("expected_at", { mode: "timestamp" }),
   createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
   updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
 });

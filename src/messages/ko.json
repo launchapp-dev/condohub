@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "title": "CondoHub - 공동주택 관리",
+    "description": "콘도미니엄 커뮤니티를 쉽게 관리하세요"
+  },
+  "navigation": {
+    "dashboard": "대시보드",
+    "visitors": "방문객",
+    "registerVisitor": "방문객 등록",
+    "announcements": "공지사항",
+    "maintenance": "유지보수",
+    "amenities": "편의시설",
+    "finances": "재무",
+    "documents": "문서",
+    "community": "커뮤니티",
+    "settings": "설정"
+  },
+  "visitors": {
+    "title": "방문객 관리",
+    "description": "커뮤니티 방문객을 관리하고 추적하세요",
+    "registerNew": "새 방문객 등록",
+    "list": {
+      "title": "나의 방문객",
+      "description": "등록한 방문객을 보고 관리하세요",
+      "filter": {
+        "all": "모든 방문객",
+        "upcoming": "예정된 방문",
+        "past": "지난 방문",
+        "checkedIn": "체크인 완료"
+      },
+      "columns": {
+        "name": "방문객 이름",
+        "type": "유형",
+        "arrival": "예상 도착",
+        "status": "상태",
+        "actions": "작업"
+      },
+      "status": {
+        "pending": "대기 중",
+        "checkedIn": "체크인됨",
+        "checkedOut": "체크아웃됨",
+        "cancelled": "취소됨"
+      },
+      "viewDetails": "세부정보 보기",
+      "viewQR": "패스 보기",
+      "noVisitors": "방문객을 찾을 수 없음",
+      "noVisitorsDescription": "아직 등록한 방문객이 없습니다."
+    },
+    "register": {
+      "title": "방문객 등록",
+      "description": "커뮤니티 방문객을 사전 등록하세요",
+      "form": {
+        "visitorName": {
+          "label": "방문객 이름",
+          "placeholder": "방문객의 전체 이름 입력"
+        },
+        "idType": {
+          "label": "신분증 유형",
+          "placeholder": "신분증 유형 선택",
+          "options": {
+            "passport": "여권",
+            "driverLicense": "운전면허증",
+            "nationalId": "주민등록증",
+            "other": "기타"
+          }
+        },
+        "idNumber": {
+          "label": "신분증 번호",
+          "placeholder": "신분증 번호 입력"
+        },
+        "vehiclePlate": {
+          "label": "차량 번호판 (선택사항)",
+          "placeholder": "차량 번호판 입력"
+        },
+        "arrivalDate": {
+          "label": "예상 도착 날짜",
+          "placeholder": "날짜 선택"
+        },
+        "arrivalTime": {
+          "label": "예상 도착 시간",
+          "placeholder": "시간 선택"
+        },
+        "purpose": {
+          "label": "방문 목적",
+          "placeholder": "목적 선택",
+          "options": {
+            "guest": "손님",
+            "delivery": "배달",
+            "contractor": "계약자",
+            "serviceProvider": "서비스 제공자",
+            "realEstateAgent": "부동산 중개인",
+            "other": "기타"
+          }
+        },
+        "unitNumber": {
+          "label": "수신자 유닛 번호",
+          "placeholder": "유닛 번호 입력"
+        },
+        "submit": "방문객 등록",
+        "submitting": "등록 중..."
+      },
+      "validation": {
+        "visitorNameRequired": "방문객 이름은 필수입니다",
+        "idTypeRequired": "신분증 유형은 필수입니다",
+        "idNumberRequired": "신분증 번호는 필수입니다",
+        "arrivalDateRequired": "도착 날짜는 필수입니다",
+        "arrivalTimeRequired": "도착 시간은 필수입니다",
+        "purposeRequired": "방문 목적은 필수입니다",
+        "unitNumberRequired": "유닛 번호는 필수입니다"
+      },
+      "success": {
+        "title": "방문객 등록 완료",
+        "description": "방문객이 성공적으로 등록되었습니다. QR 코드 패스를 공유하세요."
+      },
+      "qrCode": {
+        "title": "방문객 패스",
+        "description": "이 QR 코드를 방문객과 공유하세요",
+        "download": "패스 다운로드",
+        "print": "패스 인쇄"
+      }
+    },
+    "detail": {
+      "title": "방문객 상세정보",
+      "backToList": "방문객 목록으로 돌아가기",
+      "visitorInfo": {
+        "title": "방문객 정보",
+        "name": "이름",
+        "idType": "신분증 유형",
+        "idNumber": "신분증 번호",
+        "vehiclePlate": "차량 번호판",
+        "purpose": "목적",
+        "unitNumber": "유닛 번호",
+        "expectedArrival": "예상 도착"
+      },
+      "timeline": {
+        "title": "상태 타임라인",
+        "registered": "등록됨",
+        "checkedIn": "체크인됨",
+        "checkedOut": "체크아웃됨",
+        "at": "시간"
+      },
+      "actions": {
+        "checkIn": "체크인",
+        "checkOut": "체크아웃",
+        "cancel": "방문객 취소"
+      },
+      "qrCode": {
+        "title": "방문객 패스",
+        "scanInstructions": "보안 인원이 이 QR 코드를 스캔하여 방문객을 확인할 수 있습니다."
+      }
+    }
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다",
+    "retry": "다시 시도",
+    "cancel": "취소",
+    "save": "저장",
+    "delete": "삭제",
+    "edit": "편집",
+    "view": "보기",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "submit": "제출",
+    "close": "닫기"
+  }
+}

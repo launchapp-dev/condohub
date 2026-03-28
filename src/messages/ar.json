@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "title": "CondoHub - إدارة المجمعات السكنية",
+    "description": "إدارة مجتمعك السكني بسهولة"
+  },
+  "navigation": {
+    "dashboard": "لوحة التحكم",
+    "visitors": "الزوار",
+    "registerVisitor": "تسجيل زائر",
+    "announcements": "الإعلانات",
+    "maintenance": "الصيانة",
+    "amenities": "المرافق",
+    "finances": "الماليات",
+    "documents": "المستندات",
+    "community": "المجتمع",
+    "settings": "الإعدادات"
+  },
+  "visitors": {
+    "title": "إدارة الزوار",
+    "description": "إدارة وتتبع زوار مجتمعك",
+    "registerNew": "تسجيل زائر جديد",
+    "list": {
+      "title": "زائري",
+      "description": "عرض وإدارة زوارك المسجلين",
+      "filter": {
+        "all": "جميع الزوار",
+        "upcoming": "القادمون",
+        "past": "السابقون",
+        "checkedIn": "تم تسجيل الدخول"
+      },
+      "columns": {
+        "name": "اسم الزائر",
+        "type": "النوع",
+        "arrival": "الوصول المتوقع",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "status": {
+        "pending": "معلق",
+        "checkedIn": "تم تسجيل الدخول",
+        "checkedOut": "تم تسجيل الخروج",
+        "cancelled": "ملغى"
+      },
+      "viewDetails": "عرض التفاصيل",
+      "viewQR": "عرض التصريح",
+      "noVisitors": "لم يتم العثور على زوار",
+      "noVisitorsDescription": "لم تقم بتسجيل أي زوار بعد."
+    },
+    "register": {
+      "title": "تسجيل زائر",
+      "description": "التسجيل المسبق لزائر في مجتمعك",
+      "form": {
+        "visitorName": {
+          "label": "اسم الزائر",
+          "placeholder": "أدخل الاسم الكامل للزائر"
+        },
+        "idType": {
+          "label": "نوع الهوية",
+          "placeholder": "اختر نوع الهوية",
+          "options": {
+            "passport": "جواز سفر",
+            "driverLicense": "رخصة قيادة",
+            "nationalId": "الهوية الوطنية",
+            "other": "أخرى"
+          }
+        },
+        "idNumber": {
+          "label": "رقم الهوية",
+          "placeholder": "أدخل رقم الهوية"
+        },
+        "vehiclePlate": {
+          "label": "لوحة المركبة (اختياري)",
+          "placeholder": "أدخل رقم اللوحة"
+        },
+        "arrivalDate": {
+          "label": "تاريخ الوصول المتوقع",
+          "placeholder": "اختر التاريخ"
+        },
+        "arrivalTime": {
+          "label": "وقت الوصول المتوقع",
+          "placeholder": "اختر الوقت"
+        },
+        "purpose": {
+          "label": "الغرض من الزيارة",
+          "placeholder": "اختر الغرض",
+          "options": {
+            "guest": "ضيف",
+            "delivery": "توصيل",
+            "contractor": "مقاول",
+            "serviceProvider": "مزود الخدمة",
+            "realEstateAgent": "وكيل عقاري",
+            "other": "أخرى"
+          }
+        },
+        "unitNumber": {
+          "label": "رقم الوحدة المستقبلة",
+          "placeholder": "أدخل رقم الوحدة"
+        },
+        "submit": "تسجيل الزائر",
+        "submitting": "جاري التسجيل..."
+      },
+      "validation": {
+        "visitorNameRequired": "اسم الزائر مطلوب",
+        "idTypeRequired": "نوع الهوية مطلوب",
+        "idNumberRequired": "رقم الهوية مطلوب",
+        "arrivalDateRequired": "تاريخ الوصول مطلوب",
+        "arrivalTimeRequired": "وقت الوصول مطلوب",
+        "purposeRequired": "الغرض من الزيارة مطلوب",
+        "unitNumberRequired": "رقم الوحدة مطلوب"
+      },
+      "success": {
+        "title": "تم تسجيل الزائر",
+        "description": "تم تسجيل زائرك بنجاح. شارك رمز QR معه."
+      },
+      "qrCode": {
+        "title": "تصريح الزائر",
+        "description": "شارك رمز QR هذا مع زائرك",
+        "download": "تحميل التصريح",
+        "print": "طباعة التصريح"
+      }
+    },
+    "detail": {
+      "title": "تفاصيل الزائر",
+      "backToList": "العودة إلى الزوار",
+      "visitorInfo": {
+        "title": "معلومات الزائر",
+        "name": "الاسم",
+        "idType": "نوع الهوية",
+        "idNumber": "رقم الهوية",
+        "vehiclePlate": "لوحة المركبة",
+        "purpose": "الغرض",
+        "unitNumber": "رقم الوحدة",
+        "expectedArrival": "الوصول المتوقع"
+      },
+      "timeline": {
+        "title": "الجدول الزمني للحالة",
+        "registered": "مسجل",
+        "checkedIn": "تم تسجيل الدخول",
+        "checkedOut": "تم تسجيل الخروج",
+        "at": "في"
+      },
+      "actions": {
+        "checkIn": "تسجيل الدخول",
+        "checkOut": "تسجيل الخروج",
+        "cancel": "إلغاء الزائر"
+      },
+      "qrCode": {
+        "title": "تصريح الزائر",
+        "scanInstructions": "يمكن لأمن الموقع مسح رمز QR للتحقق من الزائر."
+      }
+    }
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "retry": "إعادة المحاولة",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "view": "عرض",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "close": "إغلاق"
+  }
+}
