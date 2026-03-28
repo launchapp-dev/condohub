@@ -141,7 +141,29 @@ export default {
     "history": "履歴",
     "checkedInAt": "入室時刻",
     "checkedOutAt": "退室時刻",
-    "noQrPass": "QRパスはありません"
+    "noQrPass": "QRパスはありません",
+    "idType": "IDタイプ",
+    "idTypePassport": "パスポート",
+    "idTypeDriversLicense": "運転免許証",
+    "idTypeNationalId": "公民証",
+    "idTypeOther": "その他",
+    "vehiclePlate": "車両番号",
+    "visitorType": "来客タイプ",
+    "visitorTypeGuest": "ゲスト",
+    "visitorTypeDelivery": "配達",
+    "visitorTypeContractor": "業者",
+    "visitorTypeServiceProvider": "サービス提供者",
+    "visitorTypeRealEstateAgent": "不動産屋",
+    "visitorTypeOther": "その他",
+    "qrCodeGenerated": "QRコードを生成しました",
+    "qrCodeDownload": "QRコードをダウンロード",
+    "visitorRegistered": "来客を登録しました",
+    "visitorPass": "来客パス",
+    "formErrors": {
+      "required": "この項目は必須です",
+      "invalidTime": "無効な時間形式です",
+      "generic": "エラーが発生しました"
+    }
   },
   "announcements": {
     "title": "お知らせ",

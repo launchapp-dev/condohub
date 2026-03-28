@@ -141,7 +141,29 @@ export default {
     "history": "السجل",
     "checkedInAt": "تم تسجيل الدخول في",
     "checkedOutAt": "تم تسجيل الخروج في",
-    "noQrPass": "لا يوجد رمز دخول متاح"
+    "noQrPass": "لا يوجد رمز دخول متاح",
+    "idType": "نوع الهوية",
+    "idTypePassport": "جواز سفر",
+    "idTypeDriversLicense": "رخصة قيادة",
+    "idTypeNationalId": "الهوية الوطنية",
+    "idTypeOther": "أخرى",
+    "vehiclePlate": "لوحة المركبة",
+    "visitorType": "نوع الزائر",
+    "visitorTypeGuest": "ضيف",
+    "visitorTypeDelivery": "توصيل",
+    "visitorTypeContractor": "مقاول",
+    "visitorTypeServiceProvider": "مقدم خدمة",
+    "visitorTypeRealEstateAgent": "وكيل عقاري",
+    "visitorTypeOther": "أخرى",
+    "qrCodeGenerated": "تم إنشاء رمز QR",
+    "qrCodeDownload": "تحميل رمز QR",
+    "visitorRegistered": "تم تسجيل الزائر بنجاح",
+    "visitorPass": "بطاقة الزائر",
+    "formErrors": {
+      "required": "هذا الحقل مطلوب",
+      "invalidTime": "تنسيق وقت غير صالح",
+      "generic": "حدث خطأ ما"
+    }
   },
   "announcements": {
     "title": "الإعلانات",

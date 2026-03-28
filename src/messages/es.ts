@@ -141,7 +141,29 @@ export default {
     "history": "Historial",
     "checkedInAt": "Entrada a las",
     "checkedOutAt": "Salida a las",
-    "noQrPass": "No hay pase QR disponible"
+    "noQrPass": "No hay pase QR disponible",
+    "idType": "Tipo de ID",
+    "idTypePassport": "Pasaporte",
+    "idTypeDriversLicense": "Licencia de conducir",
+    "idTypeNationalId": "ID Nacional",
+    "idTypeOther": "Otro",
+    "vehiclePlate": "Placa del vehículo",
+    "visitorType": "Tipo de visitante",
+    "visitorTypeGuest": "Invitado",
+    "visitorTypeDelivery": "Entrega",
+    "visitorTypeContractor": "Contratista",
+    "visitorTypeServiceProvider": "Proveedor de servicios",
+    "visitorTypeRealEstateAgent": "Agente inmobiliario",
+    "visitorTypeOther": "Otro",
+    "qrCodeGenerated": "Código QR generado",
+    "qrCodeDownload": "Descargar código QR",
+    "visitorRegistered": "Visitante registrado correctamente",
+    "visitorPass": "Pase de visitante",
+    "formErrors": {
+      "required": "Este campo es obligatorio",
+      "invalidTime": "Formato de hora inválido",
+      "generic": "Algo salió mal"
+    }
   },
   "announcements": {
     "title": "Anuncios",
