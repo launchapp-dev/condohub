@@ -739,3 +739,22 @@ Each entry: `[DATE] ACTION — details`
 **Queue state**: 4 total entries after enqueue (3 assigned, 1 new, within 8 limit)
 **Idle action**: NOT dispatched — new work enqueued this cycle.
 **Status**: 3 open PRs still awaiting merge. TASK-070 remains anomalous (done in ao, no PR).
+
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 6 entries before → 8 after (TASK-074, TASK-075 enqueued → triage)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 7 — TASK-071 (critical), TASK-079 (critical), TASK-078 (critical), TASK-076 (critical), TASK-072 (critical), TASK-074 (high), TASK-075 (medium)
+**Duplicate checks**: TASK-076, TASK-078, TASK-079 already assigned/standard in queue → SKIPPED duplicates.
+**Dependencies check**:
+- TASK-071, TASK-072: both depend on TASK-070 (done in ao, no merged PR per gh pr list). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED both.
+- TASK-074: no dependencies, not in queue → enqueued → triage.
+- TASK-075: no dependencies, not in queue → enqueued → triage.
+**Action**: Enqueued TASK-074, TASK-075 → triage. TASK-071/TASK-072 skipped (TASK-070 dependency unmet — no merged PR). TASK-076/078/079 skipped (already queued).
+**Queue state**: 8 total entries after enqueue (at 8-limit capacity).
+**Idle action**: NOT dispatched — 2 new tasks enqueued this cycle, pipeline not idle.
+**Status**: 0 open PRs. TASK-070 anomalous (done in ao, no PR) — blocks TASK-071 and TASK-072. Queue at capacity (8).
