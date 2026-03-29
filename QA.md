@@ -10,7 +10,7 @@
 
 | Date | Run By | Result | Notes |
 |------|--------|--------|-------|
-| 2026-03-29 | QA Agent | PARTIAL PASS | Signup API 500 persists, i18n keys missing, no new bugs found |
+| 2026-03-29 | QA Agent | PARTIAL PASS | Both auth APIs (signup & login) return 500. i18n keys still missing. Features blocked by auth.
 
 ---
 
@@ -23,7 +23,7 @@
 | 2026-03-28 | 6 | 4 | 2 | 0 | E2E run - auth forms still incomplete, visitor forms implemented |
 | 2026-03-28 | 6 | 4 | 2 | 1 | Signup form complete but 500 error on API, login form still incomplete |
 | 2026-03-28 | 6 | 5 | 1 | 0 | Login form FIXED, Signup API still 500, i18n auth keys missing |
-| 2026-03-29 | 6 | 4 | 2 | 0 | Signup API 500 persists, i18n missing keys, no NEW bugs found |
+| 2026-03-29 | 6 | 4 | 2 | 0 | Signup API 500 persists, i18n missing keys, auth blocked |
 
 ---
 
@@ -73,10 +73,23 @@
 - [ ] Dashboard loads for authenticated user (blocked by auth)
 - [ ] Role-appropriate content displayed (not tested)
 
-### Community Management
-- [ ] Community settings accessible (requires auth)
-- [ ] Unit directory accessible (requires auth)
-- [ ] Role management accessible (requires auth)
+### Documents
+- [ ] Documents page accessible (requires auth)
+- [ ] Can upload documents with category
+- [ ] Document list displays correctly
+- [ ] Document categories work (Rules, Minutes, Financial, etc.)
+- [ ] Access control for board-only documents
+
+### Visitor Blacklist
+- [ ] Blacklist system prevents denied entries
+- [ ] Security can check visitors against blacklist
+- [ ] Blacklist alerts display properly
+
+### Community Onboarding
+- [ ] Onboarding wizard accessible at /onboarding
+- [ ] Can create new community with name, address, units
+- [ ] Can configure amenities during setup
+- [ ] Wizard completes and redirects to dashboard
 
 ---
 
@@ -84,8 +97,9 @@
 
 | ID | Severity | Description | First Seen | Status |
 |----|----------|-------------|------------|--------|
-| BUG-012 | HIGH | Signup API returns 500 error - `/api/auth/sign-up/email` fails | 2026-03-28 | **OPEN** |
-| BUG-011 | MEDIUM | Missing i18n translation key `auth.common:loading` causing console errors | 2026-03-28 | **OPEN** |
+| BUG-012 | HIGH | Signup API returns 500 error - `/api/auth/sign-up/email` fails | 2026-03-28 | **OPEN** - Task TASK-024 marked done but issue persists |
+| BUG-014 | HIGH | **Login API also returns 500** - `/api/auth/sign-in/email` fails | 2026-03-29 | **NEW** |
+| BUG-011 | MEDIUM | Missing i18n translation key `auth.common:loading` causing console errors | 2026-03-28 | **OPEN** - Task TASK-025 marked done but issue persists |
 | BUG-013 | MEDIUM | Missing i18n translation key `auth.common.or` causing console errors | 2026-03-28 | **NEW** |
 | BUG-010 | MEDIUM | No language switcher UI component | 2026-03-28 | Open |
 
@@ -214,6 +228,60 @@
 
 ---
 
+## Detailed Test Results - 2026-03-29 (Current Run)
+
+### Step 1 - Smoke Test: PASS
+- **Status:** CondoHub loads correctly with proper branding
+- **URL:** http://localhost:3000 → redirects to /en
+- **Console Errors:** 0
+- **Screenshot:** qa-step1-smoke-test-2026-03-29.png
+
+### Step 2 - Auth Flow: FAIL (CRITICAL - BOTH APIs BROKEN)
+- **Status:** Forms complete but BOTH auth APIs return 500
+- **Signup Page:**
+  - ✅ All form fields present: Full name, Email, Password, Confirm password
+  - ✅ Submit button present
+  - ❌ POST `/api/auth/sign-up/email` returns 500 (BUG-012 - STILL OPEN)
+  - ❌ Missing i18n key `auth.common:loading` causes console errors (BUG-011)
+- **Login Page:**
+  - ✅ All form fields present: Email, Password, Submit
+  - ✅ Social auth buttons present (Google, GitHub)
+  - ❌ POST `/api/auth/sign-in/email` returns 500 (NEW - Login API also broken)
+  - ❌ Missing i18n key `auth.common:or` causes console errors (BUG-013)
+- **Test Credentials:** qa-test-2026-03-29@condohub.dev / TestPass123!
+- **Screenshot:** qa-errors-signup-2026-03-29.png
+
+### Step 3 - Visitor Registration: BLOCKED
+- **Status:** Cannot test - requires authentication
+- **Route:** /en/visitors correctly redirects to /en/login when unauthenticated
+- **Onboarding:** /en/onboarding returns 307 (redirect, may require auth)
+
+### Step 4 - i18n Verification: PASS
+- **Status:** All tested locales working correctly
+- **English (/en):** "CondoHub - Modern condominium management platform" ✓
+- **Spanish (/es):** "CondoHub - Plataforma moderna de gestión de condominios" ✓
+- **Arabic (/ar):** "CondoHub - منصة حديثة لإدارة المجمعات السكنية" with RTL layout ✓
+- **Console Errors:** 0 on i18n pages (errors only appear on auth pages)
+
+### Step 5 - Navigation: PASS
+- **Status:** All public routes working, protected routes correctly redirect to login
+- **Public Routes:** /, /en, /es, /ar, /en/login, /en/signup all return 200
+- **Protected Routes:** All redirect to /en/login with 307:
+  - /en/dashboard, /en/visitors, /en/announcements, /en/maintenance
+  - /en/amenities, /en/finances, /en/documents, /en/community, /en/settings
+- **No 404 errors** on expected routes
+
+### Step 6 - Console & Network Audit: FAIL
+- **Console Errors during auth flow:**
+  - `IntlError: MISSING_MESSAGE: Could not resolve 'auth.common:loading'` (BUG-011)
+  - `IntlError: MISSING_MESSAGE: Could not resolve 'auth.common:or'` (BUG-013)
+- **Network Failures:**
+  - POST `/api/auth/sign-up/email` returns 500 (BUG-012)
+  - POST `/api/auth/sign-in/email` returns 500 (Login API also broken)
+- **Note:** Tasks TASK-024, TASK-025 marked as "done" but issues persist
+
+---
+
 ## Critical Findings
 
 1. **Login Form FIXED (TASK-019 Complete):**
@@ -229,8 +297,9 @@
    - Need to add these keys to en.json and other locale files (BUG-011, BUG-013)
 
 4. **Authentication is the Main Blocker:**
-   - Cannot test protected features (visitor management, dashboard, etc.) until signup API is fixed
-   - Once BUG-012 is resolved, full E2E testing of authenticated features can proceed
+   - BOTH Signup AND Login APIs return 500 errors
+   - Cannot test protected features (visitor management, dashboard, etc.) until auth APIs are fixed
+   - Tasks TASK-024 (signup fix) and TASK-025 (i18n fix) marked as "done" but issues persist
 
 ---
 
