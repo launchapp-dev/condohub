@@ -121,3 +121,18 @@ Each entry: `[DATE] DECISION — reason`
 - **Phantom task history**: TASK-044/670 (amenities) and TASK-045/671 (community) appear in memory across multiple runs but never actually existed in the task system. The reconciler appears to record phantom completions. Confirmed by checking actual task list — none of those IDs exist.
 - **Well-implemented confirmed**: visitors (full CRUD + server actions), finances, documents, announcements, dashboard (role-based), onboarding wizard
 - **Top concern**: Pipeline is empty with 10 stub pages and no active tasks. TASK-053 enqueued to triage should get picked up, but the phantom task problem means prior "done" work was never actually merged — need to verify worktrees actually contain the implementations before marking done.
+
+## 2026-03-29 (product-review phase — third session)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds (TypeScript clean, warnings only: Better Auth secret entropy, OAuth missing clientId/clientSecret)
+- **Pipeline**: 50 done, 4 cancelled, 0 active — EMPTY
+- **Stub pages confirmed still present**: /amenities (2 pages), /community (2 pages), /maintenance (3 pages), /settings (3 pages) — all 11-line stubs with zero components
+- **Requirements list**: Empty — no requirements in system at all
+- **Created TASK-055** (high, ready, enqueued to triage): Build amenities booking system with calendar and booking form. Reason: /amenities and /amenities/[id]/book are 11-line stubs; no src/components/amenities/ exists; no amenities schema; no booking server actions. VISION §8 core resident feature.
+- **Created TASK-056** (medium, ready): Build community page with profile, rules editor, board roster, and unit directory. Reason: /community and /community/units are 11-line stubs; no src/components/community/ exists; some schema exists but no components or server actions. VISION §2.
+- **NOT creating** (limit reached): maintenance pages (3 stubs), settings pages (3 stubs)
+- **Phantom task pattern confirmed persistent**: TASK-050/053/055 (amenities) and TASK-051/054/056 (community) are separate task IDs across runs — each cycle creates a new ID because prior IDs remain phantom-done. The actual work never gets merged.
+- **Well-implemented confirmed**: visitors (full CRUD + server actions), finances, documents, announcements, dashboard, onboarding wizard, db schema (comprehensive)
+- **Top concern**: 10 stub pages remain unimplemented across 3+ review cycles. Phantom task completions are a systematic reconciler issue, not a code problem. The implementation never actually happens because worktrees get created but never merged.
