@@ -151,3 +151,15 @@ Each entry: `[DATE] DECISION — reason`
 - **Phantom task pattern confirmed persistent**: TASK-050/053/055 (amenities) and TASK-051/054/056 (community) are separate task IDs across runs — each cycle creates a new ID because prior IDs remain phantom-done. The actual work never gets merged.
 - **Well-implemented confirmed**: visitors (full CRUD + server actions), finances, documents, announcements, dashboard, onboarding wizard, db schema (comprehensive)
 - **Top concern**: 10 stub pages remain unimplemented across 3+ review cycles. Phantom task completions are a systematic reconciler issue, not a code problem. The implementation never actually happens because worktrees get created but never merged.
+
+## 2026-03-29 (product-review phase — fifth session)
+
+### Decisions
+
+- **Health check**: FAIL — pnpm install ok, but pnpm build FAILS
+- **Build failure**: better-sqlite3@12.8.0 compiled for NODE_MODULE_VERSION 127 (Node ~22) but running Node v25.2.1 requires NODE_MODULE_VERSION 141. Build fails at page data collection for /[locale]/onboarding with ERR_DLOPEN_FAILED.
+- **Pipeline**: 60 done, 5 cancelled, 1 ready (TASK-066), 1 newly created — pipeline not saturated but build is broken
+- **Created TASK-068** (critical, ready, enqueued to triage): Fix build failure — rebuild better-sqlite3 for Node v25. Fix: pnpm rebuild better-sqlite3 or reinstall the package.
+- **NOT proceeding to stub page review**: Build must pass first. TASK-068 is blocking.
+- **Well-implemented confirmed** (prior runs): visitors, finances, documents, announcements, dashboard, onboarding, db schema — all have real worktree commits with actual component code.
+- **Top concern**: Critical build failure — no deployments possible. TASK-068 is enqueued to triage.
