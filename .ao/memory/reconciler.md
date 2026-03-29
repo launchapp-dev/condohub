@@ -423,3 +423,21 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — daemon running at 100% pool utilization (5 active agents), 11 ready tasks with worktrees, 3 active queue entries. Did NOT dispatch product-review.
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
+
+### 2026-03-29T15:45 UTC — Reconciliation run
+
+**Pipeline state:** 66 done, 10 cancelled, 10 ready (TASK-072, TASK-071, TASK-083, TASK-085, TASK-084, TASK-081, TASK-086, TASK-080, TASK-082, TASK-075), 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue had 6 entries (3 stale for CANCELLED/DONE tasks, 3 active triage for READY tasks). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 3 stale queue entries for DONE/CANCELLED tasks:
+  - `TASK-051` — task is CANCELLED, pr-reviewer assigned entry. Dropped. TASK-051 remains cancelled.
+  - `TASK-018` — task is CANCELLED, pr-reviewer assigned entry. Dropped. TASK-018 remains cancelled.
+  - `TASK-014` — task is DONE, pr-reviewer pending entry. Dropped. TASK-014 remains done.
+  - Queue now 3 entries (TASK-081, TASK-082, TASK-075 — all pending triage for READY tasks, active).
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 10 ready tasks + 3 active queue entries (for ready tasks) exist. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
