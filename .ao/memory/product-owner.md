@@ -60,3 +60,14 @@ Each entry: `[DATE] DECISION — reason`
   - /settings/page.tsx (user settings — stub)
 - **Confirmed well-implemented**: dashboard (role-based, full server actions), finances (full component + server actions), documents (full component + server actions), visitor management (full pre-registration, QR, blacklist), announcements (rich text), onboarding wizard, db schema (comprehensive)
 - **Deferred**: None new this run — all gaps already covered by existing ready tasks or deferred from prior runs
+
+## 2026-03-29 (late review)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds (TypeScript clean, no errors)
+- **Critical finding — Phantom task completions**: TASK-044 (amenities) and TASK-045 (community) are marked "done" in the task system but their branches (ao/task-044, ao/task-045) contain NO unique commits — they point to the same HEAD as main. The actual source files remain placeholder pages. Same applies to TASK-020/042 (maintenance) and TASK-021/043 (announcements) — all marked done but actual pages are empty stubs. The reconciler marked work complete without it being merged.
+- **Created TASK-670** (high, ready, enqueued to triage): Build amenities page with calendar view and booking form. Replaces stale TASK-044. The /amenities and /amenities/[id]/book pages are placeholders; VISION section 8 specifies full amenity booking with calendar, time slots, conflict detection, deposit tracking, and waitlist.
+- **Created TASK-671** (medium, ready): Build community page with profile, rules editor, and board roster. Replaces stale TASK-045. The /community page is a placeholder; VISION section 2 specifies community info, rules document (rich text, versioned), and board member roster with roles.
+- **NOT creating** (pipeline saturated): Several other placeholder pages exist (announcements, maintenance, community/units) but pipeline already has 2 new high-priority tasks this cycle. Will create in next review cycle.
+- **Verified well-implemented**: visitors page (full table with filters, server actions), dashboard (role-based, skeleton loading), finances page, documents page — all are genuine implementations, not stubs.
