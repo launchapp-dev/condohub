@@ -192,3 +192,20 @@ Each entry: `[DATE] DECISION — reason`
 - **NOT creating** (limit reached): community pages (2 stubs) — covered by community stubs, lower priority than amenities and settings
 - **Well-implemented confirmed**: visitors (full CRUD + server actions), finances, documents, announcements, dashboard, onboarding, db schema — all have real worktree commits with actual component code
 - **Top concern**: 10 stub pages remain unimplemented. TASK-071/072 (maintenance, critical), TASK-074 (amenities, high) are enqueued/ready. Phantom completions mean prior "done" tasks never produced code.
+
+## 2026-03-29 (product-review phase — eighth session)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds (TypeScript clean, no errors; warnings: Better Auth secret entropy, OAuth missing clientId/clientSecret)
+- **Node version**: Default pnpm uses Node 16.19.0 which is too old; must use `export PATH="$HOME/.nvm/versions/node/v22.22.2/bin:$PATH"` before pnpm commands
+- **Pipeline**: 65 done, 7 cancelled, 2 blocked, 5 ready, 0 active — HEALTHY, not saturated (5 ready tasks exist but I haven't created any yet this run)
+- **Queue**: 6 entries (TASK-079 assigned/i18n, TASK-074/TASK-075 assigned/triage, TASK-051/TASK-018/TASK-014 pending/pr-reviewer)
+- **10 stub pages still confirmed 11-line stubs**: amenities (2), community (2), maintenance (3), settings (3) — zero feature components exist in src/components/ for any of these areas
+- **Phantom task pattern confirmed**: Tasks 044–075 show "done" but /community/page.tsx and /community/units/page.tsx are still 11-line stubs. TASK-060/058/059 (all marked done) claimed to implement community pages but produced no code.
+- **Existing ready tasks cover**: maintenance (TASK-071/072, critical), amenities (TASK-074, high), settings (TASK-075, medium), i18n (TASK-079, critical)
+- **Community pages gap identified**: No task covers /community/page.tsx and /community/units/page.tsx — all prior community tasks are phantom-done
+- **Created TASK-080** (medium, ready, NOT enqueued per rules): Build community pages with profile, rules, board roster, and unit directory. Reason: /community/page.tsx and /community/units/page.tsx are 11-line stubs with no coverage. All prior community task IDs (TASK-045/049/054/056/059/060/061/062) are phantom-done. Depends on TASK-079 (i18n keys).
+- **NOT creating second task** (limit reached for this run)
+- **Well-implemented confirmed** (verified fresh this run): dashboard components (admin/resident/security), finances.tsx, documents components, visitors (full CRUD), announcements, onboarding wizard, db schema (comprehensive)
+- **Top concern**: 10 stub pages remain. Pipeline has 5 ready tasks but phantom completions mean actual code delivery is uncertain. Community pages (TASK-080) now queued as the only remaining uncovered gap.
