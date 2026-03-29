@@ -1341,3 +1341,24 @@ Each entry: `[DATE] ACTION — details`
 **Queue**: 3 entries after enqueue (within 8 limit).
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
 **Status**: 3 open PRs still awaiting merge. TASK-070 anomalous (done in ao, no PR) — blocks TASK-071/072. Amenities chain: TASK-083 (data layer) → TASK-087 (schema+actions) → TASK-090 (i18n) enqueued. Remaining amenities sub-tasks (084/085/086/088/089) waiting on upstream.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — late)
+
+**Queue**: 4 entries before → 7 after (TASK-072, TASK-071, TASK-080 enqueued → triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, zero reviews. 3 < 5 → continue.
+**Rework**: none (no CHANGES_REQUESTED reviews on any open PR)
+**Rebase**: none (all 3 MERGEABLE, no conflicts)
+**Ready tasks**: 12 total — critical: TASK-072, TASK-071 (no deps listed, enqueued); high: TASK-081, TASK-084, TASK-085, TASK-086, TASK-087, TASK-088, TASK-089 (all blocked on TASK-083/TASK-070 done-without-merged-PR); medium: TASK-080 (enqueued), TASK-082 (human-assigned, skip)
+**Dependencies check**:
+  - TASK-072: dependencies=[] per ao data → ENQUEUED.
+  - TASK-071: dependencies=[] per ao data → ENQUEUED.
+  - TASK-087: dependencies=[] per ao data, but description mentions TASK-083 schema. TASK-083 done/no merged PR → BLOCKED (not trusting description vs ao data, went with ao data).
+  - TASK-080: dependencies=[] → ENQUEUED.
+  - TASK-081: umbrella task, skips in favor of more granular work already queued (TASK-087).
+  - TASK-084/085/086/088/089: all blocked by TASK-083 or TASK-084 or TASK-087 (all done, no merged PRs) → SKIPPED.
+**Action**: Enqueued TASK-072, TASK-071, TASK-080 → triage (3/cycle max).
+**Queue**: 7 entries after enqueue (within 8 limit).
+**Idle action**: NOT dispatched — new tasks enqueued this cycle.
+**Status**: Queue at 7/8. TASK-083 and TASK-070 anomalous (done in ao, no merged PRs) — blocks most amenities chain. TASK-090 already queued (i18n). Maintenance (071/072) and community (080) now queued.
