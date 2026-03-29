@@ -122,6 +122,21 @@ Each entry: `[DATE] DECISION — reason`
 - **Well-implemented confirmed**: visitors (full CRUD + server actions), finances, documents, announcements, dashboard (role-based), onboarding wizard
 - **Top concern**: Pipeline is empty with 10 stub pages and no active tasks. TASK-053 enqueued to triage should get picked up, but the phantom task problem means prior "done" work was never actually merged — need to verify worktrees actually contain the implementations before marking done.
 
+## 2026-03-29 (product-review phase — fourth session)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds (TypeScript clean, warnings only: Better Auth secret entropy, OAuth missing clientId/clientSecret)
+- **Pipeline**: 52 done, 5 cancelled, 0 active — EMPTY
+- **Worktree analysis reveals phantom completions**: Tasks 044–062 all share identical non-functional commits (memory updates, reviewer fixes). Only TASK-063 has a real `feat(community): add unit-directory` commit. All prior "amenities" and "community" task IDs never produced any feature code — the reconciler marked them done without merged PRs.
+- **10 stub pages confirmed still 11-line stubs**: amenities (2), community (2), maintenance (3), settings (3)
+- **Requirements list**: Empty
+- **Created TASK-064** (high, ready, enqueued to triage): Build amenities booking system with calendar and time slots. Replaces phantom TASK-044/050/053/055. /amenities and /amenities/[id]/book are stubs; no src/components/amenities/ exists; no schema or server actions. VISION §8.
+- **Created TASK-065** (medium, ready): Build admin settings pages with community config and role management. Replaces phantom TASK-046/056. /settings, /settings/community, /settings/roles are stubs; no src/components/settings/ exists. VISION §11.
+- **NOT creating** (limit reached): maintenance pages (3 stubs) — will create next cycle.
+- **Well-implemented confirmed**: visitors, finances, documents, announcements, dashboard, onboarding, db schema — all have real worktree commits with actual component code.
+- **Top concern**: Phantom task completions keep recurring (7+ cycles). TASK-064 and TASK-065 are new IDs but describe the same gaps. Need the reconciler to stop marking work done without merged PRs — or these stub pages will remain unimplemented indefinitely.
+
 ## 2026-03-29 (product-review phase — third session)
 
 ### Decisions
