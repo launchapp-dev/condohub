@@ -246,6 +246,7 @@ export const documents = sqliteTable("documents", {
   fileUrl: text("file_url").notNull(),
   fileType: text("file_type"),
   fileSize: integer("file_size"),
+  category: text("category"),
   isPublic: integer("is_public", { mode: "boolean" }).notNull().default(false),
   createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
   updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
