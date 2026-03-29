@@ -171,3 +171,15 @@ Each entry: `[DATE] ACTION — details`
 **Ready tasks**: 4 — TASK-057, TASK-058, TASK-059, TASK-060 (all medium, all TASK-056 sub-tasks)
 **Action**: Enqueued TASK-057, TASK-058, TASK-059 → triage. TASK-060 skipped (max 3/cycle).
 **Queue state**: 5 total entries after enqueue (within 8 limit)
+
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 1 entry before → 2 after (TASK-058 assigned/triage, TASK-060 just enqueued)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 2 — TASK-058 (already queued), TASK-060 (enqueued → triage)
+**Action**: TASK-060 → triage. No deps, not already queued. TASK-058 skipped (already dispatched).
+**Idle action**: NOT dispatched — queue has 2 active entries (not idle).
