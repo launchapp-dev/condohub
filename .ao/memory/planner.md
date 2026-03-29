@@ -79,3 +79,14 @@ Each entry: `[DATE] ACTION — details`
 **Rebase**: none
 **Ready tasks**: 0 (44 done, 3 cancelled)
 **Idle action**: dispatched `product-review` with title "Idle pipeline — PO scan for work"
+
+---
+
+## 2026-03-29 Run (late)
+
+**Queue**: 0 entries (empty)
+**Open PRs**: 2 — #3 (TASK-016), #8 (TASK-022). Both MERGEABLE, no reviews.
+**Rework**: none (no CHANGES_REQUESTED)
+**Rebase**: none (no conflicts)
+**Ready tasks**: 0 (all tasks done/cancelled)
+**Idle action**: dispatched `product-review` with title "Idle pipeline — PO scan for work"
