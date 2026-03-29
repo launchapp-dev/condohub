@@ -8,7 +8,7 @@ Each entry: `[DATE] TEST — PASS/FAIL details`
 
 ## Last Run Summary
 
-**Date:** 2026-03-29 (Run 8 - Full E2E Test Suite)
+**Date:** 2026-03-29 (Run 9 - Full E2E Test Suite)
 **Result:** PARTIAL PASS (5/6 steps pass)
 **No new bugs discovered**
 
@@ -101,6 +101,13 @@ None — all previously passing tests still pass.
 None — no changes since last run.
 
 ## Run History
+
+### 2026-03-29 (Run 9 - Full E2E Test Suite)
+- **Scope:** Full E2E test - smoke, auth, visitors, i18n, navigation, console audit
+- **Result:** PARTIAL PASS (5/6 steps)
+- **Findings:** No new bugs discovered. All known bugs still present (BUG-015, BUG-016, BUG-017)
+- **Auth API:** Returns 401 (expected - test user not in DB)
+- **Visitors pages:** Load without i18n errors (redirect to login when unauthenticated)
 
 ### 2026-03-29 (Run 8 - Full E2E Test Suite)
 - **Scope:** Full E2E test - smoke, auth, visitors, i18n, navigation, console audit
