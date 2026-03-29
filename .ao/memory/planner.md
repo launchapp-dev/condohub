@@ -1362,3 +1362,31 @@ Each entry: `[DATE] ACTION — details`
 **Queue**: 7 entries after enqueue (within 8 limit).
 **Idle action**: NOT dispatched — new tasks enqueued this cycle.
 **Status**: Queue at 7/8. TASK-083 and TASK-070 anomalous (done in ao, no merged PRs) — blocks most amenities chain. TASK-090 already queued (i18n). Maintenance (071/072) and community (080) now queued.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — work-planning phase)
+
+**Queue**: 4 entries before → 7 after (TASK-091, TASK-087, TASK-090 enqueued → triage)
+**Open PRs**: 0 — no open PRs, pipeline clear.
+**Rework**: none (no open PRs with CHANGES_REQUESTED)
+**Rebase**: none (no open PRs with conflicts)
+**Ready tasks**: 14 total — critical: TASK-091, TASK-014, TASK-072, TASK-071; high: TASK-081, TASK-084, TASK-085, TASK-086, TASK-087, TASK-088, TASK-089, TASK-090; medium: TASK-082
+**Dependencies check**:
+  - TASK-091: dependencies=[], no deps → ENQUEUED.
+  - TASK-014: already queued (pending) → SKIPPED.
+  - TASK-072: dependencies=[], but description mentions TASK-070. TASK-070 done/no merged PR → SKIPPED (blocked by premature done).
+  - TASK-071: same as TASK-072 → SKIPPED.
+  - TASK-087: dependencies=[], no deps → ENQUEUED.
+  - TASK-090: dependencies=[], no deps → ENQUEUED.
+  - TASK-081: umbrella task, dependencies=[], enqueued in previous run → SKIPPED (already queued).
+  - TASK-084: depends on TASK-083, TASK-083 done/no merged PR → SKIPPED.
+  - TASK-085: depends on TASK-083 and TASK-084, upstream blocked → SKIPPED.
+  - TASK-086: depends on TASK-084 and TASK-085, upstream blocked → SKIPPED.
+  - TASK-088: depends on TASK-087, but TASK-087 was just enqueued this cycle → SKIPPED (not yet done).
+  - TASK-089: depends on TASK-087, same → SKIPPED.
+  - TASK-082: medium priority, human-assigned (samishukri) → SKIPPED.
+**Action**: Enqueued TASK-091, TASK-087, TASK-090 → triage (3/cycle max).
+**Queue**: 7 entries after enqueue (within 8 limit).
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
+**Status**: TASK-070 and TASK-083 anomalous (done in ao, no merged PRs) — blocks TASK-071, TASK-072, TASK-084, TASK-085, TASK-086, TASK-088, TASK-089. Queue at 7/8.
