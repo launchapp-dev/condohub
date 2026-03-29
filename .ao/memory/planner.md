@@ -324,3 +324,15 @@ Each entry: `[DATE] ACTION — details`
 **Rebase**: none (all 3 PRs clean)
 **Ready tasks**: 0 (no ready tasks in backlog)
 **Action**: Pipeline idle. Dispatched `product-review` with title "Idle pipeline — PO scan for work".
+
+---
+
+## 2026-03-30 Run (work-planner cycle — 2026-03-31 midday)
+
+**Queue**: 2 entries before → 3 after (TASK-067 enqueued → triage)
+**Open PRs**: 3 — #3, #8, #18. All mergeable_state: null, zero reviews.
+**Rework**: none (no CHANGES_REQUESTED reviews)
+**Rebase**: none (no conflicting PRs)
+**Ready tasks**: 1 — TASK-067 (critical, rebuild better-sqlite3 for Node v25)
+**Action**: Enqueued TASK-067 → triage. Not in queue, no dependencies. No rework, no rebase.
+**Idle action**: NOT dispatched — new work enqueued this cycle.
