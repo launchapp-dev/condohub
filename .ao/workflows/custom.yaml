@@ -16,13 +16,16 @@ mcp_servers:
     args: ["-y", "@modelcontextprotocol/server-sequential-thinking"]
   github:
     command: npx
-    args: ["-y", "@modelcontextprotocol/server-github"]
+    args: ["-y", "gh-cli-mcp"]
   package-version:
     command: npx
     args: ["-y", "mcp-package-version"]
   playwright:
     command: npx
     args: ["-y", "@playwright/mcp@latest"]
+  minimax:
+    command: uvx
+    args: ["minimax-mcp"]
 
 agents:
   default:
@@ -181,7 +184,7 @@ agents:
         - Top concern: (one sentence)
     model: minimax/MiniMax-M2.7
     tool: claude
-    mcp_servers: ["ao", "sequential-thinking", "package-version"]
+    mcp_servers: ["ao", "sequential-thinking", "package-version", "minimax"]
 
   planner:
     system_prompt: |
@@ -534,7 +537,7 @@ agents:
          Check ao.task.list first — do NOT create duplicate bug tasks.
     model: kimi-code/kimi-for-coding
     tool: claude
-    mcp_servers: ["ao", "playwright", "context7"]
+    mcp_servers: ["ao", "playwright", "context7", "minimax"]
 
   pr-sweep:
     system_prompt: |
