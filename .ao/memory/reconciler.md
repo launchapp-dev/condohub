@@ -227,3 +227,19 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline idle — 0 ready + 0 in-progress + queue empty. Dispatched product-review ("Idle pipeline — PO scan for work").
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
+### 2026-03-29T16:XX — Reconciliation run
+
+**Pipeline state:** 63 done, 5 cancelled, 1 ready (TASK-069), 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue empty (2 stale entries dropped). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 2 stale queue entries:
+  - `Idle pipeline — PO scan for work` — stale idle trigger from when queue was empty (dispatched 2026-03-29T15:37 UTC). Pipeline now has TASK-069 ready, so not idle. Dropped.
+  - `TASK-069` — task is READY (not done), but queue entry was assigned stale (~2026-03-29T15:41 UTC, ~24h old) with no active workflow. Dropped. TASK-069 remains in ready state for daemon re-assignment.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 1 ready task (TASK-069) exists. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
