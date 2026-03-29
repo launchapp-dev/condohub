@@ -481,6 +481,23 @@ Each entry: `[DATE] ACTION — details`
 
 ## 2026-03-29 Run (work-planner cycle — current)
 
+**Queue**: 0 entries before → 1 after (TASK-082 enqueued → triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, zero reviews.
+**Rework**: none (no CHANGES_REQUESTED reviews on any open PR)
+**Rebase**: none (all 3 MERGEABLE, no conflicts)
+**Ready tasks**: 4 — TASK-071 (critical), TASK-072 (critical), TASK-082 (medium), TASK-080 (medium)
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070. TASK-070 is "done" in ao but has NO merged PR → per rule: never treat as done if PR never merged → dependency NOT met. SKIPPED both.
+- TASK-080: depends on TASK-079 (blocked, not done/cancelled) → dependency NOT met. SKIPPED.
+- TASK-082: no dependencies, not in queue → enqueued → triage.
+**Action**: Enqueued TASK-082 → triage. SKIPPED: TASK-071, TASK-072 (TASK-070 unmet dep), TASK-080 (TASK-079 blocked).
+**Idle action**: NOT dispatched — queue has 1 active entry, pipeline not idle.
+**Status**: 3 open PRs still awaiting merge. TASK-070 flagged again (done, no PR).
+
+---
+
+## 2026-03-29 Run (work-planner cycle — current)
+
 **Queue**: 7 entries (1 assigned/rebase-and-retry, 6 pending) — 7 < 8, proceed
 **Open PRs**: 3 — #3 (MERGEABLE/CLEAN), #8 (MERGEABLE/CLEAN), #18 (MERGEABLE/CLEAN). Zero reviews on all.
 **Rework**: none (no CHANGES_REQUESTED reviews)
