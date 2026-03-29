@@ -495,3 +495,20 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 48 ready/in-progress tasks across fleet, 2 active queue entries, daemon running. Did NOT dispatch product-review.
 
 **Note:** Most "condohub" tasks in reconciler memory (TASK-014/016/018/022/051/063/071-093) are brain repo tasks with condohub content, not actual condohub worktree tasks. TASK-690 (product-catalog: Create knowledge file for condohub) is the only task with condohub worktree. TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
+
+### 2026-03-30T16:54 UTC — Reconciliation run
+
+**Pipeline state:** 66 done, 11 cancelled, 16 ready, 0 blocked (all unblocked), 0 in-progress, 0 failed. Queue: 2 entries (TASK-088 pending triage, TASK-089 pending triage — both ready tasks, ~9m old). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done — not merged).
+
+**Actions:**
+- STEP 1 (UNBLOCK): 9 tasks unblocked → `ready`:
+  - TASK-071, TASK-072, TASK-081, TASK-082, TASK-084, TASK-087, TASK-090, TASK-091 — all had `blocked_reason: "workflow runner failed"`, no real dependencies, worktrees exist, paused: true → false via `ao task update --id <tid> --status ready`. All now ready.
+  - TASK-080 — parent task blocked_reason: "Blocked by status update", deps on TASK-091/092/093 all now `ready`. Unblocked via `ao task update --id TASK-080 --status ready`. Now ready.
+  - Ready count now 16 (from 7).
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Queue has 2 pending entries (TASK-088, TASK-089 — ~9m old, tasks are `ready`, triage workflow pending). Not yet stale (30m threshold). No drop needed. Prior run's stale assigned entries (TASK-051 etc.) already auto-cleaned.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still OPEN (not merged into main). No action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 16 ready tasks, 2 pending queue entries, daemon running. Did NOT dispatch product-review.
+
+**Note:** All 9 previously-blocked tasks now ready. TASK-080's unblock also triggered since its 3 subtask dependencies (TASK-091/092/093) are all now ready. TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
