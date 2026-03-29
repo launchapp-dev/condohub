@@ -342,5 +342,82 @@ export default {
     "no": "いいえ",
     "optional": "任意",
     "required": "必須"
+  },
+  "onboarding": {
+    "title": "コミュニティを設定",
+    "welcome": "ようこそ、{name}さん！マンションコミュニティを作成しましょう。",
+    "steps": {
+      "community": "コミュニティ",
+      "units": "部屋",
+      "amenities": "施設",
+      "review": "確認"
+    },
+    "community": {
+      "title": "コミュニティ情報",
+      "subtitle": "マンションについて教えてください",
+      "name": "コミュニティ名",
+      "namePlaceholder": "例：サンライズレジデンス",
+      "address": "住所",
+      "addressPlaceholder": "例：メインストリート123、市",
+      "language": "デフォルト言語",
+      "languagePlaceholder": "言語を選択",
+      "timezone": "タイムゾーン",
+      "timezonePlaceholder": "タイムゾーンを選択"
+    },
+    "languages": {
+      "en": "英語",
+      "es": "スペイン語",
+      "pt": "ポルトガル語",
+      "fr": "フランス語",
+      "ar": "アラビア語",
+      "zh": "中国語（簡体字）",
+      "ja": "日本語",
+      "ko": "韓国語"
+    },
+    "units": {
+      "title": "建物構造",
+      "subtitle": "部屋、アパート、または住宅を追加",
+      "unitNumber": "部屋番号",
+      "unitNumberPlaceholder": "例：101、A-12",
+      "floor": "階",
+      "add": "部屋を追加",
+      "remove": "削除"
+    },
+    "amenities": {
+      "title": "施設",
+      "subtitle": "居住者が利用できる施設を追加（任意）",
+      "name": "施設名",
+      "namePlaceholder": "例：プール、ジム",
+      "description": "説明",
+      "descriptionPlaceholder": "施設の簡単な説明",
+      "requiresApproval": "予約に承認が必要",
+      "add": "施設を追加",
+      "remove": "削除",
+      "skipHint": "このステップをスキップし、後で施設を追加できます"
+    },
+    "review": {
+      "title": "確認と完了",
+      "subtitle": "作成する前にコミュニティの詳細を確認してください",
+      "communityInfo": "コミュニティ情報",
+      "name": "名前",
+      "address": "住所",
+      "language": "言語",
+      "timezone": "タイムゾーン",
+      "unitsInfo": "部屋",
+      "unitsCount": "{count} 部屋",
+      "amenitiesInfo": "施設",
+      "amenitiesCount": "{count} 施設",
+      "noAmenities": "施設が追加されていません"
+    },
+    "complete": "コミュニティを作成",
+    "errors": {
+      "communityNameRequired": "コミュニティ名は必須です",
+      "addressRequired": "住所は必須です",
+      "unitNumberRequired": "部屋番号は必須です",
+      "floorRequired": "階は0以上である必要があります",
+      "atLeastOneUnit": "少なくとも1つの部屋を追加してください",
+      "amenityNameRequired": "施設名は必須です",
+      "generic": "問題が発生しました。もう一度お試しください。"
+    }
   }
 } as const;

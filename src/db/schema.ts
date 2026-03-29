@@ -76,6 +76,7 @@ export const communities = sqliteTable("communities", {
   name: text("name").notNull(),
   address: text("address").notNull(),
   defaultLocale: text("default_locale").default("en").notNull(),
+  timezone: text("timezone").default("UTC").notNull(),
   createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
   updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
 });

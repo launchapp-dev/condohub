@@ -342,5 +342,82 @@ export default {
     "no": "No",
     "optional": "Opcional",
     "required": "Obligatorio"
+  },
+  "onboarding": {
+    "title": "Configura tu comunidad",
+    "welcome": "¡Bienvenido, {name}! Vamos a crear tu comunidad de condominios.",
+    "steps": {
+      "community": "Comunidad",
+      "units": "Unidades",
+      "amenities": "Amenidades",
+      "review": "Revisión"
+    },
+    "community": {
+      "title": "Información de la Comunidad",
+      "subtitle": "Cuéntanos sobre tu condominio",
+      "name": "Nombre de la comunidad",
+      "namePlaceholder": "p. ej., Residencias Amanecer",
+      "address": "Dirección",
+      "addressPlaceholder": "p. ej., Calle Principal 123, Ciudad",
+      "language": "Idioma predeterminado",
+      "languagePlaceholder": "Selecciona un idioma",
+      "timezone": "Zona horaria",
+      "timezonePlaceholder": "Selecciona una zona horaria"
+    },
+    "languages": {
+      "en": "Inglés",
+      "es": "Español",
+      "pt": "Portugués",
+      "fr": "Francés",
+      "ar": "Árabe",
+      "zh": "Chino (Simplificado)",
+      "ja": "Japonés",
+      "ko": "Coreano"
+    },
+    "units": {
+      "title": "Estructura del Edificio",
+      "subtitle": "Agrega tus unidades, apartamentos o casas",
+      "unitNumber": "Número de unidad",
+      "unitNumberPlaceholder": "p. ej., 101, A-12",
+      "floor": "Piso",
+      "add": "Agregar unidad",
+      "remove": "Eliminar"
+    },
+    "amenities": {
+      "title": "Amenidades",
+      "subtitle": "Agrega instalaciones disponibles para residentes (opcional)",
+      "name": "Nombre de la amenidad",
+      "namePlaceholder": "p. ej., Piscina, Gimnasio",
+      "description": "Descripción",
+      "descriptionPlaceholder": "Breve descripción de la amenidad",
+      "requiresApproval": "Requiere aprobación para reservar",
+      "add": "Agregar amenidad",
+      "remove": "Eliminar",
+      "skipHint": "Puedes omitir este paso y agregar amenidades más tarde"
+    },
+    "review": {
+      "title": "Revisar y Completar",
+      "subtitle": "Por favor revisa los detalles de tu comunidad antes de crear",
+      "communityInfo": "Información de la Comunidad",
+      "name": "Nombre",
+      "address": "Dirección",
+      "language": "Idioma",
+      "timezone": "Zona horaria",
+      "unitsInfo": "Unidades",
+      "unitsCount": "{count} unidades",
+      "amenitiesInfo": "Amenidades",
+      "amenitiesCount": "{count} amenidades",
+      "noAmenities": "No se agregaron amenidades"
+    },
+    "complete": "Crear comunidad",
+    "errors": {
+      "communityNameRequired": "El nombre de la comunidad es obligatorio",
+      "addressRequired": "La dirección es obligatoria",
+      "unitNumberRequired": "El número de unidad es obligatorio",
+      "floorRequired": "El piso debe ser 0 o mayor",
+      "atLeastOneUnit": "Por favor agrega al menos una unidad",
+      "amenityNameRequired": "El nombre de la amenidad es obligatorio",
+      "generic": "Algo salió mal. Por favor, inténtalo de nuevo."
+    }
   }
 } as const;

@@ -342,5 +342,82 @@ export default {
     "no": "否",
     "optional": "可选",
     "required": "必填"
+  },
+  "onboarding": {
+    "title": "设置您的社区",
+    "welcome": "欢迎，{name}！让我们创建您的公寓社区。",
+    "steps": {
+      "community": "社区",
+      "units": "单元",
+      "amenities": "设施",
+      "review": "审核"
+    },
+    "community": {
+      "title": "社区信息",
+      "subtitle": "告诉我们关于您的公寓",
+      "name": "社区名称",
+      "namePlaceholder": "例如：日出公寓",
+      "address": "地址",
+      "addressPlaceholder": "例如：主街123号，城市",
+      "language": "默认语言",
+      "languagePlaceholder": "选择语言",
+      "timezone": "时区",
+      "timezonePlaceholder": "选择时区"
+    },
+    "languages": {
+      "en": "英语",
+      "es": "西班牙语",
+      "pt": "葡萄牙语",
+      "fr": "法语",
+      "ar": "阿拉伯语",
+      "zh": "中文（简体）",
+      "ja": "日语",
+      "ko": "韩语"
+    },
+    "units": {
+      "title": "建筑结构",
+      "subtitle": "添加您的单元、公寓或住宅",
+      "unitNumber": "单元号",
+      "unitNumberPlaceholder": "例如：101，A-12",
+      "floor": "楼层",
+      "add": "添加单元",
+      "remove": "删除"
+    },
+    "amenities": {
+      "title": "设施",
+      "subtitle": "添加可供居民使用的设施（可选）",
+      "name": "设施名称",
+      "namePlaceholder": "例如：游泳池、健身房",
+      "description": "描述",
+      "descriptionPlaceholder": "设施的简要描述",
+      "requiresApproval": "预订需要审批",
+      "add": "添加设施",
+      "remove": "删除",
+      "skipHint": "您可以跳过此步骤，稍后添加设施"
+    },
+    "review": {
+      "title": "审核并完成",
+      "subtitle": "请在创建前审核您的社区详情",
+      "communityInfo": "社区信息",
+      "name": "名称",
+      "address": "地址",
+      "language": "语言",
+      "timezone": "时区",
+      "unitsInfo": "单元",
+      "unitsCount": "{count} 个单元",
+      "amenitiesInfo": "设施",
+      "amenitiesCount": "{count} 个设施",
+      "noAmenities": "未添加设施"
+    },
+    "complete": "创建社区",
+    "errors": {
+      "communityNameRequired": "社区名称为必填项",
+      "addressRequired": "地址为必填项",
+      "unitNumberRequired": "单元号为必填项",
+      "floorRequired": "楼层必须大于或等于0",
+      "atLeastOneUnit": "请至少添加一个单元",
+      "amenityNameRequired": "设施名称为必填项",
+      "generic": "出了点问题。请重试。"
+    }
   }
 } as const;
