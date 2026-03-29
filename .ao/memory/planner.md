@@ -1211,3 +1211,26 @@ Each entry: `[DATE] ACTION — details`
 **Action**: Enqueued TASK-074, TASK-081, TASK-080 → triage (3 max per cycle). SKIPPED: TASK-071, TASK-072 (TASK-070 unmet dep), TASK-085, TASK-084, TASK-086 (TASK-083 dependency chain), TASK-082 (human-assigned).
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
 **Notes**: ao task list shows 0 total tasks; may be a session/project scope issue with the CLI. Pipeline is actively working on 3 PRs. No action taken.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-31)
+
+**Queue**: 1 entry before (TASK-074), +3 enqueued → 4 total
+**Open PRs**: 3 — #3, #8, #18. All MERGEABLE/CLEAN, zero reviews. 3 < 5, proceed.
+**Rework**: none (no CHANGES_REQUESTED reviews on any open PR)
+**Rebase**: none (all 3 PRs CLEAN, no conflicts)
+**Ready tasks**: 10 — filtered to top 3:
+- TASK-071 (critical, maintenance list+detail, dep TASK-070 done/no PR → routed to triage)
+- TASK-072 (critical, maintenance form, dep TASK-070 done/no PR → routed to triage)
+- TASK-081 (high, amenities booking, no deps → enqueued)
+**Skipped**:
+- TASK-084 (high, blocked by TASK-083 which is blocked/runner-failed)
+- TASK-085 (high, blocked by TASK-083 which is blocked/runner-failed)
+- TASK-080 (medium, description says depends on TASK-079 which is cancelled; formal deps array empty but risky)
+- TASK-075 (medium, settings pages, duplicate scope with TASK-082 which is human-assigned)
+- TASK-074 (already queued)
+- TASK-082 (human-assigned, skip autonomous dispatch)
+**Action**: Enqueued TASK-071, TASK-072, TASK-081 → triage. Max 3/cycle.
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
+**Status**: 3 open PRs still awaiting merge. Amenities pipeline: TASK-083 blocked (runner failed), TASK-084/085 waiting on TASK-083. Maintenance: TASK-070 done/no PR (needs verification), TASK-071/072 now enqueued.
