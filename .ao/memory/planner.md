@@ -226,6 +226,16 @@ Each entry: `[DATE] ACTION — details`
 
 ## 2026-03-29 Run (work-planner cycle — current)
 
+**Queue**: 7 entries before (TASK-051/018/014: pr-reviewer; TASK-071/081/082: assigned/triage) → 8 after (+TASK-084 pending/triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, no CHANGES_REQUESTED reviews.
+**Rework**: none
+**Rebase**: none
+**Ready tasks**: TASK-093/092 (critical, blocked by TASK-091=blocked), TASK-071 (critical, already queued assigned), TASK-081 (high, already queued assigned), TASK-084 (high, dep TASK-083=done ✓, enqueued), TASK-085 (high, dep TASK-084=not-done → blocked), TASK-086 (high, deps not done → blocked), TASK-088/089 (high, dep TASK-087=blocked → blocked), TASK-082 (medium, already queued assigned)
+**Action**: TASK-084 → triage (enqueued=true). TASK-071/081 returned enqueued=false (already assigned in queue). 1 new enqueue this cycle.
+**Skipped**: TASK-093/092 (TASK-091 blocked), TASK-085 (TASK-084 not done), TASK-086 (TASK-084/085 not done), TASK-088/089 (TASK-087 blocked), TASK-082 (already queued)
+**Queue capacity**: 7→8 (at limit). No idle trigger needed.
+**Idle action**: NOT dispatched — queue has active entries.
+
 **Queue**: 0 entries before → 3 after (TASK-074, TASK-075, TASK-071 enqueued → triage)
 **Open PRs**: 0 — none
 **Rework**: none (no open PRs)
