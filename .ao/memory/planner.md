@@ -802,3 +802,20 @@ Each entry: `[DATE] ACTION — details`
 **Action**: Enqueued TASK-078, TASK-076, TASK-071 → triage (top 3 critical, no deps, not already queued).
 **Remaining unqueued**: TASK-072 (critical), TASK-074 (high), TASK-075 (medium), TASK-080 (medium)
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — evening)
+
+**Queue**: 0 → 3 entries (TASK-079 assigned/triage, TASK-078 pending/triage, TASK-076 pending/triage)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 6 — TASK-079 (critical), TASK-078 (critical), TASK-076 (critical), TASK-071 (critical), TASK-072 (critical), TASK-080 (medium)
+**Dependency checks**:
+  - TASK-071, TASK-072: descriptions mention TASK-070 as dependency. TASK-070 status=done in ao but NO merged PR (gh pr list empty) → dependency NOT met → SKIPPED.
+  - TASK-079, TASK-078, TASK-076: no dependencies, not in queue → enqueued → triage.
+  - TASK-080: description mentions TASK-079 as dependency, not yet merged → SKIPPED.
+**Action**: Enqueued TASK-079, TASK-078, TASK-076 → triage (3 critical tasks, max 3 per run).
+**Remaining unqueued**: TASK-071, TASK-072 (blocked by TASK-070 no-PR), TASK-080 (blocked by TASK-079 not-merged).
+**Idle action**: NOT dispatched — new work enqueued this cycle.
