@@ -1140,3 +1140,17 @@ Each entry: `[DATE] ACTION — details`
 **Queue**: 6 entries after enqueue (within 8 limit).
 **Idle action**: NOT dispatched — 3 new tasks dispatched.
 **Status**: 3 open PRs awaiting review (#3, #8, #18). Amenity chain (083→084→085→086) not actionable — upstream deps have no merged PRs. Maintenance tasks (071, 072) still blocked by TASK-070 anomalous done/no-PR state.
+
+---
+
+## 2026-03-30 Run (continued)
+
+**Queue**: 6 entries — TASK-051/TASK-018/TASK-014 (assigned/pr-reviewer), TASK-081/TASK-083/TASK-082 (pending/triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, zero reviews.
+**Rework**: none (no CHANGES_REQUESTED reviews)
+**Rebase**: none (all 3 MERGEABLE/clean)
+**Ready tasks**: TASK-074, TASK-075, TASK-080 (no deps, not queued) — but pipeline full (6/8, 3 active triage pending)
+**Action**: No new enqueues. Queue has 3 pending triage entries actively working. 3-cycle max not reached this run but capacity reason to defer.
+**Skipped**: TASK-071/072 (TASK-070 done but no merged PR), TASK-084/085/086 (deps pending in queue), TASK-074/075/080 (candidates but queue already working 3 pending triage items).
+**Idle action**: NOT dispatched — queue has 6 entries, not idle.
+**Status**: 3 open PRs (#3, #8, #18) awaiting review. Pipeline working.
