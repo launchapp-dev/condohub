@@ -773,3 +773,16 @@ Each entry: `[DATE] ACTION — details`
 **Idle action**: NOT dispatched — queue has 5 active entries (not idle).
 
 **Flagged issue**: TASK-070 is marked "done" in ao but has zero PRs (not even closed). Tasks depending on it (TASK-071, TASK-072) cannot be enqueued until a PR for TASK-070 is created and merged.
+
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 0 entries before → 3 after (TASK-078, TASK-076, TASK-071 enqueued → triage)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 7 — TASK-078 (critical), TASK-076 (critical), TASK-071 (critical), TASK-072 (critical), TASK-074 (high), TASK-075 (medium), TASK-080 (medium)
+**Action**: Enqueued TASK-078, TASK-076, TASK-071 → triage (top 3 critical, no deps, not already queued).
+**Remaining unqueued**: TASK-072 (critical), TASK-074 (high), TASK-075 (medium), TASK-080 (medium)
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
