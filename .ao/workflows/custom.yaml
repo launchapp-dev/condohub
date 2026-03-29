@@ -22,7 +22,7 @@ mcp_servers:
     args: ["-y", "mcp-package-version"]
   playwright:
     command: npx
-    args: ["-y", "@playwright/mcp@latest"]
+    args: ["-y", "@playwright/record-mcp@latest", "--record", "--record-format", "webm", "--output-dir", ".ao/recordings"]
   minimax:
     command: uvx
     args: ["minimax-mcp"]
