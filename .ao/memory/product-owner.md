@@ -163,3 +163,16 @@ Each entry: `[DATE] DECISION — reason`
 - **NOT proceeding to stub page review**: Build must pass first. TASK-068 is blocking.
 - **Well-implemented confirmed** (prior runs): visitors, finances, documents, announcements, dashboard, onboarding, db schema — all have real worktree commits with actual component code.
 - **Top concern**: Critical build failure — no deployments possible. TASK-068 is enqueued to triage.
+
+## 2026-03-29 (product-review phase — sixth session)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds (TypeScript clean, warnings only: Better Auth secret entropy, OAuth missing clientId/clientSecret)
+- **Pipeline**: 66 done, 5 cancelled, 2 ready (TASK-071, TASK-072 — maintenance pages), 0 active — HEALTHY, not saturated but at 2-task creation limit
+- **7 stub pages confirmed still 11-line stubs**: amenities (2), community (2), settings (3) — zero components exist in src/components/
+- **3 maintenance stubs still 11-line stubs**: maintenance/page.tsx, maintenance/new/page.tsx, maintenance/[id]/page.tsx — but TASK-071/TASK-072 cover these
+- **Worktree analysis confirms phantom pattern**: TASK-069 through TASK-073 all share commit 54e1970 ("fix reviewer: handle missing/empty PRs") — no feature code. Only task-task-063 has a real feature commit (unit-directory). Prior amenities/community/settings/ maintenance tasks were never merged.
+- **No new tasks created** (at 2-task limit, and pipeline already has 2 critical tasks queued)
+- **Well-implemented confirmed**: visitors, finances, documents, announcements, dashboard, onboarding, db schema — all have real worktree commits with actual component code
+- **Top concern**: Phantom task completions persist — tasks marked done but work never merged. 10 stub pages remain across 6+ review cycles. TASK-071 and TASK-072 are queued for maintenance implementation.
