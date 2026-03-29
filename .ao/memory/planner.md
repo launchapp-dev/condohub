@@ -212,6 +212,23 @@ Each entry: `[DATE] ACTION — details`
 
 ## 2026-03-29 Run (work-planner cycle — current)
 
+**Queue**: 0 entries before → 3 after (TASK-074, TASK-075, TASK-071 enqueued → triage)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 5 — TASK-071 (critical), TASK-072 (critical), TASK-074 (high), TASK-075 (medium), TASK-080 (medium)
+**Dependencies checked**:
+- TASK-071, TASK-072: depend on TASK-070 (done, but NO merged PR, no open PR) → routed to triage for verification
+- TASK-074: no dependencies → enqueued
+- TASK-075: no dependencies → enqueued
+- TASK-080: depends on TASK-079 (blocked/paused, no merged PR) → SKIPPED
+**Action**: Enqueued TASK-074, TASK-075, TASK-071 → triage. SKIPPED: TASK-072 (blocked/dep), TASK-080 (blocked/dep).
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — current)
+
 **Queue**: 0 entries before → 1 after (TASK-062 enqueued → triage)
 **Open PRs**: 2 — #3 (TASK-016), #8 (TASK-022). Both MERGEABLE, no review decisions.
 **Rework**: none (no CHANGES_REQUESTED reviews)
