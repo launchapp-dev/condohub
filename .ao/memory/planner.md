@@ -720,3 +720,22 @@ Each entry: `[DATE] ACTION — details`
 **Skipped**: TASK-072 (deps TASK-070 not met — done but no merged PR)
 **Action**: Enqueued TASK-079, TASK-075 → triage. TASK-072 skipped (TASK-070 dependency unmet — no merged PR).
 **Queue state**: 5 total entries after enqueue (within 8 limit)
+
+---
+
+## 2026-03-29 Run (work-planner cycle — current)
+
+**Queue**: 3 entries before → 4 after (TASK-079 enqueued → triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All mergeStateStatus=CLEAN, zero reviews.
+**Rework**: none (no CHANGES_REQUESTED reviews)
+**Rebase**: none (all 3 PRs CLEAN, no conflicts)
+**Ready tasks**: 6 — TASK-074 (already queued/assigned), TASK-076 (already queued/assigned), TASK-078 (already queued/assigned), TASK-071 (blocked), TASK-072 (blocked), TASK-079 (enqueued → triage)
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070. TASK-070 is "done" in ao but has NO merged PR (gh pr list --merged --search "TASK-070" = empty). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED both.
+- TASK-074, TASK-076, TASK-078: already dispatched (assigned in queue) → SKIPPED.
+- TASK-079: no dependencies, not in queue → enqueued → triage.
+**Skipped**: TASK-071, TASK-072 (deps TASK-070 not met — done but no merged PR), TASK-074/076/078 (already queued).
+**Action**: Enqueued TASK-079 → triage. 1 new enqueue this cycle.
+**Queue state**: 4 total entries after enqueue (3 assigned, 1 new, within 8 limit)
+**Idle action**: NOT dispatched — new work enqueued this cycle.
+**Status**: 3 open PRs still awaiting merge. TASK-070 remains anomalous (done in ao, no PR).
