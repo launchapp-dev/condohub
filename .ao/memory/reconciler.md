@@ -103,6 +103,23 @@ Each entry: `[DATE] ACTION — details`
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
 
+### 2026-03-29T15:05 — Reconciliation run
+
+**Pipeline state:** 62 done, 5 cancelled, 1 ready (TASK-067), 0 in-progress, 0 backlog. Queue was 3 entries (TASK-051 assigned stale, TASK-014 assigned stale, "Idle pipeline" assigned stale). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): TASK-067 (Fix better-sqlite3 build failure) promoted backlog→ready. No dependencies, no blocked_by.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 2 stale queue entries:
+  - `TASK-051` — task is DONE, queue entry was assigned stale (~2026-03-29T15:03 UTC, ~24+ hours old). Dropped.
+  - `Idle pipeline — PO scan for work` — pipeline is NOT idle (TASK-067 ready), stale duplicate idle trigger. Dropped.
+  - `TASK-014` — auto-cleaned before manual drop needed (task is DONE).
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 1 ready task (TASK-067) + queue empty. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
 ### 2026-03-30 — Reconciliation run
 
 **Pipeline state:** 48 done, 3 cancelled, 1 blocked (TASK-052), 0 ready, 0 in-progress. 1 assigned queue entry (Playwright smoke test — custom subject, manually enqueued ~04:22 UTC). 2 open PRs (#3, #8).
