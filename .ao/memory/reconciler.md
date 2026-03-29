@@ -18,8 +18,14 @@ Each entry: `[DATE] ACTION — details`
 ## Queue Cleaned
 <!-- Stale queue entries dropped, with reason. -->
 
+### 2026-03-30 (third pass)
+- `TASK-051`, `TASK-018`, `TASK-014` — all tasks are DONE; queue entries auto-cleaned by daemon before manual drop needed.
+
 ## Idle Pipeline Triggers
 <!-- Times product-review was dispatched due to idle pipeline. -->
+
+### 2026-03-30T14:03 UTC — Pipeline idle
+- Dispatched `product-review` ("Idle pipeline — PO scan for work") — 0 ready, 0 in-progress, queue empty. 3 open PRs exist but represent done/merged work awaiting review.
 
 ---
 
@@ -55,6 +61,20 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 4 ready tasks + 2 open PRs. Did NOT dispatch product-review.
 
 **Note:** TASK-016 and TASK-022 marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
+### 2026-03-30 — Reconciliation run (third pass)
+
+**Pipeline state:** 58 done, 5 cancelled, 0 ready, 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue was 3 entries (TASK-051, TASK-018, TASK-014 — all for DONE tasks). Queue auto-cleaned before manual drop needed. 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Queue entries for TASK-051, TASK-018, TASK-014 (all DONE) — auto-cleaned before manual drop. No action needed.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline idle — 0 ready + 0 in-progress + queue empty. Dispatched product-review ("Idle pipeline — PO scan for work").
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
 
 ### 2026-03-30 — Reconciliation run
 
