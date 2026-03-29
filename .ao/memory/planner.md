@@ -231,3 +231,15 @@ Each entry: `[DATE] ACTION — details`
 **Ready tasks**: 0 (no ready tasks in backlog)
 **Action**: No new enqueues — no ready tasks available.
 **Idle action**: NOT dispatched — queue has 2 active entries (TASK-051, TASK-014 assigned/pr-reviewer), pipeline not idle.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-30 midday)
+
+**Queue**: 2 entries before → 3 after (TASK-065 enqueued → triage)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 2 — TASK-064 (high, already queued as triage), TASK-065 (medium)
+**Action**: TASK-064 skipped (already dispatched). Enqueued TASK-065 → triage. No deps, not already queued.
+**Idle action**: NOT dispatched — 1 new task enqueued this cycle, pipeline not idle.
