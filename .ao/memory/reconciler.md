@@ -25,6 +25,20 @@ Each entry: `[DATE] ACTION — details`
 
 ## Run Log
 
+### 2026-03-30 — Reconciliation run
+
+**Pipeline state:** 48 done, 3 cancelled, 1 blocked (TASK-052), 0 ready, 0 in-progress. 1 assigned queue entry (Playwright smoke test — custom subject, manually enqueued ~04:22 UTC). 2 open PRs (#3, #8).
+
+**Actions:**
+- STEP 1 (UNBLOCK): TASK-052 was blocked (workflow runner exit code 1, single failure, not 3+ failures). Set to `ready` — daemon can retry.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Queue has 1 active assigned entry (Playwright smoke test — custom/manual dispatch, e2e-test workflow). Not a stale idle trigger, not stale.
+- STEP 5 (MARK DONE): PRs #3 and #8 still open, tasks already marked done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — TASK-052 is now ready. Did NOT dispatch product-review.
+
+**Note:** TASK-016 and TASK-022 marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
 ### 2026-03-29 — Reconciliation run (second pass)
 
 **Pipeline state:** 46 done, 3 cancelled, 2 ready (TASK-050, TASK-051). 2 assigned queue entries (TASK-050, TASK-051). 2 open PRs (#3, #8).
