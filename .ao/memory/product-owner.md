@@ -207,5 +207,23 @@ Each entry: `[DATE] DECISION — reason`
 - **Community pages gap identified**: No task covers /community/page.tsx and /community/units/page.tsx — all prior community tasks are phantom-done
 - **Created TASK-080** (medium, ready, NOT enqueued per rules): Build community pages with profile, rules, board roster, and unit directory. Reason: /community/page.tsx and /community/units/page.tsx are 11-line stubs with no coverage. All prior community task IDs (TASK-045/049/054/056/059/060/061/062) are phantom-done. Depends on TASK-079 (i18n keys).
 - **NOT creating second task** (limit reached for this run)
+
+## 2026-03-29 (product-review phase — ninth session)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds (TypeScript clean, no errors; warnings: Better Auth secret entropy, OAuth missing clientId/clientSecret)
+- **Pipeline**: 72 done, 283 cancelled, 3 ready, 2 in_progress, 0 queued — HEALTHY
+- **Queue**: EMPTY — no items currently queued
+- **10 stub pages confirmed still 11-line stubs**: amenities (2), community (2), maintenance (3), settings (3) — zero feature components exist in src/components/ for any of these areas
+- **Existing ready tasks confirmed**: TASK-071/TASK-072 (maintenance, critical), TASK-080 (community, medium) — 3 tasks ready, pipeline not saturated
+- **Amenities gap (2 stubs, no ready task)**: /amenities and /amenities/[id]/book have no ready task covering them. All prior amenity task IDs (TASK-044/050/053/055/064/074) are phantom-done.
+- **Settings gap (3 stubs, no ready task)**: /settings, /settings/community, /settings/roles have no ready task. Prior TASK-075 was phantom-done.
+- **Created TASK-081** (high, ready, enqueued to triage): Build amenities booking system with calendar and time slots. Covers 2 stub pages. No src/components/amenities/ exists. VISION §8.
+- **Created TASK-082** (medium, ready, NOT enqueued per rules): Build admin settings pages with community config and role management. Covers 3 stub pages. No src/components/settings/ exists. VISION §11.
+- **NOT creating additional tasks** (2-task limit reached)
+- **Phantom task pattern confirmed persistent**: 72 "done" tasks but 10 stub pages remain. TASK-044 through TASK-075 (30+ IDs) all claimed to implement amenities/community/maintenance but none produced actual code.
+- **Well-implemented confirmed** (fresh verification): visitors, finances, documents, announcements, dashboard, onboarding, db schema — all are genuine implementations with component files and server actions
+- **Top concern**: 10 stub pages across 5 feature areas remain unimplemented after 9+ review cycles. TASK-081 (amenities, high) and TASK-082 (settings, medium) are the highest-impact gaps not covered by existing ready tasks.
 - **Well-implemented confirmed** (verified fresh this run): dashboard components (admin/resident/security), finances.tsx, documents components, visitors (full CRUD), announcements, onboarding wizard, db schema (comprehensive)
 - **Top concern**: 10 stub pages remain. Pipeline has 5 ready tasks but phantom completions mean actual code delivery is uncertain. Community pages (TASK-080) now queued as the only remaining uncovered gap.
