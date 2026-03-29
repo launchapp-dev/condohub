@@ -300,3 +300,19 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 8 ready tasks + 2 active queue entries exist. Did NOT dispatch product-review.
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
+
+### 2026-03-29T20:05 UTC — Reconciliation run
+
+**Pipeline state:** 65 done, 7 cancelled, 8 ready (TASK-071, TASK-072, TASK-074, TASK-075, TASK-076, TASK-078, TASK-079, TASK-080), 0 in-progress, 0 blocked, 0 backlog. Queue had 1 entry (TASK-051 stale, auto-cleaned before drop). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): 6 blocked tasks resolved:
+  - `TASK-051` — blocked_reason="workflow runner failed" but `completed_at` was already set (2026-03-29T04:18:01Z). Data inconsistency: status said blocked but task was done. Fixed: blocked→backlog→in_progress→done. TASK-051 now correctly `done`.
+  - `TASK-074`, `TASK-075`, `TASK-076`, `TASK-078`, `TASK-079` — all blocked_reason="workflow runner failed" (single failure), no dependencies, no blocked_by. Set to `ready` via blocked→ready transition.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Queue entry for TASK-051 (assigned, pr-reviewer) was stale — task is done. Drop attempted but entry was already auto-cleaned. Queue now empty.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still OPEN (not merged), tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 8 ready tasks + 0 in-progress + queue empty. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
