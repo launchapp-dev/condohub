@@ -577,3 +577,20 @@ Each entry: `[DATE] ACTION — details`
 **Action**: Pipeline idle (queue empty, no ready tasks). Dispatched `product-review` with title "Idle pipeline — PO scan for work".
 **Idle action**: Pipeline idle. product-review dispatched.
 **Status**: BLOCKER unchanged: TASK-070 marked "done" in ao but has no PR. PO must resolve TASK-070 to unblock TASK-071 and TASK-072. 3 open PRs still awaiting merge.
+
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 4 entries before → 5 after (TASK-075 enqueued → triage)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 4 — TASK-072 (critical), TASK-071 (critical), TASK-074 (high, already queued), TASK-075 (medium)
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070 (stated in descriptions). TASK-070 is "done" in ao (completed_at=2026-03-29T16:14:25) but has NO merged PR (gh pr list --state all --search "TASK-070" = empty). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED both.
+- TASK-074: already dispatched (pending/triage in queue) → SKIPPED.
+- TASK-075: no dependencies, not in queue → enqueued → triage.
+**Action**: Enqueued TASK-075 → triage. No deps, not already queued. TASK-071/TASK-072 skipped (TASK-070 dependency unmet — no merged PR). TASK-074 skipped (already queued).
+**Idle action**: NOT dispatched — 1 new task enqueued this cycle, pipeline not idle.
+**Status**: BLOCKER unchanged: TASK-070 marked "done" in ao but has no PR. PO must resolve TASK-070 to unblock TASK-071 and TASK-072.
