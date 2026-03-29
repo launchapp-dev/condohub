@@ -90,3 +90,15 @@ Each entry: `[DATE] ACTION — details`
 **Rebase**: none (no conflicts)
 **Ready tasks**: 0 (all tasks done/cancelled)
 **Idle action**: dispatched `product-review` with title "Idle pipeline — PO scan for work"
+
+---
+
+## 2026-03-29 Run (midday)
+
+**Queue**: 3 entries before — TASK-048 (triage), TASK-018 (pr-reviewer), TASK-014 (pr-reviewer)
+**Open PRs**: 2 — #3 (TASK-016), #8 (TASK-022). Both MERGEABLE, clean.
+**Rework**: none (no reviews at all)
+**Rebase**: none (both clean)
+**Ready tasks**: 1 — TASK-049 (medium, community page + units directory)
+**Action**: Enqueued TASK-049 → triage. No deps, not already queued.
+**Idle action**: Not dispatched — queue has 4 active entries (not idle).
