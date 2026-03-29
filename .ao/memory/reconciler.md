@@ -458,3 +458,26 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — daemon running, 13 ready tasks + 3 active queue entries. Did NOT dispatch product-review.
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
+
+### 2026-03-30T15:38 UTC — Reconciliation run
+
+**Pipeline state:** 66 done, 11 cancelled, 15 ready (TASK-092, TASK-093 newly promoted from backlog), 1 blocked (TASK-080), 0 backlog, 0 in-progress, 0 failed. Queue had 4 entries (TASK-072 assigned ~15h old stale, TASK-091 assigned stale, TASK-087 assigned stale, TASK-090 pending stale). Daemon: 4 active agents, running. Open PRs: #3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done.
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks resolved. TASK-080 (blocked_reason: "Blocked by status update", blocked_by: null) is correctly blocked — dependencies on subtasks TASK-091 (ready), TASK-092 (now promoted), TASK-093 (now promoted) are not yet done. Paused: true. Parent task correctly waiting for subtasks.
+- STEP 2 (PROMOTE): TASK-092 and TASK-093 promoted backlog→ready. Both are decomposed subtasks of TASK-080 with no real blockers, just in backlog. Ready count now 15.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 3 stale queue entries:
+  - `TASK-072` — task is READY, queue entry was assigned (~2026-03-29T23:25 UTC, ~15h old, no active workflow). Dropped. TASK-072 remains ready.
+  - `TASK-091` — already auto-cleaned (dropped:0). No action.
+  - `TASK-087` — task is READY, queue entry was assigned (~15h old, no active workflow). Dropped. TASK-087 remains ready.
+  - `TASK-090` — already auto-cleaned (dropped:0). No action.
+  - After cleaning, daemon re-enqueued TASK-051 (cancelled), TASK-018 (cancelled), TASK-014 (ready) — all stale done/cancelled tasks. Dropped all 3:
+    - `TASK-051` — task is CANCELLED, queue entry stale. Dropped.
+    - `TASK-018` — task is CANCELLED, queue entry stale. Dropped.
+    - `TASK-014` — task is READY, queue entry stale. Dropped.
+  - Queue now empty after all cleaning.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 15 ready tasks exist, daemon running with 4 active agents. Did NOT dispatch product-review.
+
+**Note:** TASK-080 correctly blocked — depends on subtasks TASK-091/092/093 which are now all ready/in-progress. TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
