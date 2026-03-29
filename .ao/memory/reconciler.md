@@ -441,3 +441,20 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 10 ready tasks + 3 active queue entries (for ready tasks) exist. Did NOT dispatch product-review.
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
+
+### 2026-03-30T16:30 UTC — Reconciliation run
+
+**Pipeline state:** 66 done, 11 cancelled, 13 ready (TASK-014, TASK-072, TASK-071, TASK-090, TASK-087, TASK-081, TASK-089, TASK-088, TASK-085, TASK-084, TASK-086, TASK-080, TASK-082), 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue had 3 entries (TASK-072/TASK-071 assigned triage, TASK-080 pending triage). Daemon running. 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): TASK-014 unblocked → `ready` (blocked_reason: "workflow runner failed: status Some(1)", no deps, worktree exists, paused: true → false). Ready count now 13.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 1 stale queue entry:
+  - `TASK-090` — task is READY, queue entry was assigned triage (~2026-03-29T23:19 UTC, ~17h old, no active workflow). Dropped. TASK-090 remains ready.
+  - `TASK-051` — queue entry already cleaned (dropped:0). No action.
+  - Queue now 3 entries (TASK-072, TASK-071 assigned triage active, TASK-080 pending triage active).
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — daemon running, 13 ready tasks + 3 active queue entries. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
