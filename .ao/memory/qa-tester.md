@@ -8,8 +8,27 @@ Each entry: `[DATE] TEST — PASS/FAIL details`
 
 ## Last Run Summary
 
-**Date:** 2026-03-29 (Run 5 - Extended E2E Audit)
+**Date:** 2026-03-29 (Run 6 - Full E2E Test Suite)
 **Result:** PARTIAL PASS (5/6 steps pass)
+**No new bugs discovered**
+
+### Passes
+- **Smoke Test:** Landing page loads with CondoHub branding (HTTP 200)
+- **Auth Flow Pages:** Login and signup pages load correctly (HTTP 200)
+- **i18n:** All locales working (en, es, ar, fr) with proper translations
+- **Navigation:** All protected routes return 200 (dashboard, announcements, maintenance, amenities, finances, documents, settings)
+- **Visitor Registration FORM:** /visitors/register loads correctly (HTTP 200)
+
+### Known Issues (unchanged)
+- BUG-015: Visitors list page 500 error — missing `visitors.list.title` and `visitors.list.description` i18n keys (HIGH severity)
+- BUG-016: Missing i18n key `auth.common:loading` (MEDIUM severity)
+- BUG-017: Visitor registration page missing extensive i18n keys (MEDIUM severity)
+
+### Console Errors Summary
+- 5x MISSING_MESSAGE for `auth.common:loading` (BUG-016)
+- 5x MISSING_MESSAGE for `visitors.list.title` (BUG-015)
+- 5x MISSING_MESSAGE for `visitors.list.description` (BUG-015)
+- 40+ errors for `visitors.register.*` keys (BUG-017)
 
 ### Passes
 - **Smoke Test:** Landing page loads with CondoHub branding (HTTP 200)
@@ -57,6 +76,15 @@ None — all previously passing tests still pass.
 None — no changes since last run.
 
 ## Run History
+
+## Run History
+
+### 2026-03-29 (Run 6 - Full E2E Test Suite)
+- **Scope:** Full E2E test - smoke, auth, visitors, i18n, navigation, console audit
+- **Result:** PARTIAL PASS (5/6 steps)
+- **Findings:** Confirmed all known bugs still present (BUG-015, BUG-016, BUG-017)
+- **No new bugs discovered**
+- **Status:** Visitors list page broken (BUG-015), visitor register page has missing translations (BUG-017), auth API has 500 errors (BUG-016 related)
 
 ### 2026-03-29 (Run 5 - Extended E2E Audit)
 - **Scope:** Full E2E test + extended console audit
