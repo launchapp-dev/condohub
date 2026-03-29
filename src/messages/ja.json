@@ -164,5 +164,38 @@
     "previous": "前へ",
     "submit": "送信",
     "close": "閉じる"
+  },
+  "community": {
+    "units": {
+      "searchPlaceholder": "ユニット番号で検索...",
+      "noUnits": "ユニットが見つかりません",
+      "noUnitsDescription": "検索条件またはフィルターを調整してください。",
+      "filter": {
+        "all": "すべて",
+        "occupied": "入居中",
+        "vacant": "空室",
+        "maintenance": "メンテナンス"
+      },
+      "status": {
+        "occupied": "入居中",
+        "vacant": "空室",
+        "maintenance": "メンテナンス"
+      },
+      "card": {
+        "unitLabel": "ユニット",
+        "floor": "階",
+        "occupant": "居住者"
+      },
+      "directory": {
+        "title": "ユニット一覧",
+        "description": "コミュニティのすべてのユニットを表示・管理"
+      },
+      "table": {
+        "unitNumber": "ユニット番号",
+        "floor": "階",
+        "status": "ステータス",
+        "occupant": "居住者"
+      }
+    }
   }
 }
