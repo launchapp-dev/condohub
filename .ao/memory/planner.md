@@ -940,3 +940,19 @@ Each entry: `[DATE] ACTION — details`
 **Status**: 3 open PRs awaiting merge. All 4 ready tasks remain blocked:
   - TASK-070: anomalous (done in ao, no PR ever created) — blocks TASK-071, TASK-072. PO must either create+merge a PR for TASK-070 or cancel TASK-070.
   - TASK-079: blocked by runner failure — blocks TASK-080.
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-31)
+
+**Queue**: 0 entries (empty)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, zero reviews.
+**Rework**: none (no CHANGES_REQUESTED reviews)
+**Rebase**: none (all PRs MERGEABLE, no conflicts)
+**Ready tasks**: 3 — TASK-071 (critical), TASK-072 (critical), TASK-080 (medium)
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070. TASK-070 is "done" in ao (completed_at=2026-03-29T16:14:25) but has NO merged PR (gh pr list --merged --search "TASK-070" = empty, --closed = empty — no PR ever created). Code not in codebase either (grep for getMaintenanceRequests = no files). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED both.
+- TASK-080: depends on TASK-079 (status=blocked, runner failed, paused=true, no merged PR) → dependency NOT met → SKIPPED.
+**Action**: No new enqueues — all 3 ready tasks blocked by unmet dependencies.
+**Idle action**: Dispatched product-review ("Idle pipeline — unmet dependencies block all ready tasks") — queue empty, no rework, no rebase, no new work possible.
+**Status**: 3 open PRs awaiting review/merge. 3 ready tasks remain blocked:
+  - TASK-070: anomalous (done in ao, no PR, work not in codebase) — blocks TASK-071, TASK-072. PO must either create+merge a PR for TASK-070 or cancel TASK-070.
+  - TASK-079: blocked by runner failure — blocks TASK-080.
