@@ -1009,4 +1009,22 @@ Each entry: `[DATE] ACTION — details`
 - TASK-074, TASK-075, TASK-080: skipped (max 3/cycle limit reached).
 **Action**: Enqueued TASK-078, TASK-076, TASK-081 → triage. SKIPPED: TASK-071, TASK-072 (TASK-070 no merged PR), TASK-074, TASK-075, TASK-080 (max 3 reached).
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
+
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 4 entries before → 6 after (TASK-076, TASK-079 enqueued → triage)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 9 — TASK-079 (critical, enqueued), TASK-076 (critical, enqueued), TASK-071 (critical, skipped/TASK-070 no PR), TASK-072 (critical, skipped/TASK-070 no PR), TASK-081 (high, already queued/decompose), TASK-074 (high, duplicate of TASK-081), TASK-082 (medium), TASK-075 (medium), TASK-080 (medium)
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070 (stated in description). TASK-070 is "done" in ao but has NO merged PR (gh pr list --state all --search "TASK-070" = empty). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED both.
+- TASK-076, TASK-079: no explicit dependencies (title prefixes like [TASK-075] are work breakdown labels, not "depends on" statements), not already in queue → enqueued.
+- TASK-074: duplicate of TASK-081, not enqueued separately.
+- TASK-081: already in queue (assigned/decompose) → SKIPPED.
+**Action**: Enqueued TASK-076, TASK-079 → triage. SKIPPED: TASK-071, TASK-072 (TASK-070 dependency unmet — no merged PR), TASK-081 (already queued), TASK-074 (duplicate of queued TASK-081).
+**Idle action**: NOT dispatched — 2 new tasks enqueued this cycle, pipeline not idle.
+**Status**: 0 open PRs. TASK-070 anomalous (done in ao, no PR) — blocks TASK-071 and TASK-072. Queue at 6 entries (under 8 limit).
 **Queue**: 4 entries (TASK-079 assigned/standard, +3 pending triage)
