@@ -345,3 +345,23 @@ Each entry: `[DATE] ACTION — details`
 - STEP 4 (CLEAN QUEUE): Queue has 3 assigned entries (TASK-079, TASK-078, TASK-076) — all for ready tasks, recent triage assignments. Not stale. No action needed.
 - STEP 5 (MARK DONE): No open PRs to check. No action.
 - STEP 6 (IDLE CHECK): Pipeline idle — 8 ready + 0 in-progress + queue with 3 assigned (for already-ready tasks) = pipeline effectively idle. Dispatched `product-review` ("Idle pipeline — PO scan for work").
+
+### 2026-03-30T14:11 UTC — Reconciliation run
+
+**Pipeline state:** 66 done, 7 cancelled, 9 ready (TASK-079, TASK-076, TASK-071, TASK-072, TASK-081, TASK-074, TASK-082, TASK-075, TASK-080), 0 in-progress, 0 blocked. Queue empty (5 stale entries dropped). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): 2 blocked tasks unblocked → `ready` (single workflow runner failure, no dependencies, worktrees exist): TASK-079 (blocked_reason: "workflow runner failed: status Some(1)"), TASK-082 (same). Ready count now 9.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found (1-2x failures resolved in STEP 1).
+- STEP 4 (CLEAN QUEUE): Dropped 5 stale queue entries:
+  - `TASK-076` — task is READY, queue entry was assigned (~2026-03-29T20:53 UTC, ~17h old, no active workflow). Dropped. TASK-076 remains ready.
+  - `TASK-081` — task is READY, queue entry was assigned (~17h old, no active workflow). Dropped. TASK-081 remains ready.
+  - `TASK-051` — task is DONE, queue entry was pending (~2026-03-29T20:54 UTC, ~17h old). Dropped.
+  - `TASK-018` — task is DONE, queue entry was pending (pr-reviewer, ~17h old). Dropped.
+  - `TASK-014` — task is DONE, queue entry was pending (pr-reviewer, ~17h old). Dropped.
+  - Queue now empty.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 9 ready tasks exist + queue empty. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
