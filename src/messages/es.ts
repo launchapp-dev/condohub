@@ -34,7 +34,8 @@ export default {
     "loginWithGoogle": "Continuar con Google",
     "loginWithGitHub": "Continuar con GitHub",
     "common": {
-      "loading": "Cargando..."
+      "loading": "Cargando...",
+      "or": "o"
     },
     "errors": {
       "invalidCredentials": "Correo o contraseña inválidos",

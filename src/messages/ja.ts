@@ -34,7 +34,8 @@ export default {
     "loginWithGoogle": "Google で続ける",
     "loginWithGitHub": "GitHub で続ける",
     "common": {
-      "loading": "読み込み中..."
+      "loading": "読み込み中...",
+      "or": "または"
     },
     "errors": {
       "invalidCredentials": "メールアドレスまたはパスワードが無効です",

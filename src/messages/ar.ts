@@ -34,7 +34,8 @@ export default {
     "loginWithGoogle": "المتابعة باستخدام Google",
     "loginWithGitHub": "المتابعة باستخدام GitHub",
     "common": {
-      "loading": "جاري التحميل..."
+      "loading": "جاري التحميل...",
+      "or": "أو"
     },
     "errors": {
       "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",

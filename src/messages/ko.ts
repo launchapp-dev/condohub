@@ -34,7 +34,8 @@ export default {
     "loginWithGoogle": "Google로 계속",
     "loginWithGitHub": "GitHub으로 계속",
     "common": {
-      "loading": "로딩 중..."
+      "loading": "로딩 중...",
+      "or": "또는"
     },
     "errors": {
       "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다",
