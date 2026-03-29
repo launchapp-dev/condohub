@@ -222,3 +222,22 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 2 ready tasks (TASK-071, TASK-072) exist. Did NOT dispatch product-review.
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
+### 2026-03-29T20:00 UTC — Reconciliation run
+
+**Pipeline state:** 65 done, 6 cancelled, 4 ready (TASK-071, TASK-072, TASK-074, TASK-075), 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue had 4 entries (TASK-051 assigned stale ~44h, TASK-074 assigned stale ~44h, TASK-075 assigned stale ~44h, TASK-071 assigned stale ~44h — all with no active workflow). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 4 stale queue entries:
+  - `TASK-051` — task is DONE, queue entry was assigned ~2026-03-29T18:21 UTC (~44h old, no active workflow). Dropped. TASK-051 remains done.
+  - `TASK-074` — task is READY, queue entry was assigned ~44h ago, no active workflow (0 in-progress tasks). Dropped. TASK-074 remains ready for daemon re-assignment.
+  - `TASK-075` — task is READY, queue entry was assigned ~44h ago, no active workflow. Dropped. TASK-075 remains ready for daemon re-assignment.
+  - `TASK-071` — task is READY, queue entry was assigned ~44h ago, no active workflow. Dropped. TASK-071 remains ready for daemon re-assignment.
+  - Queue now empty.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 4 ready tasks (TASK-071, TASK-072, TASK-074, TASK-075) exist. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
