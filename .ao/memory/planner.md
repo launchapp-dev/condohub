@@ -528,6 +528,24 @@ Each entry: `[DATE] ACTION — details`
 
 ## 2026-03-29 Run (work-planner cycle)
 
+**Queue**: 4 entries before → 7 after (TASK-079, TASK-078, TASK-076 enqueued → triage)
+**Open PRs**: 3 — #3 (MERGEABLE), #8 (MERGEABLE), #18 (MERGEABLE). Zero reviews on all.
+**Rework**: none (no CHANGES_REQUESTED reviews)
+**Rebase**: none (all 3 MERGEABLE, no conflicts)
+**Ready tasks**: 9 — TASK-079 (critical), TASK-078 (critical), TASK-076 (critical), TASK-071 (critical), TASK-072 (critical), TASK-081 (high), TASK-074 (high), TASK-075 (medium), TASK-080 (medium)
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070. TASK-070 not found in ao (no status). Per rule: dependency NOT met → SKIPPED both.
+- TASK-080: depends on TASK-079. TASK-079 is being enqueued this cycle → dependency met → SKIPPED (max 3/cycle).
+- TASK-081, TASK-074: no dependencies, not in queue → SKIPPED (max 3/cycle limit).
+- TASK-075: no dependencies, not in queue → SKIPPED (max 3/cycle limit).
+- TASK-079, TASK-078, TASK-076: no dependencies, not already queued → enqueued → triage.
+**Action**: Enqueued TASK-079, TASK-078, TASK-076 → triage (3/cycle max). SKIPPED: TASK-071, TASK-072 (TASK-070 dep unmet/not found), TASK-080 (TASK-079 being enqueued), TASK-081, TASK-074, TASK-075 (max 3/cycle).
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle, pipeline not idle.
+**Status**: 3 open PRs still awaiting merge. TASK-070 still anomalous. New work dispatched: i18n messages, role-manager, user-settings-form.
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
 **Queue**: 0 entries before → 1 after (product-review enqueued)
 **Open PRs**: 0 — none
 **Rework**: none (no open PRs)
