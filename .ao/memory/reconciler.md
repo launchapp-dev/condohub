@@ -18,6 +18,21 @@ Each entry: `[DATE] ACTION — details`
 ## Queue Cleaned
 <!-- Stale queue entries dropped, with reason. -->
 
+### 2026-03-29 — Reconciliation run
+
+**Pipeline state:** 57 done, 5 cancelled, 3 ready (TASK-051, TASK-064, TASK-065), 0 in-progress, 0 blocked, 0 backlog. Queue had 2 entries (TASK-051 pending stale, TASK-064 assigned active). Open PRs #3 (TASK-016 done), #8 (TASK-022 done), #18 (TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 1 stale queue entry:
+  - `TASK-051` — task is DONE, queue entry was pending stale (triage workflow, manually enqueued 2026-03-29T14:22:34 UTC). Dropped. TASK-051 remains in done state.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 3 ready tasks + 1 active queue entry (TASK-064). Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
+
 ### 2026-03-30 (third pass)
 - `TASK-051`, `TASK-018`, `TASK-014` — all tasks are DONE; queue entries auto-cleaned by daemon before manual drop needed.
 
