@@ -1,5 +1,16 @@
 ---
 
+## Detailed Test Results - 2026-03-29 (Run 3 - Playwright Smoke Test)
+
+### Step 1 - Smoke Test: PASS
+- **Status:** CondoHub loads correctly with proper branding
+- **URL:** http://localhost:3000 → redirects to /en (HTTP 200)
+- **Content:** "CondoHub" heading and "Modern condominium management platform" subtitle confirmed
+- **Console Errors:** 0 on initial load
+- **Screenshot:** qa-step1-smoke-test-2026-03-29-2.png
+
+---
+
 ## Detailed Test Results - 2026-03-29 (Current Run)
 
 ### Step 1 - Smoke Test: PASS

@@ -8,24 +8,16 @@ Each entry: `[DATE] TEST — PASS/FAIL details`
 
 ## Last Run Summary
 
-**Date:** 2026-03-29 (Run 2)
-**Result:** PARTIAL PASS (5/6 steps pass)
+**Date:** 2026-03-29 (Run 3 - Playwright MCP Smoke Test)
+**Result:** PASS - Smoke test only
 
 ### Passes
-- Smoke Test: CondoHub loads correctly
-- Auth Flow: Login API works, user successfully authenticated
-- i18n Verification: All locales work correctly with RTL support
-- Navigation: All protected routes accessible (dashboard, announcements, maintenance, amenities, finances, documents, settings)
-- Protected Routes: All accessible after authentication
+- **Smoke Test:** CondoHub landing page loads correctly with "CondoHub" heading and "Modern condominium management platform" subtitle
+- **Navigation:** Log in and Sign up buttons visible and accessible
+- **Console:** No critical errors on initial load
+- **Screenshot:** qa-step1-smoke-test-2026-03-29-2.png captured successfully
 
-### Failures
-- Visitor Management: 500 error due to missing i18n keys (BUG-015)
-
-### New Findings
-- Missing `auth.common:loading` i18n key (causes client-side error during signup)
-- Missing `auth.common:or` i18n key (likely for social auth divider)
-
-### Known Bugs Filed
+### Known Bugs (unchanged)
 - BUG-015: Visitors page 500 error — missing `visitors.list.title` and `visitors.list.description` i18n keys (HIGH severity)
 
 ## Known Bugs Filed
@@ -53,6 +45,12 @@ None — auth APIs that were failing in all previous runs are now working.
 | BUG-014 | Login API 500 error | 2026-03-28 |
 
 ## Run History
+
+### 2026-03-29 (Run 3 - Playwright MCP Smoke Test)
+- **Scope:** Smoke test only - verify app loads and video recording works
+- **Result:** PASS - Landing page loads with CondoHub branding
+- **Screenshot:** qa-step1-smoke-test-2026-03-29-2.png
+- **Status:** Ready for full E2E test suite
 
 ### 2026-03-28
 - Auth APIs FIXED — both signup and login now return 200 OK
