@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "title": "CondoHub - Gesti?n de Condominios",
+    "description": "Gerencie sua comunidade de condom?nio com facilidade"
+  },
+  "navigation": {
+    "dashboard": "Painel",
+    "visitors": "Visitantes",
+    "registerVisitor": "Registrar Visitante",
+    "announcements": "Comunicados",
+    "maintenance": "Manuten??o",
+    "amenities": "Comodidades",
+    "finances": "Finan?as",
+    "documents": "Documentos",
+    "community": "Comunidade",
+    "settings": "Configura??es"
+  },
+  "visitors": {
+    "title": "Gest?o de Visitantes",
+    "description": "Gerencie e rastreie visitantes na sua comunidade",
+    "registerNew": "Registrar Novo Visitante",
+    "list": {
+      "title": "Meus Visitantes",
+      "description": "Visualize e gerencie seus visitantes registrados",
+      "filter": {
+        "all": "Todos os Visitantes",
+        "upcoming": "Pr?ximos",
+        "past": "Passados",
+        "checkedIn": "Registrados"
+      },
+      "columns": {
+        "name": "Nome do Visitante",
+        "type": "Tipo",
+        "arrival": "Chegada Prevista",
+        "status": "Status",
+        "actions": "A??es"
+      },
+      "status": {
+        "pending": "Pendente",
+        "checkedIn": "Registrado",
+        "checkedOut": "Sa?da Registrada",
+        "cancelled": "Cancelado"
+      },
+      "viewDetails": "Ver Detalhes",
+      "viewQR": "Ver Passe",
+      "noVisitors": "Nenhum visitante encontrado",
+      "noVisitorsDescription": "Voc? ainda n?o registrou nenhum visitante."
+    },
+    "register": {
+      "title": "Registrar Visitante",
+      "description": "Pr?-registre um visitante para sua comunidade",
+      "form": {
+        "visitorName": {
+          "label": "Nome do Visitante",
+          "placeholder": "Digite o nome completo do visitante"
+        },
+        "idType": {
+          "label": "Tipo de Documento",
+          "placeholder": "Selecione o tipo de documento",
+          "options": {
+            "passport": "Passaporte",
+            "driverLicense": "Carteira de Motorista",
+            "nationalId": "Documento Nacional",
+            "other": "Outro"
+          }
+        },
+        "idNumber": {
+          "label": "N?mero do Documento",
+          "placeholder": "Digite o n?mero do documento"
+        },
+        "vehiclePlate": {
+          "label": "Placa do Ve?culo (Opcional)",
+          "placeholder": "Digite a placa do ve?culo"
+        },
+        "arrivalDate": {
+          "label": "Data de Chegada Prevista",
+          "placeholder": "Selecione a data"
+        },
+        "arrivalTime": {
+          "label": "Hora de Chegada Prevista",
+          "placeholder": "Selecione a hora"
+        },
+        "purpose": {
+          "label": "Prop?sito da Visita",
+          "placeholder": "Selecione o prop?sito",
+          "options": {
+            "guest": "Convidado",
+            "delivery": "Entrega",
+            "contractor": "Contratante",
+            "serviceProvider": "Prestador de Servi?o",
+            "realEstateAgent": "Corretor de Im?veis",
+            "other": "Outro"
+          }
+        },
+        "unitNumber": {
+          "label": "N?mero da Unidade Destinat?ria",
+          "placeholder": "Digite o n?mero da unidade"
+        },
+        "submit": "Registrar Visitante",
+        "submitting": "Registrando..."
+      },
+      "validation": {
+        "visitorNameRequired": "O nome do visitante ? obrigat?rio",
+        "idTypeRequired": "O tipo de documento ? obrigat?rio",
+        "idNumberRequired": "O n?mero do documento ? obrigat?rio",
+        "arrivalDateRequired": "A data de chegada ? obrigat?ria",
+        "arrivalTimeRequired": "A hora de chegada ? obrigat?ria",
+        "purposeRequired": "O prop?sito da visita ? obrigat?rio",
+        "unitNumberRequired": "O n?mero da unidade ? obrigat?rio"
+      },
+      "success": {
+        "title": "Visitante Registrado",
+        "description": "Seu visitante foi registrado com sucesso. Compartilhe o c?digo QR com ele."
+      },
+      "qrCode": {
+        "title": "Passe de Visitante",
+        "description": "Compartilhe este c?digo QR com seu visitante",
+        "download": "Baixar Passe",
+        "print": "Imprimir Passe"
+      }
+    },
+    "detail": {
+      "title": "Detalhes do Visitante",
+      "backToList": "Voltar para Visitantes",
+      "visitorInfo": {
+        "title": "Informa??es do Visitante",
+        "name": "Nome",
+        "idType": "Tipo de Documento",
+        "idNumber": "N?mero do Documento",
+        "vehiclePlate": "Placa do Ve?culo",
+        "purpose": "Prop?sito",
+        "unitNumber": "N?mero da Unidade",
+        "expectedArrival": "Chegada Prevista"
+      },
+      "timeline": {
+        "title": "Linha do Tempo de Status",
+        "registered": "Registrado",
+        "checkedIn": "Entrada Registrada",
+        "checkedOut": "Sa?da Registrada",
+        "at": "?s"
+      },
+      "actions": {
+        "checkIn": "Registrar Entrada",
+        "checkOut": "Registrar Sa?da",
+        "cancel": "Cancelar Visitante"
+      },
+      "qrCode": {
+        "title": "Passe de Visitante",
+        "scanInstructions": "A seguran?a pode escanear este c?digo QR para verificar o visitante."
+      }
+    }
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "retry": "Tentar novamente",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "view": "Visualizar",
+    "back": "Voltar",
+    "next": "Pr?ximo",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "close": "Fechar"
+  }
+}

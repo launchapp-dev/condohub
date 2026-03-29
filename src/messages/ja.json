@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "title": "CondoHub - マンション管理",
+    "description": "コンドミニアムコミュニティを簡単に管理"
+  },
+  "navigation": {
+    "dashboard": "ダッシュボード",
+    "visitors": "訪問者",
+    "registerVisitor": "訪問者を登録",
+    "announcements": "お知らせ",
+    "maintenance": "メンテナンス",
+    "amenities": "施設",
+    "finances": "財務",
+    "documents": "書類",
+    "community": "コミュニティ",
+    "settings": "設定"
+  },
+  "visitors": {
+    "title": "訪問者管理",
+    "description": "コミュニティの訪問者を管理・追跡",
+    "registerNew": "新規訪問者を登録",
+    "list": {
+      "title": "マイ訪問者",
+      "description": "登録した訪問者を表示・管理",
+      "filter": {
+        "all": "すべての訪問者",
+        "upcoming": "今後の訪問",
+        "past": "過去の訪問",
+        "checkedIn": "チェックイン済み"
+      },
+      "columns": {
+        "name": "訪問者名",
+        "type": "タイプ",
+        "arrival": "到着予定",
+        "status": "ステータス",
+        "actions": "アクション"
+      },
+      "status": {
+        "pending": "保留中",
+        "checkedIn": "チェックイン済",
+        "checkedOut": "チェックアウト済",
+        "cancelled": "キャンセル済"
+      },
+      "viewDetails": "詳細を見る",
+      "viewQR": "パスを見る",
+      "noVisitors": "訪問者が見つかりません",
+      "noVisitorsDescription": "まだ訪問者を登録していません。"
+    },
+    "register": {
+      "title": "訪問者を登録",
+      "description": "コミュニティへの訪問者を事前登録",
+      "form": {
+        "visitorName": {
+          "label": "訪問者名",
+          "placeholder": "訪問者のフルネームを入力"
+        },
+        "idType": {
+          "label": "IDタイプ",
+          "placeholder": "IDタイプを選択",
+          "options": {
+            "passport": "パスポート",
+            "driverLicense": "運転免許証",
+            "nationalId": "国民ID",
+            "other": "その他"
+          }
+        },
+        "idNumber": {
+          "label": "ID番号",
+          "placeholder": "ID番号を入力"
+        },
+        "vehiclePlate": {
+          "label": "車両ナンバープレート（任意）",
+          "placeholder": "ナンバープレートを入力"
+        },
+        "arrivalDate": {
+          "label": "到着予定日",
+          "placeholder": "日付を選択"
+        },
+        "arrivalTime": {
+          "label": "到着予定時刻",
+          "placeholder": "時刻を選択"
+        },
+        "purpose": {
+          "label": "訪問目的",
+          "placeholder": "目的を選択",
+          "options": {
+            "guest": "ゲスト",
+            "delivery": "配達",
+            "contractor": "業者",
+            "serviceProvider": "サービス提供者",
+            "realEstateAgent": "不動産業者",
+            "other": "その他"
+          }
+        },
+        "unitNumber": {
+          "label": "訪問先ユニット番号",
+          "placeholder": "ユニット番号を入力"
+        },
+        "submit": "訪問者を登録",
+        "submitting": "登録中..."
+      },
+      "validation": {
+        "visitorNameRequired": "訪問者名は必須です",
+        "idTypeRequired": "IDタイプは必須です",
+        "idNumberRequired": "ID番号は必須です",
+        "arrivalDateRequired": "到着日は必須です",
+        "arrivalTimeRequired": "到着時刻は必須です",
+        "purposeRequired": "訪問目的は必須です",
+        "unitNumberRequired": "ユニット番号は必須です"
+      },
+      "success": {
+        "title": "訪問者を登録しました",
+        "description": "訪問者が正常に登録されました。QRコードパスを共有してください。"
+      },
+      "qrCode": {
+        "title": "訪問者パス",
+        "description": "このQRコードを訪問者と共有",
+        "download": "パスをダウンロード",
+        "print": "パスを印刷"
+      }
+    },
+    "detail": {
+      "title": "訪問者詳細",
+      "backToList": "訪問者一覧に戻る",
+      "visitorInfo": {
+        "title": "訪問者情報",
+        "name": "名前",
+        "idType": "IDタイプ",
+        "idNumber": "ID番号",
+        "vehiclePlate": "車両ナンバー",
+        "purpose": "目的",
+        "unitNumber": "ユニット番号",
+        "expectedArrival": "到着予定"
+      },
+      "timeline": {
+        "title": "ステータスタイムライン",
+        "registered": "登録済み",
+        "checkedIn": "チェックイン済み",
+        "checkedOut": "チェックアウト済み",
+        "at": "時刻"
+      },
+      "actions": {
+        "checkIn": "チェックイン",
+        "checkOut": "チェックアウト",
+        "cancel": "訪問をキャンセル"
+      },
+      "qrCode": {
+        "title": "訪問者パス",
+        "scanInstructions": "セキュリティ担当者がこのQRコードをスキャンして訪問者を確認できます。"
+      }
+    }
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "retry": "再試行",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "view": "表示",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "close": "閉じる"
+  }
+}

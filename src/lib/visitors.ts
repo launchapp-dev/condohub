@@ -90,16 +90,14 @@ export async function createVisitor(formData: FormData) {
 
   const expectedAt = expectedAtRaw ? new Date(expectedAtRaw) : null;
   const now = new Date();
-  const id = crypto.randomUUID();
 
   await db.insert(visitors).values({
-    id,
     communityId: community.id,
     hostId: session.user.id,
     unitId,
     name,
     phone,
-    purpose,
+    purpose: purpose as typeof visitors.$inferInsert["purpose"],
     expectedAt,
     status: "expected",
     createdAt: now,
@@ -107,7 +105,7 @@ export async function createVisitor(formData: FormData) {
   });
 
   revalidatePath("/visitors");
-  return { success: true, id };
+  return { success: true };
 }
 
 export async function checkInVisitor(id: string) {
