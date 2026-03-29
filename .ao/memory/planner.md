@@ -1116,3 +1116,27 @@ Each entry: `[DATE] ACTION — details`
 **Action**: Enqueued TASK-083, TASK-084, TASK-085 → triage (3/cycle max). SKIPPED: TASK-071/072 (TASK-070 doesn't exist), TASK-084/085 chain started, TASK-086 (upstream deps), TASK-074 (duplicate), TASK-075/080 (max 3 or unmet dep).
 **Queue**: 4 entries after enqueue (within 8 limit).
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — current)
+
+**Queue**: 2 entries before → 6 after (TASK-081, TASK-083, TASK-082 enqueued → triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, zero reviews. (< 5 → continue)
+**Rework**: none (no CHANGES_REQUESTED reviews on any open PR)
+**Rebase**: none (all 3 PRs MERGEABLE, CLEAN state)
+**Ready tasks**: 11 — TASK-071, TASK-072 (critical, blocked/TASK-070 done but no merged PR), TASK-083 (high, no deps), TASK-084 (high, blocked/TASK-083 no merged PR), TASK-085 (high, blocked/TASK-083+084), TASK-086 (high, blocked/TASK-084+085), TASK-081 (high, no deps), TASK-074 (high/duplicate of TASK-081), TASK-082 (medium), TASK-075 (medium), TASK-080 (medium)
+**Dependencies check**:
+  - TASK-071, TASK-072: depend on TASK-070 (done, verified no merged PR via gh). Dependency NOT met → SKIPPED.
+  - TASK-083: no dependencies, no merged PR, not in queue → ENQUEUED.
+  - TASK-084: blocked-by TASK-083 (no merged PR) → SKIPPED.
+  - TASK-085: blocked-by TASK-083, TASK-084 (no merged PRs) → SKIPPED.
+  - TASK-086: blocked-by TASK-084, TASK-085 → SKIPPED.
+  - TASK-081: no dependencies, not in queue, replaces TASK-074 → ENQUEUED.
+  - TASK-074: duplicate of TASK-081 scope → SKIPPED.
+  - TASK-082: no dependencies, not in queue, medium → ENQUEUED (3rd slot).
+  - TASK-075, TASK-080: no dependencies, medium → SKIPPED (max 3 reached).
+**Action**: Enqueued TASK-081, TASK-083, TASK-082 → triage (3/cycle max). SKIPPED: TASK-071/072 (TASK-070 no merged PR), TASK-084/085/086 (upstream deps no merged PRs), TASK-074 (duplicate of TASK-081), TASK-075/080 (max 3 reached).
+**Queue**: 6 entries after enqueue (within 8 limit).
+**Idle action**: NOT dispatched — 3 new tasks dispatched.
+**Status**: 3 open PRs awaiting review (#3, #8, #18). Amenity chain (083→084→085→086) not actionable — upstream deps have no merged PRs. Maintenance tasks (071, 072) still blocked by TASK-070 anomalous done/no-PR state.
