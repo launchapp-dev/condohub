@@ -90,6 +90,19 @@ Each entry: `[DATE] DECISION — reason`
 - **NOT creating** (limit reached): maintenance pages, settings pages — will create in next cycle now that pipeline has 2 tasks queued.
 - **Deferred**: Settings pages (/settings, /settings/community, /settings/roles), maintenance pages — covered by existing stubs; waiting for next cycle.
 
+## 2026-03-29 (product-review phase)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds
+- **Pipeline**: 46 done, 3 cancelled, 0 active — EMPTY
+- **Critical finding — Phantom completions persist**: All 46 tasks marked "done" but 8 pages remain 11-line stubs (amenities, community, settings x3, maintenance, community/units, amenities/[id]/book). Reconciler marked work complete without actual implementation.
+- **Created TASK-050** (high, ready, enqueued to triage): Build amenities booking system with calendar, time slots, and conflict detection. Replaces stale TASK-044/TASK-670. 8 stub pages remain but limit reached.
+- **Created TASK-051** (high, ready, enqueued to triage): Build maintenance request system with status workflow. VISION §6.
+- **NOT creating** (limit reached): /community page, /settings pages — will create in next cycle.
+- **Stubs still present** (8 total): amenities/page.tsx, amenities/[id]/book/page.tsx, community/page.tsx, community/units/page.tsx, settings/page.tsx, settings/community/page.tsx, settings/roles/page.tsx, maintenance/page.tsx
+- **Deferred**: community page, settings pages (covered by stubs, lower priority than amenities and maintenance)
+
 ## 2026-03-28 (product-review phase — read-only)
 
 ### Decisions
