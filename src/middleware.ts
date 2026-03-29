@@ -15,6 +15,7 @@ const protectedMatchers = [
   "/documents",
   "/community",
   "/settings",
+  "/onboarding",
 ];
 
 export async function middleware(request: NextRequest) {

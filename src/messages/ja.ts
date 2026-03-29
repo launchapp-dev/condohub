@@ -341,6 +341,104 @@ export default {
     "roles": "ロール管理",
     "save": "変更を保存"
   },
+  "onboarding": {
+    "title": "コミュニティの設定",
+    "subtitle": "CondoHub を始めるために建物を設定してください",
+    "progress": "ステップ {step} / {total}",
+    "steps": {
+      "profile": "コミュニティプロフィール",
+      "building": "建物の構造",
+      "amenities": "施設",
+      "logo": "コミュニティロゴ",
+      "invites": "居住者を招待"
+    },
+    "profile": {
+      "title": "コミュニティプロフィール",
+      "description": "コミュニティの基本情報を入力してください",
+      "nameLabel": "コミュニティ名",
+      "namePlaceholder": "例：オーシャンビューレジデンス",
+      "addressLabel": "住所",
+      "addressPlaceholder": "完全な住所",
+      "timezoneLabel": "タイムゾーン",
+      "languageLabel": "デフォルト言語",
+      "currencyLabel": "通貨"
+    },
+    "building": {
+      "title": "建物の構造",
+      "description": "建物のレイアウトと部屋を定義してください",
+      "hasTowersLabel": "複数のタワー/ブロックがある",
+      "towerNameLabel": "タワー/ブロック名",
+      "towerNamePlaceholder": "例：タワー A",
+      "addTower": "タワーを追加",
+      "removeTower": "削除",
+      "unitNumberLabel": "部屋番号",
+      "unitNumberPlaceholder": "例：101",
+      "floorLabel": "階（任意）",
+      "addUnit": "部屋を追加",
+      "removeUnit": "削除",
+      "unitsLabel": "部屋",
+      "bulkAddLabel": "部屋を一括追加",
+      "bulkAddPlaceholder": "例：101-110、201-210",
+      "bulkAddHelp": "101-110 のような範囲またはカンマ区切りの数字を入力",
+      "atLeastOneUnit": "少なくとも 1 つの部屋を追加してください"
+    },
+    "amenities": {
+      "title": "施設",
+      "description": "コミュニティで利用可能な施設を選択してください",
+      "predefinedLabel": "一般的な施設",
+      "partyRoom": "パーティールーム",
+      "gym": "ジム/フィットネスセンター",
+      "pool": "プール",
+      "bbq": "バーベキューエリア",
+      "guestParking": "ゲスト駐車場",
+      "coworking": "コワーキングスペース",
+      "tennis": "テニスコート",
+      "playground": "遊び場",
+      "petArea": "ペットエリア",
+      "storage": "トランクルーム",
+      "elevator": "エレベーター",
+      "concierge": "コンシェルジュ",
+      "customLabel": "カスタム施設",
+      "customPlaceholder": "施設名を入力",
+      "addCustom": "カスタム施設を追加",
+      "requiresApproval": "予約に承認が必要",
+      "noAmenities": "まだ施設が選択されていません"
+    },
+    "logo": {
+      "title": "コミュニティロゴ",
+      "description": "コミュニティのロゴをアップロードしてください（任意）",
+      "uploadLabel": "ロゴをアップロード",
+      "dragDrop": "ロゴをここにドラッグ＆ドロップするか、クリックして参照",
+      "fileTypes": "対応形式：JPEG、PNG、WebP（最大 5MB）",
+      "removeLogo": "ロゴを削除",
+      "changeLogo": "ロゴを変更"
+    },
+    "invites": {
+      "title": "居住者を招待",
+      "description": "最初の居住者をコミュニティに招待してください（任意）",
+      "emailLabel": "メールアドレス",
+      "emailPlaceholder": "resident@example.com",
+      "unitLabel": "部屋に割り当て（任意）",
+      "addInvite": "もう一人追加",
+      "skipInvites": "今はスキップ",
+      "invalidEmail": "有効なメールアドレスを入力してください"
+    },
+    "navigation": {
+      "back": "戻る",
+      "next": "次へ",
+      "finish": "完了",
+      "saving": "保存中..."
+    },
+    "errors": {
+      "required": "この項目は必須です",
+      "invalidEmail": "有効なメールアドレスを入力してください",
+      "saveFailed": "保存に失敗しました。もう一度お試しください。"
+    },
+    "success": {
+      "title": "設定完了！",
+      "message": "コミュニティの設定が正常に完了しました。ダッシュボードに移動します..."
+    }
+  },
   "roles": {
     "resident": "居住者",
     "board_member": "理事会メンバー",
@@ -378,82 +476,5 @@ export default {
     "no": "いいえ",
     "optional": "任意",
     "required": "必須"
-  },
-  "onboarding": {
-    "title": "コミュニティを設定",
-    "welcome": "ようこそ、{name}さん！マンションコミュニティを作成しましょう。",
-    "steps": {
-      "community": "コミュニティ",
-      "units": "部屋",
-      "amenities": "施設",
-      "review": "確認"
-    },
-    "community": {
-      "title": "コミュニティ情報",
-      "subtitle": "マンションについて教えてください",
-      "name": "コミュニティ名",
-      "namePlaceholder": "例：サンライズレジデンス",
-      "address": "住所",
-      "addressPlaceholder": "例：メインストリート123、市",
-      "language": "デフォルト言語",
-      "languagePlaceholder": "言語を選択",
-      "timezone": "タイムゾーン",
-      "timezonePlaceholder": "タイムゾーンを選択"
-    },
-    "languages": {
-      "en": "英語",
-      "es": "スペイン語",
-      "pt": "ポルトガル語",
-      "fr": "フランス語",
-      "ar": "アラビア語",
-      "zh": "中国語（簡体字）",
-      "ja": "日本語",
-      "ko": "韓国語"
-    },
-    "units": {
-      "title": "建物構造",
-      "subtitle": "部屋、アパート、または住宅を追加",
-      "unitNumber": "部屋番号",
-      "unitNumberPlaceholder": "例：101、A-12",
-      "floor": "階",
-      "add": "部屋を追加",
-      "remove": "削除"
-    },
-    "amenities": {
-      "title": "施設",
-      "subtitle": "居住者が利用できる施設を追加（任意）",
-      "name": "施設名",
-      "namePlaceholder": "例：プール、ジム",
-      "description": "説明",
-      "descriptionPlaceholder": "施設の簡単な説明",
-      "requiresApproval": "予約に承認が必要",
-      "add": "施設を追加",
-      "remove": "削除",
-      "skipHint": "このステップをスキップし、後で施設を追加できます"
-    },
-    "review": {
-      "title": "確認と完了",
-      "subtitle": "作成する前にコミュニティの詳細を確認してください",
-      "communityInfo": "コミュニティ情報",
-      "name": "名前",
-      "address": "住所",
-      "language": "言語",
-      "timezone": "タイムゾーン",
-      "unitsInfo": "部屋",
-      "unitsCount": "{count} 部屋",
-      "amenitiesInfo": "施設",
-      "amenitiesCount": "{count} 施設",
-      "noAmenities": "施設が追加されていません"
-    },
-    "complete": "コミュニティを作成",
-    "errors": {
-      "communityNameRequired": "コミュニティ名は必須です",
-      "addressRequired": "住所は必須です",
-      "unitNumberRequired": "部屋番号は必須です",
-      "floorRequired": "階は0以上である必要があります",
-      "atLeastOneUnit": "少なくとも1つの部屋を追加してください",
-      "amenityNameRequired": "施設名は必須です",
-      "generic": "問題が発生しました。もう一度お試しください。"
-    }
   }
 } as const;

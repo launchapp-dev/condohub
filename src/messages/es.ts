@@ -341,6 +341,104 @@ export default {
     "roles": "Gestión de roles",
     "save": "Guardar cambios"
   },
+  "onboarding": {
+    "title": "Configura tu Comunidad",
+    "subtitle": "Configura tu edificio para comenzar con CondoHub",
+    "progress": "Paso {step} de {total}",
+    "steps": {
+      "profile": "Perfil de la Comunidad",
+      "building": "Estructura del Edificio",
+      "amenities": "Amenidades",
+      "logo": "Logo de la Comunidad",
+      "invites": "Invitar Residentes"
+    },
+    "profile": {
+      "title": "Perfil de la Comunidad",
+      "description": "Ingresa la información básica de tu comunidad",
+      "nameLabel": "Nombre de la Comunidad",
+      "namePlaceholder": "p. ej., Residencias Ocean View",
+      "addressLabel": "Dirección",
+      "addressPlaceholder": "Dirección completa",
+      "timezoneLabel": "Zona Horaria",
+      "languageLabel": "Idioma Predeterminado",
+      "currencyLabel": "Moneda"
+    },
+    "building": {
+      "title": "Estructura del Edificio",
+      "description": "Define la distribución y unidades de tu edificio",
+      "hasTowersLabel": "El edificio tiene múltiples torres/bloques",
+      "towerNameLabel": "Nombre de la Torre/Bloque",
+      "towerNamePlaceholder": "p. ej., Torre A",
+      "addTower": "Agregar Torre",
+      "removeTower": "Eliminar",
+      "unitNumberLabel": "Número de Unidad",
+      "unitNumberPlaceholder": "p. ej., 101",
+      "floorLabel": "Piso (opcional)",
+      "addUnit": "Agregar Unidad",
+      "removeUnit": "Eliminar",
+      "unitsLabel": "Unidades",
+      "bulkAddLabel": "Agregar Unidades en Grupo",
+      "bulkAddPlaceholder": "p. ej., 101-110, 201-210",
+      "bulkAddHelp": "Ingresa rangos como 101-110 o números separados por comas",
+      "atLeastOneUnit": "Agrega al menos una unidad"
+    },
+    "amenities": {
+      "title": "Amenidades",
+      "description": "Selecciona las amenidades disponibles en tu comunidad",
+      "predefinedLabel": "Amenidades Comunes",
+      "partyRoom": "Salón de Fiestas",
+      "gym": "Gimnasio/Centro Fitness",
+      "pool": "Piscina",
+      "bbq": "Área de BBQ",
+      "guestParking": "Estacionamiento de Visitas",
+      "coworking": "Espacio de Co-working",
+      "tennis": "Cancha de Tenis",
+      "playground": "Área de Juegos",
+      "petArea": "Área para Mascotas",
+      "storage": "Bodegas",
+      "elevator": "Ascensor",
+      "concierge": "Conserjería",
+      "customLabel": "Amenidad Personalizada",
+      "customPlaceholder": "Ingresa nombre de la amenidad",
+      "addCustom": "Agregar Amenidad Personalizada",
+      "requiresApproval": "Requiere aprobación para reservar",
+      "noAmenities": "Aún no se han seleccionado amenidades"
+    },
+    "logo": {
+      "title": "Logo de la Comunidad",
+      "description": "Sube el logo de tu comunidad (opcional)",
+      "uploadLabel": "Subir Logo",
+      "dragDrop": "Arrastra y suelta tu logo aquí, o haz clic para buscar",
+      "fileTypes": "Soportados: JPEG, PNG, WebP (máx 5MB)",
+      "removeLogo": "Eliminar Logo",
+      "changeLogo": "Cambiar Logo"
+    },
+    "invites": {
+      "title": "Invitar Residentes",
+      "description": "Invita a los residentes iniciales a unirse a tu comunidad (opcional)",
+      "emailLabel": "Correo Electrónico",
+      "emailPlaceholder": "residente@ejemplo.com",
+      "unitLabel": "Asignar a Unidad (opcional)",
+      "addInvite": "Agregar Otro",
+      "skipInvites": "Omitir por ahora",
+      "invalidEmail": "Por favor ingresa un correo válido"
+    },
+    "navigation": {
+      "back": "Atrás",
+      "next": "Siguiente",
+      "finish": "Finalizar",
+      "saving": "Guardando..."
+    },
+    "errors": {
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "Por favor ingresa un correo válido",
+      "saveFailed": "Error al guardar. Por favor inténtalo de nuevo."
+    },
+    "success": {
+      "title": "¡Configuración Completa!",
+      "message": "Tu comunidad se ha configurado correctamente. Redirigiendo al panel..."
+    }
+  },
   "roles": {
     "resident": "Residente",
     "board_member": "Miembro de la junta",
@@ -378,82 +476,5 @@ export default {
     "no": "No",
     "optional": "Opcional",
     "required": "Obligatorio"
-  },
-  "onboarding": {
-    "title": "Configura tu comunidad",
-    "welcome": "¡Bienvenido, {name}! Vamos a crear tu comunidad de condominios.",
-    "steps": {
-      "community": "Comunidad",
-      "units": "Unidades",
-      "amenities": "Amenidades",
-      "review": "Revisión"
-    },
-    "community": {
-      "title": "Información de la Comunidad",
-      "subtitle": "Cuéntanos sobre tu condominio",
-      "name": "Nombre de la comunidad",
-      "namePlaceholder": "p. ej., Residencias Amanecer",
-      "address": "Dirección",
-      "addressPlaceholder": "p. ej., Calle Principal 123, Ciudad",
-      "language": "Idioma predeterminado",
-      "languagePlaceholder": "Selecciona un idioma",
-      "timezone": "Zona horaria",
-      "timezonePlaceholder": "Selecciona una zona horaria"
-    },
-    "languages": {
-      "en": "Inglés",
-      "es": "Español",
-      "pt": "Portugués",
-      "fr": "Francés",
-      "ar": "Árabe",
-      "zh": "Chino (Simplificado)",
-      "ja": "Japonés",
-      "ko": "Coreano"
-    },
-    "units": {
-      "title": "Estructura del Edificio",
-      "subtitle": "Agrega tus unidades, apartamentos o casas",
-      "unitNumber": "Número de unidad",
-      "unitNumberPlaceholder": "p. ej., 101, A-12",
-      "floor": "Piso",
-      "add": "Agregar unidad",
-      "remove": "Eliminar"
-    },
-    "amenities": {
-      "title": "Amenidades",
-      "subtitle": "Agrega instalaciones disponibles para residentes (opcional)",
-      "name": "Nombre de la amenidad",
-      "namePlaceholder": "p. ej., Piscina, Gimnasio",
-      "description": "Descripción",
-      "descriptionPlaceholder": "Breve descripción de la amenidad",
-      "requiresApproval": "Requiere aprobación para reservar",
-      "add": "Agregar amenidad",
-      "remove": "Eliminar",
-      "skipHint": "Puedes omitir este paso y agregar amenidades más tarde"
-    },
-    "review": {
-      "title": "Revisar y Completar",
-      "subtitle": "Por favor revisa los detalles de tu comunidad antes de crear",
-      "communityInfo": "Información de la Comunidad",
-      "name": "Nombre",
-      "address": "Dirección",
-      "language": "Idioma",
-      "timezone": "Zona horaria",
-      "unitsInfo": "Unidades",
-      "unitsCount": "{count} unidades",
-      "amenitiesInfo": "Amenidades",
-      "amenitiesCount": "{count} amenidades",
-      "noAmenities": "No se agregaron amenidades"
-    },
-    "complete": "Crear comunidad",
-    "errors": {
-      "communityNameRequired": "El nombre de la comunidad es obligatorio",
-      "addressRequired": "La dirección es obligatoria",
-      "unitNumberRequired": "El número de unidad es obligatorio",
-      "floorRequired": "El piso debe ser 0 o mayor",
-      "atLeastOneUnit": "Por favor agrega al menos una unidad",
-      "amenityNameRequired": "El nombre de la amenidad es obligatorio",
-      "generic": "Algo salió mal. Por favor, inténtalo de nuevo."
-    }
   }
 } as const;

@@ -341,6 +341,104 @@ export default {
     "roles": "角色管理",
     "save": "保存更改"
   },
+  "onboarding": {
+    "title": "设置您的社区",
+    "subtitle": "配置您的楼宇以开始使用 CondoHub",
+    "progress": "第 {step} 步，共 {total} 步",
+    "steps": {
+      "profile": "社区资料",
+      "building": "楼宇结构",
+      "amenities": "配套设施",
+      "logo": "社区标志",
+      "invites": "邀请住户"
+    },
+    "profile": {
+      "title": "社区资料",
+      "description": "输入您社区的基本信息",
+      "nameLabel": "社区名称",
+      "namePlaceholder": "例如：海景公寓",
+      "addressLabel": "地址",
+      "addressPlaceholder": "完整街道地址",
+      "timezoneLabel": "时区",
+      "languageLabel": "默认语言",
+      "currencyLabel": "货币"
+    },
+    "building": {
+      "title": "楼宇结构",
+      "description": "定义您的楼宇布局和单元",
+      "hasTowersLabel": "楼宇有多个塔楼/区块",
+      "towerNameLabel": "塔楼/区块名称",
+      "towerNamePlaceholder": "例如：A 座",
+      "addTower": "添加塔楼",
+      "removeTower": "移除",
+      "unitNumberLabel": "单元号",
+      "unitNumberPlaceholder": "例如：101",
+      "floorLabel": "楼层（可选）",
+      "addUnit": "添加单元",
+      "removeUnit": "移除",
+      "unitsLabel": "单元",
+      "bulkAddLabel": "批量添加单元",
+      "bulkAddPlaceholder": "例如：101-110, 201-210",
+      "bulkAddHelp": "输入范围如 101-110 或用逗号分隔的数字",
+      "atLeastOneUnit": "请至少添加一个单元"
+    },
+    "amenities": {
+      "title": "配套设施",
+      "description": "选择您社区可用的配套设施",
+      "predefinedLabel": "常见配套设施",
+      "partyRoom": "派对室",
+      "gym": "健身房/健身中心",
+      "pool": "游泳池",
+      "bbq": "烧烤区",
+      "guestParking": "访客停车场",
+      "coworking": "共享办公空间",
+      "tennis": "网球场",
+      "playground": "儿童游乐场",
+      "petArea": "宠物区",
+      "storage": "储物间",
+      "elevator": "电梯",
+      "concierge": "礼宾服务",
+      "customLabel": "自定义配套设施",
+      "customPlaceholder": "输入配套设施名称",
+      "addCustom": "添加自定义配套设施",
+      "requiresApproval": "预订需要审批",
+      "noAmenities": "尚未选择任何配套设施"
+    },
+    "logo": {
+      "title": "社区标志",
+      "description": "上传您的社区标志（可选）",
+      "uploadLabel": "上传标志",
+      "dragDrop": "将标志拖放到此处，或点击浏览",
+      "fileTypes": "支持的格式：JPEG、PNG、WebP（最大 5MB）",
+      "removeLogo": "移除标志",
+      "changeLogo": "更换标志"
+    },
+    "invites": {
+      "title": "邀请住户",
+      "description": "邀请初始住户加入您的社区（可选）",
+      "emailLabel": "电子邮箱地址",
+      "emailPlaceholder": "resident@example.com",
+      "unitLabel": "分配至单元（可选）",
+      "addInvite": "添加另一个",
+      "skipInvites": "暂时跳过",
+      "invalidEmail": "请输入有效的电子邮箱地址"
+    },
+    "navigation": {
+      "back": "返回",
+      "next": "下一步",
+      "finish": "完成",
+      "saving": "保存中..."
+    },
+    "errors": {
+      "required": "此字段为必填项",
+      "invalidEmail": "请输入有效的电子邮箱地址",
+      "saveFailed": "保存失败。请重试。"
+    },
+    "success": {
+      "title": "设置完成！",
+      "message": "您的社区已成功配置。正在跳转到仪表盘..."
+    }
+  },
   "roles": {
     "resident": "住户",
     "board_member": "董事会成员",
@@ -378,82 +476,5 @@ export default {
     "no": "否",
     "optional": "可选",
     "required": "必填"
-  },
-  "onboarding": {
-    "title": "设置您的社区",
-    "welcome": "欢迎，{name}！让我们创建您的公寓社区。",
-    "steps": {
-      "community": "社区",
-      "units": "单元",
-      "amenities": "设施",
-      "review": "审核"
-    },
-    "community": {
-      "title": "社区信息",
-      "subtitle": "告诉我们关于您的公寓",
-      "name": "社区名称",
-      "namePlaceholder": "例如：日出公寓",
-      "address": "地址",
-      "addressPlaceholder": "例如：主街123号，城市",
-      "language": "默认语言",
-      "languagePlaceholder": "选择语言",
-      "timezone": "时区",
-      "timezonePlaceholder": "选择时区"
-    },
-    "languages": {
-      "en": "英语",
-      "es": "西班牙语",
-      "pt": "葡萄牙语",
-      "fr": "法语",
-      "ar": "阿拉伯语",
-      "zh": "中文（简体）",
-      "ja": "日语",
-      "ko": "韩语"
-    },
-    "units": {
-      "title": "建筑结构",
-      "subtitle": "添加您的单元、公寓或住宅",
-      "unitNumber": "单元号",
-      "unitNumberPlaceholder": "例如：101，A-12",
-      "floor": "楼层",
-      "add": "添加单元",
-      "remove": "删除"
-    },
-    "amenities": {
-      "title": "设施",
-      "subtitle": "添加可供居民使用的设施（可选）",
-      "name": "设施名称",
-      "namePlaceholder": "例如：游泳池、健身房",
-      "description": "描述",
-      "descriptionPlaceholder": "设施的简要描述",
-      "requiresApproval": "预订需要审批",
-      "add": "添加设施",
-      "remove": "删除",
-      "skipHint": "您可以跳过此步骤，稍后添加设施"
-    },
-    "review": {
-      "title": "审核并完成",
-      "subtitle": "请在创建前审核您的社区详情",
-      "communityInfo": "社区信息",
-      "name": "名称",
-      "address": "地址",
-      "language": "语言",
-      "timezone": "时区",
-      "unitsInfo": "单元",
-      "unitsCount": "{count} 个单元",
-      "amenitiesInfo": "设施",
-      "amenitiesCount": "{count} 个设施",
-      "noAmenities": "未添加设施"
-    },
-    "complete": "创建社区",
-    "errors": {
-      "communityNameRequired": "社区名称为必填项",
-      "addressRequired": "地址为必填项",
-      "unitNumberRequired": "单元号为必填项",
-      "floorRequired": "楼层必须大于或等于0",
-      "atLeastOneUnit": "请至少添加一个单元",
-      "amenityNameRequired": "设施名称为必填项",
-      "generic": "出了点问题。请重试。"
-    }
   }
 } as const;

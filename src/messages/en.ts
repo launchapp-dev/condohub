@@ -341,6 +341,104 @@ export default {
     "roles": "Role management",
     "save": "Save changes"
   },
+  "onboarding": {
+    "title": "Set Up Your Community",
+    "subtitle": "Configure your building to get started with CondoHub",
+    "progress": "Step {step} of {total}",
+    "steps": {
+      "profile": "Community Profile",
+      "building": "Building Structure",
+      "amenities": "Amenities",
+      "logo": "Community Logo",
+      "invites": "Invite Residents"
+    },
+    "profile": {
+      "title": "Community Profile",
+      "description": "Enter your community's basic information",
+      "nameLabel": "Community Name",
+      "namePlaceholder": "e.g., Ocean View Residences",
+      "addressLabel": "Address",
+      "addressPlaceholder": "Full street address",
+      "timezoneLabel": "Timezone",
+      "languageLabel": "Default Language",
+      "currencyLabel": "Currency"
+    },
+    "building": {
+      "title": "Building Structure",
+      "description": "Define your building's layout and units",
+      "hasTowersLabel": "Building has multiple towers/blocks",
+      "towerNameLabel": "Tower/Block Name",
+      "towerNamePlaceholder": "e.g., Tower A",
+      "addTower": "Add Tower",
+      "removeTower": "Remove",
+      "unitNumberLabel": "Unit Number",
+      "unitNumberPlaceholder": "e.g., 101",
+      "floorLabel": "Floor (optional)",
+      "addUnit": "Add Unit",
+      "removeUnit": "Remove",
+      "unitsLabel": "Units",
+      "bulkAddLabel": "Bulk Add Units",
+      "bulkAddPlaceholder": "e.g., 101-110, 201-210",
+      "bulkAddHelp": "Enter ranges like 101-110 or comma-separated numbers",
+      "atLeastOneUnit": "Add at least one unit"
+    },
+    "amenities": {
+      "title": "Amenities",
+      "description": "Select the amenities available in your community",
+      "predefinedLabel": "Common Amenities",
+      "partyRoom": "Party Room",
+      "gym": "Gym/Fitness Center",
+      "pool": "Swimming Pool",
+      "bbq": "BBQ Area",
+      "guestParking": "Guest Parking",
+      "coworking": "Co-working Space",
+      "tennis": "Tennis Court",
+      "playground": "Playground",
+      "petArea": "Pet Area",
+      "storage": "Storage Units",
+      "elevator": "Elevator",
+      "concierge": "Concierge",
+      "customLabel": "Custom Amenity",
+      "customPlaceholder": "Enter amenity name",
+      "addCustom": "Add Custom Amenity",
+      "requiresApproval": "Requires approval to book",
+      "noAmenities": "No amenities selected yet"
+    },
+    "logo": {
+      "title": "Community Logo",
+      "description": "Upload your community logo (optional)",
+      "uploadLabel": "Upload Logo",
+      "dragDrop": "Drag and drop your logo here, or click to browse",
+      "fileTypes": "Supported: JPEG, PNG, WebP (max 5MB)",
+      "removeLogo": "Remove Logo",
+      "changeLogo": "Change Logo"
+    },
+    "invites": {
+      "title": "Invite Residents",
+      "description": "Invite initial residents to join your community (optional)",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "resident@example.com",
+      "unitLabel": "Assign to Unit (optional)",
+      "addInvite": "Add Another",
+      "skipInvites": "Skip for now",
+      "invalidEmail": "Please enter a valid email address"
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next",
+      "finish": "Finish",
+      "saving": "Saving..."
+    },
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "saveFailed": "Failed to save. Please try again."
+    },
+    "success": {
+      "title": "Setup Complete!",
+      "message": "Your community has been configured successfully. Redirecting to dashboard..."
+    }
+  },
   "roles": {
     "resident": "Resident",
     "board_member": "Board member",
@@ -378,82 +476,5 @@ export default {
     "no": "No",
     "optional": "Optional",
     "required": "Required"
-  },
-  "onboarding": {
-    "title": "Set up your community",
-    "welcome": "Welcome, {name}! Let's create your condominium community.",
-    "steps": {
-      "community": "Community",
-      "units": "Units",
-      "amenities": "Amenities",
-      "review": "Review"
-    },
-    "community": {
-      "title": "Community Information",
-      "subtitle": "Tell us about your condominium",
-      "name": "Community name",
-      "namePlaceholder": "e.g., Sunrise Residences",
-      "address": "Address",
-      "addressPlaceholder": "e.g., 123 Main Street, City",
-      "language": "Default language",
-      "languagePlaceholder": "Select a language",
-      "timezone": "Timezone",
-      "timezonePlaceholder": "Select a timezone"
-    },
-    "languages": {
-      "en": "English",
-      "es": "Spanish",
-      "pt": "Portuguese",
-      "fr": "French",
-      "ar": "Arabic",
-      "zh": "Chinese (Simplified)",
-      "ja": "Japanese",
-      "ko": "Korean"
-    },
-    "units": {
-      "title": "Building Structure",
-      "subtitle": "Add your units, apartments, or homes",
-      "unitNumber": "Unit number",
-      "unitNumberPlaceholder": "e.g., 101, A-12",
-      "floor": "Floor",
-      "add": "Add unit",
-      "remove": "Remove"
-    },
-    "amenities": {
-      "title": "Amenities",
-      "subtitle": "Add facilities available to residents (optional)",
-      "name": "Amenity name",
-      "namePlaceholder": "e.g., Swimming Pool, Gym",
-      "description": "Description",
-      "descriptionPlaceholder": "Brief description of the amenity",
-      "requiresApproval": "Requires approval for booking",
-      "add": "Add amenity",
-      "remove": "Remove",
-      "skipHint": "You can skip this step and add amenities later"
-    },
-    "review": {
-      "title": "Review & Complete",
-      "subtitle": "Please review your community details before creating",
-      "communityInfo": "Community Information",
-      "name": "Name",
-      "address": "Address",
-      "language": "Language",
-      "timezone": "Timezone",
-      "unitsInfo": "Units",
-      "unitsCount": "{count} units",
-      "amenitiesInfo": "Amenities",
-      "amenitiesCount": "{count} amenities",
-      "noAmenities": "No amenities added"
-    },
-    "complete": "Create community",
-    "errors": {
-      "communityNameRequired": "Community name is required",
-      "addressRequired": "Address is required",
-      "unitNumberRequired": "Unit number is required",
-      "floorRequired": "Floor must be 0 or higher",
-      "atLeastOneUnit": "Please add at least one unit",
-      "amenityNameRequired": "Amenity name is required",
-      "generic": "Something went wrong. Please try again."
-    }
   }
 } as const;

@@ -76,8 +76,10 @@ export const communities = sqliteTable("communities", {
   id: text("id").primaryKey(),
   name: text("name").notNull(),
   address: text("address").notNull(),
-  defaultLocale: text("default_locale").default("en").notNull(),
+  logoUrl: text("logo_url"),
   timezone: text("timezone").default("UTC").notNull(),
+  defaultLocale: text("default_locale").default("en").notNull(),
+  currency: text("currency").default("USD").notNull(),
   createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
   updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
 });
@@ -102,6 +104,7 @@ export const units = sqliteTable("units", {
     .references(() => communities.id, { onDelete: "cascade" }),
   unitNumber: text("unit_number").notNull(),
   floor: integer("floor"),
+  tower: text("tower"),
   ownerId: text("owner_id").references(() => users.id, {
     onDelete: "set null",
   }),

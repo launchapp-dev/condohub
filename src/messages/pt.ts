@@ -341,6 +341,104 @@ export default {
     "roles": "Gerenciamento de funções",
     "save": "Salvar alterações"
   },
+  "onboarding": {
+    "title": "Configure sua Comunidade",
+    "subtitle": "Configure seu prédio para começar com o CondoHub",
+    "progress": "Etapa {step} de {total}",
+    "steps": {
+      "profile": "Perfil da Comunidade",
+      "building": "Estrutura do Prédio",
+      "amenities": "Comodidades",
+      "logo": "Logo da Comunidade",
+      "invites": "Convidar Moradores"
+    },
+    "profile": {
+      "title": "Perfil da Comunidade",
+      "description": "Insira as informações básicas da sua comunidade",
+      "nameLabel": "Nome da Comunidade",
+      "namePlaceholder": "ex., Residências Ocean View",
+      "addressLabel": "Endereço",
+      "addressPlaceholder": "Endereço completo",
+      "timezoneLabel": "Fuso Horário",
+      "languageLabel": "Idioma Padrão",
+      "currencyLabel": "Moeda"
+    },
+    "building": {
+      "title": "Estrutura do Prédio",
+      "description": "Defina o layout e unidades do seu prédio",
+      "hasTowersLabel": "O prédio tem múltiplas torres/blocos",
+      "towerNameLabel": "Nome da Torre/Bloco",
+      "towerNamePlaceholder": "ex., Torre A",
+      "addTower": "Adicionar Torre",
+      "removeTower": "Remover",
+      "unitNumberLabel": "Número da Unidade",
+      "unitNumberPlaceholder": "ex., 101",
+      "floorLabel": "Andar (opcional)",
+      "addUnit": "Adicionar Unidade",
+      "removeUnit": "Remover",
+      "unitsLabel": "Unidades",
+      "bulkAddLabel": "Adicionar Unidades em Lote",
+      "bulkAddPlaceholder": "ex., 101-110, 201-210",
+      "bulkAddHelp": "Insira intervalos como 101-110 ou números separados por vírgula",
+      "atLeastOneUnit": "Adicione pelo menos uma unidade"
+    },
+    "amenities": {
+      "title": "Comodidades",
+      "description": "Selecione as comodidades disponíveis na sua comunidade",
+      "predefinedLabel": "Comodidades Comuns",
+      "partyRoom": "Salão de Festas",
+      "gym": "Academia/Centro Fitness",
+      "pool": "Piscina",
+      "bbq": "Área de Churrasco",
+      "guestParking": "Estacionamento de Visitantes",
+      "coworking": "Espaço de Co-working",
+      "tennis": "Quadra de Tênis",
+      "playground": "Playground",
+      "petArea": "Área para Pets",
+      "storage": "Depósitos",
+      "elevator": "Elevador",
+      "concierge": "Concierge",
+      "customLabel": "Comodidade Personalizada",
+      "customPlaceholder": "Insira o nome da comodidade",
+      "addCustom": "Adicionar Comodidade Personalizada",
+      "requiresApproval": "Requer aprovação para reservar",
+      "noAmenities": "Nenhuma comodidade selecionada ainda"
+    },
+    "logo": {
+      "title": "Logo da Comunidade",
+      "description": "Faça upload do logo da sua comunidade (opcional)",
+      "uploadLabel": "Enviar Logo",
+      "dragDrop": "Arraste e solte seu logo aqui, ou clique para procurar",
+      "fileTypes": "Suportados: JPEG, PNG, WebP (máx 5MB)",
+      "removeLogo": "Remover Logo",
+      "changeLogo": "Alterar Logo"
+    },
+    "invites": {
+      "title": "Convidar Moradores",
+      "description": "Convide moradores iniciais para se juntarem à sua comunidade (opcional)",
+      "emailLabel": "Endereço de E-mail",
+      "emailPlaceholder": "morador@exemplo.com",
+      "unitLabel": "Atribuir à Unidade (opcional)",
+      "addInvite": "Adicionar Outro",
+      "skipInvites": "Pular por enquanto",
+      "invalidEmail": "Por favor insira um e-mail válido"
+    },
+    "navigation": {
+      "back": "Voltar",
+      "next": "Próximo",
+      "finish": "Finalizar",
+      "saving": "Salvando..."
+    },
+    "errors": {
+      "required": "Este campo é obrigatório",
+      "invalidEmail": "Por favor insira um e-mail válido",
+      "saveFailed": "Falha ao salvar. Por favor tente novamente."
+    },
+    "success": {
+      "title": "Configuração Concluída!",
+      "message": "Sua comunidade foi configurada com sucesso. Redirecionando para o painel..."
+    }
+  },
   "roles": {
     "resident": "Morador",
     "board_member": "Membro do conselho",
@@ -378,82 +476,5 @@ export default {
     "no": "Não",
     "optional": "Opcional",
     "required": "Obrigatório"
-  },
-  "onboarding": {
-    "title": "Configure sua comunidade",
-    "welcome": "Bem-vindo, {name}! Vamos criar sua comunidade de condomínio.",
-    "steps": {
-      "community": "Comunidade",
-      "units": "Unidades",
-      "amenities": "Comodidades",
-      "review": "Revisão"
-    },
-    "community": {
-      "title": "Informações da Comunidade",
-      "subtitle": "Conte-nos sobre seu condomínio",
-      "name": "Nome da comunidade",
-      "namePlaceholder": "ex., Residencial Amanhecer",
-      "address": "Endereço",
-      "addressPlaceholder": "ex., Rua Principal 123, Cidade",
-      "language": "Idioma padrão",
-      "languagePlaceholder": "Selecione um idioma",
-      "timezone": "Fuso horário",
-      "timezonePlaceholder": "Selecione um fuso horário"
-    },
-    "languages": {
-      "en": "Inglês",
-      "es": "Espanhol",
-      "pt": "Português",
-      "fr": "Francês",
-      "ar": "Árabe",
-      "zh": "Chinês (Simplificado)",
-      "ja": "Japonês",
-      "ko": "Coreano"
-    },
-    "units": {
-      "title": "Estrutura do Prédio",
-      "subtitle": "Adicione suas unidades, apartamentos ou casas",
-      "unitNumber": "Número da unidade",
-      "unitNumberPlaceholder": "ex., 101, A-12",
-      "floor": "Andar",
-      "add": "Adicionar unidade",
-      "remove": "Remover"
-    },
-    "amenities": {
-      "title": "Comodidades",
-      "subtitle": "Adicione instalações disponíveis para moradores (opcional)",
-      "name": "Nome da comodidade",
-      "namePlaceholder": "ex., Piscina, Academia",
-      "description": "Descrição",
-      "descriptionPlaceholder": "Breve descrição da comodidade",
-      "requiresApproval": "Requer aprovação para reserva",
-      "add": "Adicionar comodidade",
-      "remove": "Remover",
-      "skipHint": "Você pode pular esta etapa e adicionar comodidades depois"
-    },
-    "review": {
-      "title": "Revisar e Concluir",
-      "subtitle": "Por favor, revise os detalhes da sua comunidade antes de criar",
-      "communityInfo": "Informações da Comunidade",
-      "name": "Nome",
-      "address": "Endereço",
-      "language": "Idioma",
-      "timezone": "Fuso horário",
-      "unitsInfo": "Unidades",
-      "unitsCount": "{count} unidades",
-      "amenitiesInfo": "Comodidades",
-      "amenitiesCount": "{count} comodidades",
-      "noAmenities": "Nenhuma comodidade adicionada"
-    },
-    "complete": "Criar comunidade",
-    "errors": {
-      "communityNameRequired": "O nome da comunidade é obrigatório",
-      "addressRequired": "O endereço é obrigatório",
-      "unitNumberRequired": "O número da unidade é obrigatório",
-      "floorRequired": "O andar deve ser 0 ou maior",
-      "atLeastOneUnit": "Por favor adicione pelo menos uma unidade",
-      "amenityNameRequired": "O nome da comodidade é obrigatório",
-      "generic": "Algo deu errado. Por favor, tente novamente."
-    }
   }
 } as const;
