@@ -1,6 +1,31 @@
 ---
 
-## Detailed Test Results - 2026-03-29 (Run 4 - E2E Test Suite)
+## Last Run Summary
+
+**Date:** 2026-03-29 (Run 5 - Full E2E Test Suite)
+**Result:** PARTIAL PASS (5/6 steps pass)
+**Tester:** QA Tester Agent
+
+| Step | Test | Status |
+|------|------|--------|
+| 1 | Smoke Test - Landing page loads | PASS |
+| 2 | Auth Flow - Login/Signup works | PASS |
+| 3 | Visitor Registration - Form loads, list broken | PARTIAL |
+| 4 | i18n - All locales working | PASS |
+| 5 | Navigation - Protected routes accessible | PASS |
+| 6 | Console Audit - Multiple MISSING_MESSAGE errors | PARTIAL FAIL |
+
+### Known Issues (from this run)
+
+| Bug ID | Severity | Description | Status |
+|--------|----------|-------------|--------|
+| BUG-015 | HIGH | Visitors list page 500 - missing `visitors.list.title` and `visitors.list.description` i18n keys | OPEN |
+| BUG-016 | MEDIUM | Missing `auth.common:loading` i18n key | OPEN |
+| BUG-017 | MEDIUM | Visitor registration page missing extensive i18n keys (title, description, form labels, validation messages, idType options) | **NEW** |
+
+---
+
+## Detailed Test Results - 2026-03-29 (Run 5 - E2E Test Suite - Extended Audit)
 
 ### Step 1 - Smoke Test: PASS
 - **Status:** CondoHub landing page loads correctly
@@ -50,15 +75,20 @@
 - **Exception:** /en/visitors returns HTTP 500 (BUG-015)
 
 ### Step 6 - Console & Network Audit: PARTIAL FAIL
-- **Console Errors Found:**
-  - 5x `Error: MISSING_MESSAGE: Could not resolve 'visitors.list.title'`
-  - 5x `Error: MISSING_MESSAGE: Could not resolve 'visitors.list.description'`
-  - 4x `Error: MISSING_MESSAGE: Could not resolve 'auth.common:loading'`
+- **Console Errors Found (known issues):**
+  - 5x `Error: MISSING_MESSAGE: Could not resolve 'visitors.list.title'` (BUG-015)
+  - 5x `Error: MISSING_MESSAGE: Could not resolve 'visitors.list.description'` (BUG-015)
+  - 4x `Error: MISSING_MESSAGE: Could not resolve 'auth.common:loading'` (BUG-016)
+- **NEW Console Errors Discovered (BUG-017):**
+  - 2x `visitors.register.title`
+  - 1x `visitors.register.description`
+  - 1x each: form labels and placeholders for visitorName, idType
+  - 1x each: idType options (passport, driverLicense)
+  - 1x each: validation messages (visitorNameRequired, idNumberRequired, arrivalDateRequired, arrivalTimeRequired, unitNumberRequired)
 - **Network:** No 4xx/5xx failures (except expected 500 on visitors page)
-- **New Finding:** `auth.common:loading` i18n key also missing (BUG-016)
 
 ### Summary
-**Test Date:** 2026-03-29 (Run 4)
+**Test Date:** 2026-03-29 (Run 5)
 **Result:** PARTIAL PASS (5/6 steps pass)
 
 **What Works:**
@@ -67,16 +97,33 @@
 - ✅ Signup page loads correctly
 - ✅ All i18n locales working (en, es, ar, fr)
 - ✅ All protected routes accessible (except visitors list)
-- ✅ Visitor registration FORM works (/visitors/register)
+- ✅ Visitor registration FORM loads (/visitors/register)
 
-**Known Issues (Not Regressions):**
-- ⚠️ Visitors list page 500 error (BUG-015 - missing i18n keys)
-- ⚠️ Missing i18n key `auth.common:loading` (BUG-016)
+**Known Issues:**
+- ⚠️ BUG-015: Visitors list page 500 error - missing i18n keys `visitors.list.title`, `visitors.list.description` (HIGH)
+- ⚠️ BUG-016: Missing i18n key `auth.common:loading` (MEDIUM)
+- ⚠️ **BUG-017: Visitor registration page missing extensive i18n keys** (MEDIUM) — **NEW**
+  - Missing keys: title, description, form labels, placeholders, idType options, validation messages
 
 **Next Steps:**
-1. Fix BUG-015: Add missing visitors i18n keys
+1. Fix BUG-015: Add missing visitors list i18n keys
 2. Fix BUG-016: Add missing auth.common:loading key
-3. Re-test visitors list page
+3. Fix BUG-017: Add all visitor registration i18n keys
+4. Re-test visitors feature end-to-end
+
+---
+
+## Test Results History
+
+| Run | Date | Result | Notes |
+|-----|------|--------|-------|
+| Run 5 | 2026-03-29 | PARTIAL PASS (5/6) | Extended audit - discovered BUG-017 (visitor.register i18n keys) |
+| Run 4 | 2026-03-29 | PARTIAL PASS (5/6) | Full E2E test - confirmed BUG-015, BUG-016 |
+| Run 3 | 2026-03-29 | PASS | Smoke test only |
+| Run 2 | 2026-03-28 | PARTIAL PASS | Initial E2E - discovered BUG-014 (fixed) |
+| Run 1 | 2026-03-28 | PASS | Initial smoke test |
+
+---
 
 ---
 
