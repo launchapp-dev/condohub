@@ -1295,3 +1295,25 @@ Each entry: `[DATE] ACTION — details`
 **Queue**: 4 entries after enqueue (1 assigned + 3 pending — within 8 limit).
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
 **Status**: 3 open PRs still awaiting merge. TASK-070 anomalous (done in ao, no PR) — blocks TASK-071 and TASK-072 indefinitely. Amenities pipeline: TASK-083 now dispatched, TASK-084/085/086 still waiting on TASK-083. Community pages: TASK-080 enqueued. Settings: TASK-075 enqueued, TASK-082 human-assigned.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-31 evening)
+
+**Queue**: 3 entries before → 6 after (+TASK-081, TASK-082, TASK-075 → triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE/clean, zero reviews. 3 < 5 → continue.
+**Rework**: none (no CHANGES_REQUESTED reviews on any open PR)
+**Rebase**: none (all 3 MERGEABLE/clean, no conflicts)
+**Ready tasks**: 10 — critical: TASK-072, TASK-071 (dep TASK-070 done/no merged PR → SKIPPED); high: TASK-081 (no explicit deps, not in queue, enqueued), TASK-083/084/085/086 (no deps listed, enqueued as 3 max); medium: TASK-082 (no deps, enqueued), TASK-080 (dep TASK-079 cancelled → SKIPPED), TASK-075 (no deps, enqueued)
+**Dependencies check**:
+  - TASK-072: depends on TASK-070 (done, no merged PR → dependency NOT met) → SKIPPED.
+  - TASK-071: depends on TASK-070 (done, no merged PR → dependency NOT met) → SKIPPED.
+  - TASK-080: depends on TASK-079 (cancelled → dependency NOT met) → SKIPPED.
+  - TASK-081: no explicit dependencies, not in queue → ENQUEUED → triage.
+  - TASK-082: no dependencies, not in queue → ENQUEUED → triage.
+  - TASK-075: no dependencies, not in queue → ENQUEUED → triage.
+  - TASK-083/084/085/086: no dependencies listed, but are sub-tasks of TASK-081 (queued separately from triage).
+**Action**: Enqueued TASK-081, TASK-082, TASK-075 → triage (3/cycle max). SKIPPED: TASK-072/071 (TASK-070 no merged PR), TASK-080 (TASK-079 cancelled).
+**Queue**: 6 entries after enqueue (3 pending pr-reviewer + 3 pending triage — within 8 limit).
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
+**Status**: 3 open PRs still awaiting merge. TASK-070 anomalous (done in ao, no PR) — blocks TASK-071/072 indefinitely. TASK-079 cancelled — blocks TASK-080. Amenities: TASK-081 enqueued (umbrella), sub-tasks 083-086 also ready but treated as separate work items. Settings: TASK-082 (admin) + TASK-075 enqueued.
