@@ -1234,3 +1234,26 @@ Each entry: `[DATE] ACTION — details`
 **Action**: Enqueued TASK-071, TASK-072, TASK-081 → triage. Max 3/cycle.
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
 **Status**: 3 open PRs still awaiting merge. Amenities pipeline: TASK-083 blocked (runner failed), TASK-084/085 waiting on TASK-083. Maintenance: TASK-070 done/no PR (needs verification), TASK-071/072 now enqueued.
+
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 1 entry before → 4 after (+TASK-083, TASK-081, TASK-080 → triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, zero reviews. 3 < 5 → continue.
+**Rework**: none (no CHANGES_REQUESTED reviews on any open PR)
+**Rebase**: none (all 3 MERGEABLE/clean)
+**Ready tasks**: 10 — critical: TASK-071, TASK-072; high: TASK-083, TASK-084, TASK-085, TASK-081, TASK-086; medium: TASK-080, TASK-082 (human), TASK-075
+**Dependencies check**:
+  - TASK-071, TASK-072: depend on TASK-070 (done, no merged PR → dependency NOT met) → SKIPPED.
+  - TASK-083: no dependencies, not in queue → ENQUEUED → triage.
+  - TASK-084: depends on TASK-083 (not done/merged) → SKIPPED.
+  - TASK-085: depends on TASK-083 + TASK-084 (not done/merged) → SKIPPED.
+  - TASK-086: depends on TASK-084 + TASK-085 → SKIPPED.
+  - TASK-081: no dependencies, not in queue → ENQUEUED → triage.
+  - TASK-080: no dependencies (TASK-079 cancelled; description says can proceed with English fallback), not in queue → ENQUEUED → triage.
+  - TASK-082: human-assigned → SKIPPED.
+  - TASK-075: medium priority, no deps → SKIPPED (max 3 reached).
+**Action**: Enqueued TASK-083, TASK-081, TASK-080 → triage (3/cycle max). SKIPPED: TASK-071/072 (TASK-070 no merged PR), TASK-084/085/086 (upstream deps not merged), TASK-082 (human), TASK-075 (max 3 + medium priority).
+**Queue**: 4 entries after enqueue (1 assigned/pr-reviewer + 3 pending/triage — within 8 limit).
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
