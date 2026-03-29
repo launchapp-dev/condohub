@@ -889,3 +889,21 @@ Each entry: `[DATE] ACTION — details`
 **Idle action**: NOT dispatched — new work was enqueued this cycle.
 **Queue**: 3 entries after enqueue (within 8 limit).
 **Status**: 3 open PRs still awaiting merge. 7 ready tasks in backlog, 3 dispatched this cycle.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — post-merge flush)
+
+**Queue**: 3 entries before → 6 after (+TASK-079, +TASK-078, +TASK-076 to triage)
+**Open PRs**: 0 — none (pipeline cleared)
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 5 — TASK-079 (critical), TASK-078 (critical), TASK-076 (critical), TASK-072 (critical), TASK-080 (medium)
+**Dependency checks**:
+  - TASK-079, TASK-078, TASK-076: no dependencies, no linked_requirements → CLEAR
+  - None of the 3 are in current queue → all 3 enqueued
+  - TASK-072 and TASK-080: not enqueued this cycle (max 3/cycle)
+**Action**: Enqueued TASK-079, TASK-078, TASK-076 → triage (max 3/cycle, all critical with no blockers).
+**Remaining unqueued**: TASK-072 (critical), TASK-080 (medium)
+**Idle action**: NOT dispatched — new work was enqueued this cycle.
+**Queue**: 6 entries after enqueue (within 8 limit).
