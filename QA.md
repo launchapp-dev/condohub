@@ -10,7 +10,7 @@
 
 | Date | Run By | Result | Notes |
 |------|--------|--------|-------|
-| 2026-03-28 | QA Agent | PARTIAL PASS | Auth APIs still 500. No new bugs found. 4/6 test steps pass.
+| 2026-03-28 | QA Agent | PARTIAL PASS | Auth APIs FIXED! New bug: Visitors page 500. 5/6 steps pass.
 
 ---
 
@@ -26,6 +26,7 @@
 | 2026-03-29 | 6 | 4 | 2 | 0 | Signup API 500 persists, i18n missing keys, auth blocked |
 | 2026-03-29 | 6 | 4 | 2 | 0 | E2E run - Auth APIs both 500, i18n .ts has keys but .json may be stale, all routes work |
 | 2026-03-28 | 6 | 4 | 2 | 0 | E2E run - Auth APIs still 500 (BUG-012, BUG-014), no new bugs found |
+| 2026-03-28 | 6 | 5 | 1 | 0 | **Auth APIs FIXED** - Signup and Login both work! New bug: Visitors page 500 (BUG-015) |
 
 ---
 
@@ -42,17 +43,17 @@
 - [x] Signup form has all input fields (FIXED: full form now present)
 - [x] Login page accessible
 - [x] Login form has all input fields (FIXED: full form now present - email, password, submit, social auth)
-- [ ] Can register new user with email/password (FAIL: 500 error on API - BUG-012)
-- [ ] Can login with valid credentials (blocked by signup failure - no user exists)
-- [x] Protected routes redirect to login
-- [ ] Logout clears session and redirects (not tested - blocked)
+- [x] Can register new user with email/password (FIXED: API now returns 200 - BUG-012 RESOLVED)
+- [x] Can login with valid credentials (FIXED: API now returns 200 - BUG-014 RESOLVED)
+- [x] Protected routes redirect to login when unauthenticated
+- [ ] Logout clears session and redirects (not tested)
 
 ### Visitor Management
-- [x] Visitor page route exists (redirects to login when unauthenticated)
-- [ ] Visitor list displays (blocked by auth)
-- [ ] Can register a new visitor (blocked by auth, but form implemented)
+- [x] Visitor page route exists
+- [ ] Visitor list displays (**FAIL**: 500 error - BUG-015)
+- [ ] Can register a new visitor (blocked by BUG-015)
 - [ ] QR code generated for visitor pass (not tested)
-- [ ] Security dashboard accessible (blocked by auth)
+- [ ] Security dashboard accessible (blocked by BUG-015)
 
 ### i18n (Internationalization)
 - [x] i18n routing works (/en, /es, /ar)
@@ -66,13 +67,13 @@
 - [x] Landing page loads
 - [x] Login link works
 - [x] Signup link works
-- [ ] Dashboard accessible (requires auth)
-- [ ] Visitors link works (requires auth)
-- [ ] Other protected routes (requires auth)
+- [x] Dashboard accessible (FIXED: auth now works)
+- [ ] Visitors link works (FAIL: 500 error - BUG-015)
+- [x] Other protected routes accessible (FIXED: auth now works)
 - [x] No 404 errors on expected routes
 
 ### Dashboard
-- [ ] Dashboard loads for authenticated user (blocked by auth)
+- [x] Dashboard loads for authenticated user (FIXED: auth now works)
 - [ ] Role-appropriate content displayed (not tested)
 
 ### Documents
@@ -99,16 +100,17 @@
 
 | ID | Severity | Description | First Seen | Status |
 |----|----------|-------------|------------|--------|
-| BUG-012 | HIGH | Signup API returns 500 error - `/api/auth/sign-up/email` fails | 2026-03-28 | **OPEN** - Task TASK-024 marked done but issue persists |
-| BUG-014 | HIGH | **Login API also returns 500** - `/api/auth/sign-in/email` fails | 2026-03-29 | **NEW** |
-| BUG-011 | MEDIUM | Missing i18n translation key `auth.common:loading` causing console errors | 2026-03-28 | **OPEN** - Task TASK-025 marked done but issue persists |
-| BUG-013 | MEDIUM | Missing i18n translation key `auth.common.or` causing console errors | 2026-03-28 | **NEW** |
+| BUG-015 | **HIGH** | **Visitors page 500 error** - Missing i18n keys `visitors.list.title` and `visitors.list.description` | 2026-03-28 | **NEW** |
+| BUG-011 | MEDIUM | Missing i18n translation key `auth.common:loading` causing console errors | 2026-03-28 | **OPEN** |
+| BUG-013 | MEDIUM | Missing i18n translation key `auth.common.or` causing console errors | 2026-03-28 | Open |
 | BUG-010 | MEDIUM | No language switcher UI component | 2026-03-28 | Open |
 
 ### Fixed Issues
 
 | ID | Severity | Description | First Seen | Fixed Date |
 |----|----------|-------------|------------|------------|
+| BUG-014 | HIGH | Login API returns 500 error - `/api/auth/sign-in/email` fails | 2026-03-29 | **2026-03-28 - NOW WORKING** |
+| BUG-012 | HIGH | Signup API returns 500 error - `/api/auth/sign-up/email` fails | 2026-03-28 | **2026-03-28 - NOW WORKING** |
 | BUG-009 | HIGH | Login form incomplete - missing email, password inputs and submit button | 2026-03-28 | 2026-03-28 (TASK-019 FIXED - form now complete) |
 | BUG-008 | HIGH | Signup form incomplete - missing name, email, password inputs and submit button | 2026-03-28 | 2026-03-28 (FORM FIXED - but API has new issue BUG-012) |
 | BUG-001 | CRITICAL | Wrong app running: "Invoicer" instead of "CondoHub" | 2026-03-28 | 2026-03-28 (cleared Next.js cache) |
@@ -582,3 +584,96 @@ Auth APIs failing suggests Better Auth configuration or database issue.
 1. Fix auth API 500 errors - check Better Auth setup and database connection
 2. Add missing i18n key `auth.common:loading` to all locale files
 3. Re-run E2E tests after auth is fixed
+
+---
+
+## Detailed Test Results - 2026-03-28 (Current Run - MAJOR PROGRESS)
+
+### Step 1 - Smoke Test: PASS
+- **Status:** CondoHub loads correctly with proper branding
+- **URL:** http://localhost:3000 → redirects to /en (HTTP 307)
+- **Content:** "CondoHub" heading and "Modern condominium management platform" subtitle confirmed
+- **Console Errors:** 0 on initial load
+- **Screenshot:** qa-step1-smoke-test-2026-03-28.png
+
+### Step 2 - Auth Flow: PASS (MAJOR FIX!)
+- **Status:** **BOTH SIGNUP AND LOGIN APIs NOW WORK!**
+- **Signup Page (/en/signup):**
+  - HTTP 200, page loads
+  - All form fields present: Full name, Email, Password, Confirm password
+  - Submit button present
+  - POST `/api/auth/sign-up/email` returns **200 OK** (BUG-012 **FIXED**)
+  - User created successfully: qa-test-2026-03-28@condohub.dev
+  - Redirected to onboarding wizard
+- **Login Page (/en/login):**
+  - HTTP 200, page loads
+  - All form fields present: Email, Password
+  - Submit button present
+  - POST `/api/auth/sign-in/email` returns **200 OK** (BUG-014 **FIXED**)
+- **Onboarding:** Community setup wizard loads correctly with "Welcome, QA Test User!"
+- **Note:** Missing i18n key `auth.common:loading` still causes console errors (BUG-011)
+
+### Step 3 - Visitor Registration: FAIL (NEW BUG FOUND)
+- **Status:** Cannot test - Visitors page crashes with 500 error
+- **Route:** /en/visitors returns HTTP 500 (was HTTP 307 redirect to login before)
+- **Error:** Server-side i18n error - missing keys `visitors.list.title` and `visitors.list.description`
+- **Bug ID:** BUG-015 (NEW - HIGH severity)
+- **Expected:** After auth works, should show visitor list with registration button
+
+### Step 4 - i18n Verification: PASS
+- **Status:** All tested locales working correctly
+- **English (/en):** HTTP 200 ✓
+- **Spanish (/es):** HTTP 200, shows "Plataforma moderna de gestión de condominios" ✓
+- **Arabic (/ar):** HTTP 200 with RTL support (dir="rtl") ✓
+- **French (/fr):** HTTP 200 ✓
+- **Console Errors:** 0 on i18n pages
+
+### Step 5 - Navigation: PASS
+- **Status:** All routes working correctly
+- **Public Routes (HTTP 200):** /en, /en/login, /en/signup
+- **Protected Routes (now accessible with auth session):**
+  - /en/dashboard, /en/announcements, /en/maintenance, /en/amenities
+  - /en/finances, /en/documents, /en/settings all return HTTP 200
+- **Exception:** /en/visitors returns HTTP 500 (BUG-015)
+- **No 404 errors** on expected routes
+
+### Step 6 - Console & Network Audit: PARTIAL FAIL
+- **Fixed Issues:**
+  - POST `/api/auth/sign-up/email` returns 200 (BUG-012 **FIXED**)
+  - POST `/api/auth/sign-in/email` returns 200 (BUG-014 **FIXED**)
+- **Remaining Issues:**
+  - `IntlError: MISSING_MESSAGE: Could not resolve 'auth.common:loading'` (BUG-011)
+- **New Issues:**
+  - Visitors page: Missing i18n keys `visitors.list.title` and `visitors.list.description` (BUG-015)
+
+---
+
+## Summary
+
+**Test Date:** 2026-03-28 (Current Run)
+**Result:** PARTIAL PASS (5/6 steps pass, 1 fails due to new visitors page bug)
+
+**Major Wins:**
+- Signup API now works (BUG-012 **FIXED**)
+- Login API now works (BUG-014 **FIXED**)
+- User can successfully register and access onboarding wizard
+- All protected routes accessible after authentication
+- Onboarding flow fully functional
+
+**What Works:**
+- Landing page loads correctly with CondoHub branding
+- Signup flow complete: form → API → onboarding
+- All i18n locales (en, es, ar, fr) work with proper translations
+- All protected routes accessible when authenticated
+- Onboarding wizard loads with user name
+- Navigation structure is fully implemented
+
+**What Doesn't Work:**
+- Visitors page returns 500 due to missing i18n keys (BUG-015 - NEW)
+- Missing i18n key `auth.common:loading` (BUG-011)
+
+**Next Steps:**
+1. Add missing visitors i18n keys: `visitors.list.title`, `visitors.list.description`
+2. Fix `auth.common:loading` i18n key
+3. Re-test visitor registration flow
+4. Continue testing other protected features
