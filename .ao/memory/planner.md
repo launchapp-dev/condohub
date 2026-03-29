@@ -1094,3 +1094,25 @@ Each entry: `[DATE] ACTION — details`
 **Queue**: 5 entries after enqueue (within 8 limit).
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
 **Status**: 3 open PRs awaiting review/merge. Amenity chain (083→084→085→086) now has 083 dispatched. Maintenance tasks (071, 072) still blocked by TASK-070 anomalous done/no-PR state.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — current)
+
+**Queue**: 1 entry before → 4 after (TASK-081 already queued, + TASK-083, TASK-084, TASK-085 enqueued → triage)
+**Open PRs**: 0 — none (< 5 → continue)
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 9 — TASK-071, TASK-072 (critical, blocked/TASK-070 doesn't exist), TASK-081 (high, already queued), TASK-083 (high, no deps), TASK-084 (high, depends on 083), TASK-085 (high, depends on 083+084), TASK-086 (high, depends on 084+085), TASK-074 (high/duplicate of TASK-081), TASK-075 (medium)
+**Dependencies check**:
+  - TASK-071, TASK-072: depend on TASK-070 (TASK-070 does not exist in ao, no merged PR) → SKIPPED.
+  - TASK-083: no dependencies, not in queue → ENQUEUED.
+  - TASK-084: blocked-by TASK-083, not in queue → ENQUEUED.
+  - TASK-085: blocked-by TASK-083, TASK-084, not in queue → ENQUEUED.
+  - TASK-086: blocked-by TASK-084, TASK-085 → SKIPPED (upstream not done).
+  - TASK-074: duplicate of TASK-081 scope, TASK-081 already queued → SKIPPED.
+  - TASK-075: no dependencies, medium priority → SKIPPED (max 3 reached).
+  - TASK-080: depends on TASK-079 (no merged PR) → SKIPPED.
+**Action**: Enqueued TASK-083, TASK-084, TASK-085 → triage (3/cycle max). SKIPPED: TASK-071/072 (TASK-070 doesn't exist), TASK-084/085 chain started, TASK-086 (upstream deps), TASK-074 (duplicate), TASK-075/080 (max 3 or unmet dep).
+**Queue**: 4 entries after enqueue (within 8 limit).
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
