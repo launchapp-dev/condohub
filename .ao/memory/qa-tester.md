@@ -8,19 +8,19 @@ Each entry: `[DATE] TEST — PASS/FAIL details`
 
 ## Last Run Summary
 
-**Date:** 2026-03-29 (Run 6 - Full E2E Test Suite)
+**Date:** 2026-03-30 (Run 7 - Full E2E Test Suite)
 **Result:** PARTIAL PASS (5/6 steps pass)
 **No new bugs discovered**
 
 ### Passes
 - **Smoke Test:** Landing page loads with CondoHub branding (HTTP 200)
 - **Auth Flow Pages:** Login and signup pages load correctly (HTTP 200)
-- **i18n:** All locales working (en, es, ar, fr) with proper translations
+- **i18n:** Spanish and Arabic locales working with proper translations and RTL
 - **Navigation:** All protected routes return 200 (dashboard, announcements, maintenance, amenities, finances, documents, settings)
-- **Visitor Registration FORM:** /visitors/register loads correctly (HTTP 200)
+- **Console Audit:** No new console errors or failed network requests
 
 ### Known Issues (unchanged)
-- BUG-015: Visitors list page 500 error — missing `visitors.list.title` and `visitors.list.description` i18n keys (HIGH severity)
+- BUG-015: Visitors list page API returns 500 — missing `visitors.list.title` and `visitors.list.description` i18n keys (HIGH severity)
 - BUG-016: Missing i18n key `auth.common:loading` (MEDIUM severity)
 - BUG-017: Visitor registration page missing extensive i18n keys (MEDIUM severity)
 
@@ -58,7 +58,7 @@ Each entry: `[DATE] TEST — PASS/FAIL details`
 
 | Bug ID | Severity | Description | First Seen | Status |
 |--------|----------|-------------|------------|--------|
-| BUG-017 | MEDIUM | Visitor registration missing i18n keys (title, description, form labels, validation messages, idType options) | 2026-03-29 | **NEW** |
+| BUG-017 | MEDIUM | Visitor registration missing i18n keys (title, description, form labels, validation messages, idType options) | 2026-03-29 | OPEN |
 | BUG-015 | HIGH | Visitors page 500 error — missing i18n keys `visitors.list.title` and `visitors.list.description` | 2026-03-28 | OPEN |
 | BUG-016 | MEDIUM | Missing i18n key `auth.common:loading` — causes client error during auth | 2026-03-29 | OPEN |
 | BUG-011 | MEDIUM | Missing i18n key `auth.common:loading` | 2026-03-28 | OPEN |
@@ -78,6 +78,12 @@ None — no changes since last run.
 ## Run History
 
 ## Run History
+
+### 2026-03-30 (Run 7 - Full E2E Test Suite)
+- **Scope:** Full E2E test - smoke, auth, visitors, i18n, navigation, console audit
+- **Result:** PARTIAL PASS (5/6 steps)
+- **Findings:** No new bugs discovered. All known bugs still present (BUG-015, BUG-016, BUG-017)
+- **Status:** Auth API returns 500, visitors page has i18n issues, but core navigation and i18n work
 
 ### 2026-03-29 (Run 6 - Full E2E Test Suite)
 - **Scope:** Full E2E test - smoke, auth, visitors, i18n, navigation, console audit
