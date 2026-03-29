@@ -23,3 +23,8 @@ Each entry: `[DATE] PR#N ACTION — details`
 
 ## Known Patterns
 <!-- Recurring issues seen across PRs (e.g., missing translations, type errors). -->
+
+### 2026-03-30 (later) — TASK-051 CLOSED AGAIN — Empty branch, no feature code
+- **Reason:** Branch `ao/task-051` pushed to remote with same 73 workflow-only commits (no feature implementation). Maintenance pages are stubs, no components, no actions, no i18n beyond top-level nav label.
+- **Action:** Deleted remote branch `ao/task-051`. Re-queue with `workflow_ref="triage"` for implementation from scratch.
+- **Pattern:** This task has appeared multiple times in reconciler as DONE but feature was never built. True feature implementation still needed.
