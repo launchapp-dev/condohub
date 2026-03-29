@@ -22,17 +22,9 @@ async function DashboardContent() {
     redirect("/login");
   }
 
-  // If user has no community, show onboarding
+  // If user has no community, redirect to onboarding
   if (!user.communityId) {
-    return (
-      <div className="flex flex-1 flex-col items-center justify-center gap-4 p-6">
-        <h1 className="text-2xl font-semibold">Welcome to CondoHub</h1>
-        <p className="text-muted-foreground text-center max-w-md">
-          You are not yet a member of any community. Please contact your community
-          administrator to be added, or create a new community.
-        </p>
-      </div>
-    );
+    redirect("/onboarding");
   }
 
   // Render appropriate dashboard based on role

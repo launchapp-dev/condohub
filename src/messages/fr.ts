@@ -342,5 +342,82 @@ export default {
     "no": "Non",
     "optional": "Facultatif",
     "required": "Obligatoire"
+  },
+  "onboarding": {
+    "title": "Configurez votre communauté",
+    "welcome": "Bienvenue, {name}! Créons votre communauté de condominiums.",
+    "steps": {
+      "community": "Communauté",
+      "units": "Unités",
+      "amenities": "Commodités",
+      "review": "Vérification"
+    },
+    "community": {
+      "title": "Informations sur la Communauté",
+      "subtitle": "Parlez-nous de votre condominium",
+      "name": "Nom de la communauté",
+      "namePlaceholder": "ex., Résidences Soleil",
+      "address": "Adresse",
+      "addressPlaceholder": "ex., 123 Rue Principale, Ville",
+      "language": "Langue par défaut",
+      "languagePlaceholder": "Sélectionnez une langue",
+      "timezone": "Fuseau horaire",
+      "timezonePlaceholder": "Sélectionnez un fuseau horaire"
+    },
+    "languages": {
+      "en": "Anglais",
+      "es": "Espagnol",
+      "pt": "Portugais",
+      "fr": "Français",
+      "ar": "Arabe",
+      "zh": "Chinois (Simplifié)",
+      "ja": "Japonais",
+      "ko": "Coréen"
+    },
+    "units": {
+      "title": "Structure du Bâtiment",
+      "subtitle": "Ajoutez vos unités, appartements ou maisons",
+      "unitNumber": "Numéro d'unité",
+      "unitNumberPlaceholder": "ex., 101, A-12",
+      "floor": "Étage",
+      "add": "Ajouter une unité",
+      "remove": "Supprimer"
+    },
+    "amenities": {
+      "title": "Commodités",
+      "subtitle": "Ajoutez les installations disponibles pour les résidents (facultatif)",
+      "name": "Nom de la commodité",
+      "namePlaceholder": "ex., Piscine, Salle de sport",
+      "description": "Description",
+      "descriptionPlaceholder": "Brève description de la commodité",
+      "requiresApproval": "Nécessite une approbation pour la réservation",
+      "add": "Ajouter une commodité",
+      "remove": "Supprimer",
+      "skipHint": "Vous pouvez ignorer cette étape et ajouter des commodités plus tard"
+    },
+    "review": {
+      "title": "Vérifier et Terminer",
+      "subtitle": "Veuillez vérifier les détails de votre communauté avant de créer",
+      "communityInfo": "Informations sur la Communauté",
+      "name": "Nom",
+      "address": "Adresse",
+      "language": "Langue",
+      "timezone": "Fuseau horaire",
+      "unitsInfo": "Unités",
+      "unitsCount": "{count} unités",
+      "amenitiesInfo": "Commodités",
+      "amenitiesCount": "{count} commodités",
+      "noAmenities": "Aucune commodité ajoutée"
+    },
+    "complete": "Créer la communauté",
+    "errors": {
+      "communityNameRequired": "Le nom de la communauté est obligatoire",
+      "addressRequired": "L'adresse est obligatoire",
+      "unitNumberRequired": "Le numéro d'unité est obligatoire",
+      "floorRequired": "L'étage doit être 0 ou plus",
+      "atLeastOneUnit": "Veuillez ajouter au moins une unité",
+      "amenityNameRequired": "Le nom de la commodité est obligatoire",
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    }
   }
 } as const;

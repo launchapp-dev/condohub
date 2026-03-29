@@ -342,5 +342,82 @@ export default {
     "no": "Não",
     "optional": "Opcional",
     "required": "Obrigatório"
+  },
+  "onboarding": {
+    "title": "Configure sua comunidade",
+    "welcome": "Bem-vindo, {name}! Vamos criar sua comunidade de condomínio.",
+    "steps": {
+      "community": "Comunidade",
+      "units": "Unidades",
+      "amenities": "Comodidades",
+      "review": "Revisão"
+    },
+    "community": {
+      "title": "Informações da Comunidade",
+      "subtitle": "Conte-nos sobre seu condomínio",
+      "name": "Nome da comunidade",
+      "namePlaceholder": "ex., Residencial Amanhecer",
+      "address": "Endereço",
+      "addressPlaceholder": "ex., Rua Principal 123, Cidade",
+      "language": "Idioma padrão",
+      "languagePlaceholder": "Selecione um idioma",
+      "timezone": "Fuso horário",
+      "timezonePlaceholder": "Selecione um fuso horário"
+    },
+    "languages": {
+      "en": "Inglês",
+      "es": "Espanhol",
+      "pt": "Português",
+      "fr": "Francês",
+      "ar": "Árabe",
+      "zh": "Chinês (Simplificado)",
+      "ja": "Japonês",
+      "ko": "Coreano"
+    },
+    "units": {
+      "title": "Estrutura do Prédio",
+      "subtitle": "Adicione suas unidades, apartamentos ou casas",
+      "unitNumber": "Número da unidade",
+      "unitNumberPlaceholder": "ex., 101, A-12",
+      "floor": "Andar",
+      "add": "Adicionar unidade",
+      "remove": "Remover"
+    },
+    "amenities": {
+      "title": "Comodidades",
+      "subtitle": "Adicione instalações disponíveis para moradores (opcional)",
+      "name": "Nome da comodidade",
+      "namePlaceholder": "ex., Piscina, Academia",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Breve descrição da comodidade",
+      "requiresApproval": "Requer aprovação para reserva",
+      "add": "Adicionar comodidade",
+      "remove": "Remover",
+      "skipHint": "Você pode pular esta etapa e adicionar comodidades depois"
+    },
+    "review": {
+      "title": "Revisar e Concluir",
+      "subtitle": "Por favor, revise os detalhes da sua comunidade antes de criar",
+      "communityInfo": "Informações da Comunidade",
+      "name": "Nome",
+      "address": "Endereço",
+      "language": "Idioma",
+      "timezone": "Fuso horário",
+      "unitsInfo": "Unidades",
+      "unitsCount": "{count} unidades",
+      "amenitiesInfo": "Comodidades",
+      "amenitiesCount": "{count} comodidades",
+      "noAmenities": "Nenhuma comodidade adicionada"
+    },
+    "complete": "Criar comunidade",
+    "errors": {
+      "communityNameRequired": "O nome da comunidade é obrigatório",
+      "addressRequired": "O endereço é obrigatório",
+      "unitNumberRequired": "O número da unidade é obrigatório",
+      "floorRequired": "O andar deve ser 0 ou maior",
+      "atLeastOneUnit": "Por favor adicione pelo menos uma unidade",
+      "amenityNameRequired": "O nome da comodidade é obrigatório",
+      "generic": "Algo deu errado. Por favor, tente novamente."
+    }
   }
 } as const;

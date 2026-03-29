@@ -342,5 +342,82 @@ export default {
     "no": "아니오",
     "optional": "선택",
     "required": "필수"
+  },
+  "onboarding": {
+    "title": "커뮤니티 설정",
+    "welcome": "환영합니다, {name}님! 콘도미니엄 커뮤니티를 만들어 보겠습니다.",
+    "steps": {
+      "community": "커뮤니티",
+      "units": "호수",
+      "amenities": "편의시설",
+      "review": "검토"
+    },
+    "community": {
+      "title": "커뮤니티 정보",
+      "subtitle": "콘도미니엄에 대해 알려주세요",
+      "name": "커뮤니티 이름",
+      "namePlaceholder": "예: 선라이즈 레지던스",
+      "address": "주소",
+      "addressPlaceholder": "예: 메인스트리트 123, 시티",
+      "language": "기본 언어",
+      "languagePlaceholder": "언어 선택",
+      "timezone": "시간대",
+      "timezonePlaceholder": "시간대 선택"
+    },
+    "languages": {
+      "en": "영어",
+      "es": "스페인어",
+      "pt": "포르투갈어",
+      "fr": "프랑스어",
+      "ar": "아랍어",
+      "zh": "중국어(간체)",
+      "ja": "일본어",
+      "ko": "한국어"
+    },
+    "units": {
+      "title": "건물 구조",
+      "subtitle": "호수, 아파트 또는 주택을 추가하세요",
+      "unitNumber": "호수",
+      "unitNumberPlaceholder": "예: 101, A-12",
+      "floor": "층",
+      "add": "호수 추가",
+      "remove": "삭제"
+    },
+    "amenities": {
+      "title": "편의시설",
+      "subtitle": "입주민이 이용할 수 있는 시설을 추가하세요(선택사항)",
+      "name": "편의시설 이름",
+      "namePlaceholder": "예: 수영장, 헬스장",
+      "description": "설명",
+      "descriptionPlaceholder": "편의시설에 대한 간략한 설명",
+      "requiresApproval": "예약에 승인 필요",
+      "add": "편의시설 추가",
+      "remove": "삭제",
+      "skipHint": "이 단계를 건너뛰고 나중에 편의시설을 추가할 수 있습니다"
+    },
+    "review": {
+      "title": "검토 및 완료",
+      "subtitle": "생성하기 전에 커뮤니티 세부 정보를 검토하세요",
+      "communityInfo": "커뮤니티 정보",
+      "name": "이름",
+      "address": "주소",
+      "language": "언어",
+      "timezone": "시간대",
+      "unitsInfo": "호수",
+      "unitsCount": "{count}개 호수",
+      "amenitiesInfo": "편의시설",
+      "amenitiesCount": "{count}개 편의시설",
+      "noAmenities": "추가된 편의시설 없음"
+    },
+    "complete": "커뮤니티 생성",
+    "errors": {
+      "communityNameRequired": "커뮤니티 이름은 필수입니다",
+      "addressRequired": "주소는 필수입니다",
+      "unitNumberRequired": "호수는 필수입니다",
+      "floorRequired": "층은 0 이상이어야 합니다",
+      "atLeastOneUnit": "최소 한 개의 호수를 추가하세요",
+      "amenityNameRequired": "편의시설 이름은 필수입니다",
+      "generic": "문제가 발생했습니다. 다시 시도해 주세요."
+    }
   }
 } as const;
