@@ -1390,3 +1390,33 @@ Each entry: `[DATE] ACTION — details`
 **Queue**: 7 entries after enqueue (within 8 limit).
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
 **Status**: TASK-070 and TASK-083 anomalous (done in ao, no merged PRs) — blocks TASK-071, TASK-072, TASK-084, TASK-085, TASK-086, TASK-088, TASK-089. Queue at 7/8.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-29 evening)
+
+**Queue**: 0 entries before → 3 after (TASK-091, TASK-087, TASK-090 enqueued → triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE/CLEAN. 3 < 5 → continue.
+**Rework**: none (no CHANGES_REQUESTED reviews on any open PR — all 3 have zero reviews)
+**Rebase**: none (all 3 MERGEABLE/CLEAN, no conflicts)
+**Ready tasks**: 15 total — critical: TASK-093, TASK-092, TASK-091, TASK-014, TASK-072, TASK-071; high: TASK-090, TASK-087, TASK-081, TASK-089, TASK-088, TASK-085, TASK-084, TASK-086; medium: TASK-082 (human-assigned)
+**Dependencies check**:
+  - TASK-091: dependencies=[], no deps, not in queue → ENQUEUED.
+  - TASK-093: depends on TASK-091 (not done) → SKIPPED.
+  - TASK-092: depends on TASK-091 (not done) → SKIPPED.
+  - TASK-087: dependencies=[], no deps, not in queue → ENQUEUED.
+  - TASK-090: dependencies=[], no deps, not in queue → ENQUEUED.
+  - TASK-071: dependencies=[], but description mentions TASK-070. TASK-070 done/no merged PR → SKIPPED (blocked by premature done).
+  - TASK-072: same as TASK-071 → SKIPPED.
+  - TASK-088: dependencies=[] per ao data, not in queue → ready but SKIPPED (3/cycle max hit).
+  - TASK-089: dependencies=[] per ao data, not in queue → ready but SKIPPED (3/cycle max hit).
+  - TASK-086: dependencies=[] per ao data, not in queue → ready but SKIPPED (3/cycle max hit).
+  - TASK-084: depends on TASK-083 (not in ao, anomalous) → SKIPPED.
+  - TASK-085: depends on TASK-083 and TASK-084 → SKIPPED.
+  - TASK-081: umbrella, dependencies=[], but has worktree_path → SKIPPED (possibly staled).
+  - TASK-082: human-assigned (samishukri) → SKIPPED.
+  - TASK-014: has worktree_path (possibly in-progress) → SKIPPED (3/cycle max hit).
+**Action**: Enqueued TASK-091, TASK-087, TASK-090 → triage (3/cycle max). SKIPPED: TASK-071/072 (TASK-070 no merged PR), TASK-093/092 (blocked by TASK-091), TASK-088/089/086 (no deps per ao, not queued — deferred to next cycle), TASK-082 (human), TASK-014/081 (stale worktrees).
+**Queue**: 3 entries after enqueue (within 8 limit).
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
+**Status**: 3 open PRs still awaiting merge. TASK-070 anomalous (done, no PR) — blocks TASK-071/072. Community chain: TASK-091 enqueued (schema+actions) → will unblock TASK-092/093 next cycle. Amenities chain: TASK-087 (data layer) and TASK-090 (i18n) both enqueued — UI tasks 088/089/086 still blocked (per ao deps=[], they could run, but data layer should land first; deferred to next cycle to let 087 land). Queue empty at start, 3 dispatched.
