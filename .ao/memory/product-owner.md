@@ -42,3 +42,21 @@ Each entry: `[DATE] DECISION — reason`
 - **Deferred**: Community rules version history — would need a versions table; too complex for single task.
 - **Deferred**: Amenity waitlist — part of the larger amenities booking task; not splitting further.
 - **Not creating**: Document repository, finances, announcements, maintenance, visitor management — all verified as well-implemented in codebase.
+
+## 2026-03-29 (evening review)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds (TypeScript clean, no errors)
+- **Build warnings only**: Better Auth secret entropy warnings, OAuth providers missing clientId/clientSecret (expected in dev)
+- **Pipeline**: 43 done, 2 cancelled, 2 ready (TASK-045 community page, TASK-046 admin settings) — HEALTHY, not saturated
+- **Ready queue**: TASK-046 (admin settings, high) and TASK-045 (community page, medium) are both waiting to be picked up
+- **No new tasks created**: Phase directive is read-only product review; no file edits or task creation this run
+- **Confirmed still placeholder (not yet built)**:
+  - /amenities page (TASK-044 was created for this but component files not yet present in src/components/amenities/)
+  - /community page (TASK-045 ready)
+  - /settings/community page (TASK-046 ready)
+  - /settings/roles page (TASK-046 ready)
+  - /settings/page.tsx (user settings — stub)
+- **Confirmed well-implemented**: dashboard (role-based, full server actions), finances (full component + server actions), documents (full component + server actions), visitor management (full pre-registration, QR, blacklist), announcements (rich text), onboarding wizard, db schema (comprehensive)
+- **Deferred**: None new this run — all gaps already covered by existing ready tasks or deferred from prior runs
