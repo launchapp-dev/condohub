@@ -379,3 +379,17 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 12 ready tasks + 1 active assigned queue entry. Did NOT dispatch product-review.
 
 **Note:** TASK-081 (Build amenities booking system) was self-blocked with "Blocked by status update" — no real dependency. Unblocked and resumed. Pipeline now has 12 ready tasks for daemon to assign.
+
+### 2026-03-29T21:35 UTC — Reconciliation run
+
+**Pipeline state:** 66 done, 8 cancelled, 10 ready, 1 in-progress (TASK-082), 0 blocked, 1 backlog (TASK-051), 0 failed. Queue had 7 entries (TASK-082 assigned standard ~27min, TASK-051/TASK-014 assigned pr-reviewer ~1min, TASK-081/083/075 pending triage ~1min — all < 30 min old). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): TASK-051 (backlog, completed_at=2026-03-29T04:18:01Z, no deps, no blocked_by) — data inconsistency: task was done but status reverted to backlog. Fixed via backlog→in_progress→done transition. TASK-051 now correctly `done`. Done count now 67.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): All 7 queue entries < 30 min old — no stale entries to drop. Queue entries for done/cancelled tasks (TASK-051, TASK-014, TASK-018, TASK-075) will auto-clean. No manual drop needed.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still OPEN (not merged), tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 11 ready + 1 in-progress + queue active. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
