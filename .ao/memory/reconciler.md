@@ -333,3 +333,15 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 8 ready tasks + 3 active queue entries exist. Did NOT dispatch product-review.
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
+
+### 2026-03-29T21:00 UTC — Reconciliation run
+
+**Pipeline state:** 65 done, 7 cancelled, 5 ready (TASK-079, TASK-078, TASK-076, TASK-072, TASK-080), 3 blocked (TASK-071, TASK-074, TASK-075), 0 backlog, 0 failed. Queue had 3 assigned entries (TASK-079, TASK-078, TASK-076 — all active triage). Open PRs: 0.
+
+**Actions:**
+- STEP 1 (UNBLOCK): 3 blocked tasks unblocked → `ready` (single workflow runner failure, no dependencies, worktrees exist): TASK-071, TASK-074, TASK-075. Ready count now 8.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Queue has 3 assigned entries (TASK-079, TASK-078, TASK-076) — all for ready tasks, recent triage assignments. Not stale. No action needed.
+- STEP 5 (MARK DONE): No open PRs to check. No action.
+- STEP 6 (IDLE CHECK): Pipeline idle — 8 ready + 0 in-progress + queue with 3 assigned (for already-ready tasks) = pipeline effectively idle. Dispatched `product-review` ("Idle pipeline — PO scan for work").
