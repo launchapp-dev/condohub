@@ -1047,3 +1047,26 @@ Each entry: `[DATE] ACTION — details`
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
 **Queue**: 4 entries after enqueue (within 8 limit).
 **Flagged issues**: TASK-070 still anomalous (done in ao, no PR) — blocks TASK-071/TASK-072 indefinitely until PO resolves.
+
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 2 entries before → 4 after (TASK-081, TASK-075 enqueued → triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, zero CHANGES_REQUESTED reviews.
+**Rework**: none (no CHANGES_REQUESTED)
+**Rebase**: none (all MERGEABLE, no conflicts)
+**Ready tasks**: 9 — TASK-071, TASK-072 (critical, blocked/TASK-070 no PR), TASK-081, TASK-083, TASK-084, TASK-085, TASK-086 (high), TASK-074 (high/duplicate), TASK-075, TASK-080 (medium)
+**Dependency checks**:
+  - TASK-071, TASK-072: depend on TASK-070 (done in ao, no merged PR — verified gh pr list --merged empty). Dependency NOT met → SKIPPED.
+  - TASK-080: depends on TASK-079 (cancelled) → SKIPPED.
+  - TASK-083: already in queue (assigned) → SKIPPED.
+  - TASK-084: depends on TASK-083 (queued/assigned) → SKIPPED.
+  - TASK-085: depends on TASK-083 + TASK-084 → SKIPPED.
+  - TASK-086: depends on TASK-084 + TASK-085 → SKIPPED.
+  - TASK-074: duplicate of TASK-081 (same scope, TASK-081 is more specific) → SKIPPED.
+  - TASK-081: no dependencies, not in queue → ENQUEUED.
+  - TASK-075: no dependencies, not in queue → ENQUEUED.
+**Action**: Enqueued TASK-081, TASK-075 → triage (2/cycle max). SKIPPED: TASK-071, TASK-072 (TASK-070 no merged PR), TASK-080 (TASK-079 cancelled), TASK-083/084/085/086 (upstream deps), TASK-074 (duplicate of TASK-081).
+**Queue**: 4 entries after enqueue (within 8 limit).
+**Idle action**: NOT dispatched — pipeline has queued work.
