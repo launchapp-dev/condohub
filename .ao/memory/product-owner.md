@@ -71,3 +71,37 @@ Each entry: `[DATE] DECISION — reason`
 - **Created TASK-671** (medium, ready): Build community page with profile, rules editor, and board roster. Replaces stale TASK-045. The /community page is a placeholder; VISION section 2 specifies community info, rules document (rich text, versioned), and board member roster with roles.
 - **NOT creating** (pipeline saturated): Several other placeholder pages exist (announcements, maintenance, community/units) but pipeline already has 2 new high-priority tasks this cycle. Will create in next review cycle.
 - **Verified well-implemented**: visitors page (full table with filters, server actions), dashboard (role-based, skeleton loading), finances page, documents page — all are genuine implementations, not stubs.
+
+## 2026-03-29 (product-review phase)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds
+- **Pipeline**: 44 done, 3 cancelled, 0 active — EMPTY
+- **Stub pages still present** (6 stubs, all 11 lines):
+  - /amenities/page.tsx — stub (VISION §8)
+  - /community/page.tsx — stub (VISION §2)
+  - /settings/page.tsx — stub (VISION §11)
+  - /settings/community/page.tsx — stub (VISION §11)
+  - /settings/roles/page.tsx — stub (VISION §11)
+  - /maintenance/page.tsx — stub (VISION §6)
+- **Created TASK-048** (high, ready, enqueued to triage): Build amenities booking page with calendar and booking form. Reason: /amenities and /amenities/[id]/book are empty stubs. VISION §8 specifies full amenity booking with calendar, time slots, conflict detection, waitlist, deposit tracking.
+- **Created TASK-049** (medium, ready): Build community page with profile, rules editor, and board roster. Reason: /community and /community/units are empty stubs. VISION §2 specifies community profile, rules document (rich text, versioned), board roster with roles, and unit directory.
+- **NOT creating** (limit reached): maintenance pages, settings pages — will create in next cycle now that pipeline has 2 tasks queued.
+- **Deferred**: Settings pages (/settings, /settings/community, /settings/roles), maintenance pages — covered by existing stubs; waiting for next cycle.
+
+## 2026-03-28 (product-review phase — read-only)
+
+### Decisions
+
+- **Read-only phase**: Did not create tasks per workflow directive.
+- **TASK-670/TASK-671 phantom**: Tasks recorded in memory from 2026-03-29 late review do NOT exist in the actual task system (verified via ao task list). Memory recording was not persisted. Both tasks would have covered amenities and community pages — these pages remain stubs.
+- **Pipeline status**: Only 1 active task (TASK-046, blocked). No ready tasks. Pipeline effectively stalled.
+- **Stubs still present** (nothing built since last review):
+  - /amenities/page.tsx — empty stub
+  - /community/page.tsx — empty stub
+  - /maintenance/page.tsx, /maintenance/new/page.tsx, /maintenance/[id]/page.tsx — empty stubs
+  - /settings/page.tsx, /settings/community/page.tsx, /settings/roles/page.tsx — empty stubs (TASK-046 blocked)
+  - /community/units/page.tsx — empty stub
+- **Well-implemented pages confirmed**: dashboard (role-based), finances, documents, visitors (full CRUD), announcements/new (form), visitors/security (table)
+- **Top concern**: TASK-046 is blocked due to "workflow runner failed". TASK-670/TASK-671 were never persisted. No tasks in ready state. The pipeline is stalled and none of the 8 stub pages will be addressed without a daemon picking them up or manual intervention to unblock TASK-046.
