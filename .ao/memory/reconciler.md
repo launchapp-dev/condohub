@@ -42,6 +42,9 @@ Each entry: `[DATE] ACTION — details`
 ### 2026-03-30T14:03 UTC — Pipeline idle
 - Dispatched `product-review` ("Idle pipeline — PO scan for work") — 0 ready, 0 in-progress, queue empty. 3 open PRs exist but represent done/merged work awaiting review.
 
+### 2026-03-30T14:30 UTC — Pipeline idle
+- Dispatched `product-review` ("Idle pipeline — PO scan for work") — 0 ready, 0 in-progress, queue empty (after cleaning 4 stale queue entries for done tasks). 3 open PRs (#3, #8, #18) represent done/merged work awaiting review.
+
 ---
 
 ## Run Log
@@ -187,4 +190,40 @@ Each entry: `[DATE] ACTION — details`
 - STEP 4 (CLEAN QUEUE): Dropped 1 stale queue entry:
   - `Idle pipeline — PO scan for work` (product-review dispatch) — stale repeat of prior run's idle trigger, dropped.
 - STEP 5 (MARK DONE): No un-merged PRs needing action.
+
+### 2026-03-30T14:25 UTC — Reconciliation run
+
+**Pipeline state:** 62 done, 5 cancelled, 1 ready (TASK-067), 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue had 3 entries (TASK-051 assigned stale, TASK-014 assigned stale, "Idle pipeline" pending duplicate). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 2 stale queue entries:
+  - `TASK-051` — task is DONE, queue entry was assigned stale (pr-reviewer, ~2026-03-29T15:12 UTC). Already auto-cleaned before manual drop (subject not found).
+  - `TASK-014` — task is DONE, queue entry was assigned stale (pr-reviewer, ~2026-03-29T15:12 UTC). Dropped.
+  - `Idle pipeline — PO scan for work` — pipeline is NOT idle (TASK-067 ready), stale duplicate idle trigger. Dropped.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 1 ready task (TASK-067) exists. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — TASK-046 is ready with an active triage workflow queued. Did NOT dispatch product-review.
+
+### 2026-03-30T14:30 UTC — Reconciliation run
+
+**Pipeline state:** 63 done, 5 cancelled, 0 ready, 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue had 4 entries (TASK-051 assigned stale pr-reviewer, TASK-018 pending pr-reviewer, TASK-014 pending pr-reviewer, TASK-051 pending triage) — all for DONE tasks. 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 4 stale queue entries for DONE tasks:
+  - `TASK-051` — task is DONE, pr-reviewer assigned entry stale (~24h old). Dropped.
+  - `TASK-018` — task is DONE, pr-reviewer pending entry stale (~24h old). Dropped.
+  - `TASK-014` — task is DONE, pr-reviewer pending entry stale (~24h old). Dropped.
+  - `TASK-051` — task is DONE, triage pending entry stale (~24h old). Dropped.
+  - Queue now empty.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline idle — 0 ready + 0 in-progress + queue empty. Dispatched product-review ("Idle pipeline — PO scan for work").
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
