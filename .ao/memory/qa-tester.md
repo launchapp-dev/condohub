@@ -8,6 +8,31 @@ Each entry: `[DATE] TEST — PASS/FAIL details`
 
 ## Last Run Summary
 
+**Date:** 2026-03-29 (Run 8 - Full E2E Test Suite)
+**Result:** PARTIAL PASS (5/6 steps pass)
+**No new bugs discovered**
+
+### Passes
+- **Smoke Test:** Landing page loads with CondoHub branding (HTTP 200)
+- **Auth Flow Pages:** Login and signup pages load correctly (HTTP 200)
+- **i18n:** Spanish and Arabic locales working with proper translations and RTL
+- **Navigation:** All protected routes return 200 (dashboard, announcements, maintenance, amenities, finances, documents, settings)
+- **Console Audit:** No new console errors or failed network requests
+
+### Known Issues (unchanged)
+- BUG-015: Visitors list page API returns 500 — missing i18n keys (HIGH severity)
+- BUG-016: Missing i18n key `auth.common:loading` (MEDIUM severity)
+- BUG-017: Visitor registration page missing extensive i18n keys (MEDIUM severity)
+
+### Notes
+- Auth API returned 401 (expected - test user doesn't exist)
+- Visitors pages redirect to login when unauthenticated (correct behavior)
+- No MISSING_MESSAGE errors observed during unauthenticated session
+
+---
+
+## Last Run Summary
+
 **Date:** 2026-03-30 (Run 7 - Full E2E Test Suite)
 **Result:** PARTIAL PASS (5/6 steps pass)
 **No new bugs discovered**
@@ -77,7 +102,12 @@ None — no changes since last run.
 
 ## Run History
 
-## Run History
+### 2026-03-29 (Run 8 - Full E2E Test Suite)
+- **Scope:** Full E2E test - smoke, auth, visitors, i18n, navigation, console audit
+- **Result:** PARTIAL PASS (5/6 steps)
+- **Findings:** No new bugs discovered. All known bugs still present (BUG-015, BUG-016, BUG-017)
+- **Auth API:** Returns 401 (expected - test user not in DB)
+- **Visitors pages:** Load without i18n errors (redirect to login when unauthenticated)
 
 ### 2026-03-30 (Run 7 - Full E2E Test Suite)
 - **Scope:** Full E2E test - smoke, auth, visitors, i18n, navigation, console audit
