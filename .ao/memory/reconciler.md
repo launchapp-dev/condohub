@@ -81,6 +81,18 @@ Each entry: `[DATE] ACTION — details`
 
 **Pipeline state:** 58 done, 5 cancelled, 0 ready, 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue was 3 entries (TASK-051, TASK-018, TASK-014 — all for DONE tasks). Queue auto-cleaned before manual drop needed. 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
 
+### 2026-03-29 — Reconciliation run (fourth pass)
+
+**Pipeline state:** 60 done, 5 cancelled, 1 backlog (TASK-066), 0 ready, 0 in-progress. Queue had 1 entry (TASK-051 stale, task done). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): TASK-066 (BUG-017: Visitor registration page missing extensive i18n keys) promoted from backlog to ready. No dependencies, no blocking relationships.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 2 stale queue entries for TASK-051 (task is DONE, queue entry was assigned ~2026-03-29T14:33 UTC, ~24 hours old). Queue now empty.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 1 ready task (TASK-066) + queue empty. Did NOT dispatch product-review.
+
 **Actions:**
 - STEP 1 (UNBLOCK): No blocked tasks found.
 - STEP 2 (PROMOTE): No backlog tasks found.
