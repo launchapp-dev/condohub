@@ -1190,4 +1190,24 @@ Each entry: `[DATE] ACTION — details`
 **Ready tasks**: 0 (ao task list returned 0 tasks total — no ready backlog)
 **Action**: No new enqueues. No reworks. No rebases. Pipeline not idle (3 assigned tasks in queue).
 **Idle action**: NOT dispatched — queue has 3 assigned entries, not idle.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-29)
+
+**Queue**: 4 entries before → 7 after (TASK-074, TASK-081, TASK-080 enqueued → triage)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 11 — critical: TASK-071, TASK-072; high: TASK-085, TASK-084, TASK-081, TASK-083, TASK-086, TASK-074; medium: TASK-080, TASK-082, TASK-075
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070. TASK-070 is "done" in ao but has NO merged PR (gh pr list --merged --search "TASK-070" = empty). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED.
+- TASK-085, TASK-084: depend on TASK-083 (already queued as assigned/triage) → SKIPPED (already dispatched).
+- TASK-086: depends on TASK-084 and TASK-085 (both blocked by queued TASK-083) → SKIPPED.
+- TASK-082: assigned to human → SKIPPED.
+- TASK-074: no dependencies, not in queue → enqueued → triage.
+- TASK-081: no dependencies, not in queue → enqueued → triage.
+- TASK-080: no dependencies, not in queue → enqueued → triage.
+**Action**: Enqueued TASK-074, TASK-081, TASK-080 → triage (3 max per cycle). SKIPPED: TASK-071, TASK-072 (TASK-070 unmet dep), TASK-085, TASK-084, TASK-086 (TASK-083 dependency chain), TASK-082 (human-assigned).
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
 **Notes**: ao task list shows 0 total tasks; may be a session/project scope issue with the CLI. Pipeline is actively working on 3 PRs. No action taken.
