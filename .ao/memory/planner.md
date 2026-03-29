@@ -68,3 +68,14 @@ Each entry: `[DATE] ACTION — details`
 **Ready tasks**: 1 — TASK-046 (high, already queued as triage)
 **Action**: TASK-046 skipped — already dispatched. No new enqueues.
 **Idle action**: NOT dispatched — queue has 2 active entries (not idle).
+
+---
+
+## 2026-03-29 Run (evening — 2026-03-29)
+
+**Queue**: 0 entries (empty)
+**Open PRs**: 2 — #3 (TASK-016), #8 (TASK-022). Both MERGEABLE, no reviews.
+**Rework**: none
+**Rebase**: none
+**Ready tasks**: 0 (44 done, 3 cancelled)
+**Idle action**: dispatched `product-review` with title "Idle pipeline — PO scan for work"
