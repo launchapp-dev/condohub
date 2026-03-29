@@ -176,3 +176,19 @@ Each entry: `[DATE] DECISION — reason`
 - **No new tasks created** (at 2-task limit, and pipeline already has 2 critical tasks queued)
 - **Well-implemented confirmed**: visitors, finances, documents, announcements, dashboard, onboarding, db schema — all have real worktree commits with actual component code
 - **Top concern**: Phantom task completions persist — tasks marked done but work never merged. 10 stub pages remain across 6+ review cycles. TASK-071 and TASK-072 are queued for maintenance implementation.
+
+## 2026-03-29 (product-review phase — seventh session)
+
+### Decisions
+
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds (TypeScript clean, warnings only: Better Auth secret entropy, OAuth missing clientId/clientSecret)
+- **Node version note**: Default node v16.19.0 is too old for pnpm; used nvm to switch to Node 22.22.2 for health check
+- **Pipeline**: 65 done, 6 cancelled, 4 ready (TASK-071, TASK-072 maintenance; TASK-074 amenities; TASK-075 settings), 0 active — HEALTHY, not saturated
+- **10 stub pages still 11-line stubs**: amenities/page.tsx, amenities/[id]/book/page.tsx, community/page.tsx, community/units/page.tsx, maintenance/page.tsx, maintenance/new/page.tsx, maintenance/[id]/page.tsx, settings/page.tsx, settings/community/page.tsx, settings/roles/page.tsx
+- **No components exist** for: amenities, community, maintenance, settings (only dashboard, documents, finances, ui in src/components/)
+- **Phantom task pattern confirmed**: Tasks 044–073 are all marked done but none produced feature code in the main branch. Stub pages have never been replaced.
+- **Created TASK-074** (high, ready, enqueued to triage): Build amenities booking system with calendar and time slots. Reason: /amenities and /amenities/[id]/book are 11-line stubs; no src/components/amenities/ exists; no schema, server actions, or i18n keys for amenities. VISION §8 core resident feature.
+- **Created TASK-075** (medium, ready, NOT enqueued per rules): Build user and admin settings pages with community config and role management. Reason: /settings, /settings/community, /settings/roles are 11-line stubs; no src/components/settings/ exists. VISION §11.
+- **NOT creating** (limit reached): community pages (2 stubs) — covered by community stubs, lower priority than amenities and settings
+- **Well-implemented confirmed**: visitors (full CRUD + server actions), finances, documents, announcements, dashboard, onboarding, db schema — all have real worktree commits with actual component code
+- **Top concern**: 10 stub pages remain unimplemented. TASK-071/072 (maintenance, critical), TASK-074 (amenities, high) are enqueued/ready. Phantom completions mean prior "done" tasks never produced code.
