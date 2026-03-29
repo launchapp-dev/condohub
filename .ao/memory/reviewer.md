@@ -9,6 +9,7 @@ Each entry: `[DATE] PR#N ACTION — details`
 ## PRs Merged
 <!-- PRs merged with squash, task set to done. -->
 2026-03-29 PR#(none) CLOSE — TASK-051 no implementation, empty diff, branch behind main (42 commits) — re-queue for triage
+2026-03-29 PR#(none) CLOSE — TASK-051 still showed status "done" but no PR merged — reopened to ready, dropped pr-reviewer queue, enqueued triage
 
 ## PRs With Changes Requested
 <!-- PRs sent back for rework, with blocking issues listed. -->
