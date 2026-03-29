@@ -241,3 +241,17 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 4 ready tasks (TASK-071, TASK-072, TASK-074, TASK-075) exist. Did NOT dispatch product-review.
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
+### 2026-03-30T14:55 UTC — Reconciliation run
+
+**Pipeline state:** 65 done, 7 cancelled, 7 ready (TASK-071, TASK-072, TASK-074, TASK-075, TASK-076, TASK-078, TASK-079), 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue had 6 entries (TASK-051 assigned stale DONE, TASK-014 assigned stale DONE, TASK-071 assigned active, TASK-076 assigned active, TASK-078 pending active, TASK-079 pending active). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): TASK-074 (blocked_reason: "workflow runner failed: status Some(1)" — single failure, no deps) → set ready. TASK-075 (blocked_reason: "Blocked by status update" — no deps, no blocked_by) → set ready.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): TASK-051 and TASK-014 queue entries already auto-cleaned before manual drop. Queue now 4 entries (TASK-071, TASK-076, TASK-078, TASK-079 — all active ready tasks). No action needed.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 7 ready tasks + 4 active queue entries exist. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
