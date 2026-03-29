@@ -549,3 +549,18 @@ Each entry: `[DATE] ACTION — details`
 **Action**: No new enqueues — TASK-071 and TASK-072 skipped (TASK-070 dependency unmet — no merged PR).
 **Idle action**: NOT dispatched — queue has 1 active entry (TASK-051 assigned/pr-reviewer), pipeline not idle.
 **Status**: BLOCKER unchanged: TASK-070 marked "done" in ao but has no PR. PO must resolve TASK-070 (create+merge PR or cancel) to unblock TASK-071 and TASK-072.
+
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 0 entries before → 1 after (product-review enqueued)
+**Open PRs**: 3 — #3, #8, #18. All mergeable=null, zero reviews.
+**Rework**: none (no CHANGES_REQUESTED reviews)
+**Rebase**: none (no conflicting PRs)
+**Ready tasks**: 2 — TASK-072 (critical), TASK-071 (critical)
+**Dependencies check**:
+- TASK-071, TASK-072: both depend on TASK-070 (stated in descriptions). TASK-070 is "done" in ao but has NO merged PR (gh pr list --merged --search "TASK-070" = empty). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED both.
+**Action**: No new enqueues — TASK-071 and TASK-072 skipped (TASK-070 dependency unmet — no merged PR).
+**Idle action**: Pipeline idle (queue empty, no new enqueues). Dispatched `product-review` with title "Idle pipeline — PO scan for work".
+**Status**: BLOCKER unchanged: TASK-070 marked "done" in ao but has no PR. PO must resolve TASK-070 (create+merge PR or cancel) to unblock TASK-071 and TASK-072.
