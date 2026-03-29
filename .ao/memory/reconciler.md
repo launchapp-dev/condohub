@@ -365,3 +365,17 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 9 ready tasks exist + queue empty. Did NOT dispatch product-review.
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
+### 2026-03-29T21:04 UTC — Reconciliation run
+
+**Pipeline state:** 67 done, 12 ready (TASK-081 newly unblocked), 7 cancelled, 0 blocked, 0 backlog, 0 failed. Queue had 4 entries (TASK-079 assigned ~4min old, TASK-083/TASK-074/TASK-082 pending — all recent). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): TASK-081 unblocked → `ready`. blocked_reason was "Blocked by status update" with no actual dependency (blocked_by: null, dependencies: []). Also resumed (paused: true → false). Ready count now 12.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Queue entries are all recent (<5 min old). No stale entries. TASK-079 assigned entry is active, not stale.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, corresponding tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 12 ready tasks + 1 active assigned queue entry. Did NOT dispatch product-review.
+
+**Note:** TASK-081 (Build amenities booking system) was self-blocked with "Blocked by status update" — no real dependency. Unblocked and resumed. Pipeline now has 12 ready tasks for daemon to assign.
