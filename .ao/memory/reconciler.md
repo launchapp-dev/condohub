@@ -255,3 +255,17 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 7 ready tasks + 4 active queue entries exist. Did NOT dispatch product-review.
 
 **Note:** TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
+
+### 2026-03-29T19:14 UTC — Reconciliation run
+
+**Pipeline state:** 65 done, 7 cancelled, 7 ready (TASK-071, TASK-072, TASK-074, TASK-075, TASK-076, TASK-078, TASK-079), 0 in-progress, 0 blocked, 0 backlog, 0 failed. Queue had 3 assigned entries (TASK-074, TASK-076, TASK-078 — all active). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): TASK-071 unblocked → set to `ready`. Was blocked since 2026-03-29T18:52 UTC with single workflow runner failure (exit 1), no dependencies. Now unpaused and ready.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Queue has 3 assigned entries (TASK-074, TASK-076, TASK-078) — all recent and active. No stale entries.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still open, tasks already done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 7 ready tasks + 3 active queue entries exist. Did NOT dispatch product-review.
+
+**Note:** TASK-071 had been blocked since March 29 (~20h). Unblocked now. TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
