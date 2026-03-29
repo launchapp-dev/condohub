@@ -398,11 +398,15 @@ agents:
         1. Run: gh pr merge <number> --squash --delete-branch
            This is a shell command via Bash tool. You MUST run this command.
            Do NOT use merge_pull_request MCP tool — it does not work reliably.
+           Do NOT try to approve the PR first — GitHub blocks self-reviews.
+           Just merge directly.
         2. Verify the merge succeeded by running: gh pr view <number> --json state
            The state must be "MERGED".
         3. Only AFTER confirming merge, call ao.task.status to set task to "done".
         4. If merge fails (e.g., conflicts), do NOT set task to done.
            Instead queue workflow_ref="rebase-and-retry".
+        5. If you see "Verdict: APPROVE" but self-review is blocked, skip the
+           review step and go straight to gh pr merge.
 
       REQUEST CHANGES: leave detailed review with specific fix instructions.
         Then queue workflow_ref="rework" for the task.
@@ -571,6 +575,7 @@ agents:
           * Hardcoded strings (must use next-intl)
         - If NO blocking issues:
           1. Run: gh pr merge <number> --squash --delete-branch
+             Do NOT try to approve first — GitHub blocks self-reviews. Just merge directly.
           2. Verify: gh pr view <number> --json state (must be "MERGED")
           3. Call ao.task.status to set task to "done"
         - If blocking issues found:
