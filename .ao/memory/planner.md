@@ -642,6 +642,22 @@ Each entry: `[DATE] ACTION — details`
 
 ---
 
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 0 entries before → 2 after (TASK-074 enqueued → triage, TASK-075 enqueued → triage)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 4 — TASK-072 (critical), TASK-074 (high), TASK-075 (medium), TASK-080 (medium)
+**Dependencies check**:
+- TASK-072: depends on TASK-070 (stated in description). TASK-070 is "done" in ao (completed_at=2026-03-29T16:14:25) but has NO merged PR (gh pr list --state all --search "TASK-070" = empty). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED.
+- TASK-080: depends on TASK-079 (i18n keys). TASK-079 is "blocked" (workflow runner failed), not "done" → dependency NOT met → SKIPPED.
+- TASK-074: no dependencies, not in queue → enqueued → triage.
+- TASK-075: no dependencies, not in queue → enqueued → triage.
+**Action**: Enqueued TASK-074 → triage, TASK-075 → triage. TASK-072 and TASK-080 skipped (unmet dependencies).
+**Idle action**: NOT dispatched — 2 new tasks enqueued this cycle, pipeline not idle.
+**Status**: Pipeline active. 0 open PRs. BLOCKER: TASK-070 (done/no PR) blocks TASK-072. TASK-079 (blocked runner) blocks TASK-080.
+
 ## 2026-03-29 Run (work-planner cycle — current)
 
 **Queue**: 4 entries before → 7 after (TASK-076, TASK-077, TASK-078 enqueued → triage)
