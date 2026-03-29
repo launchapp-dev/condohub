@@ -25,6 +25,21 @@ Each entry: `[DATE] ACTION — details`
 
 ## Run Log
 
+### 2026-03-30 — Reconciliation run (second pass)
+
+**Pipeline state:** 55 done, 4 cancelled, 4 ready (TASK-060, TASK-061, TASK-062, TASK-063). 0 in-progress. Queue empty. 2 open PRs (#3, #8).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): TASK-061, TASK-062, TASK-063 promoted from backlog to ready. All are sub-tasks of done parents (TASK-059 done, which is child of done TASK-056). No blocking dependencies. Also discovered that TASK-056 worktree still exists at task-task-056 — confirming its done status.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 1 stale queue entry:
+  - `TASK-060` — assigned 2026-03-29T05:06:50 (~1 day old), no active workflow. Dropped. TASK-060 remains in ready state for daemon re-assignment.
+- STEP 5 (MARK DONE): PRs #3 and #8 still open, tasks already marked done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 4 ready tasks + 2 open PRs. Did NOT dispatch product-review.
+
+**Note:** TASK-016 and TASK-022 marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
 ### 2026-03-30 — Reconciliation run
 
 **Pipeline state:** 48 done, 3 cancelled, 1 blocked (TASK-052), 0 ready, 0 in-progress. 1 assigned queue entry (Playwright smoke test — custom subject, manually enqueued ~04:22 UTC). 2 open PRs (#3, #8).
