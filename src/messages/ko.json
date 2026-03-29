@@ -164,5 +164,38 @@
     "previous": "이전",
     "submit": "제출",
     "close": "닫기"
+  },
+  "community": {
+    "units": {
+      "searchPlaceholder": "유닛 번호로 검색...",
+      "noUnits": "유닛을 찾을 수 없음",
+      "noUnitsDescription": "검색 또는 필터 조건을 조정해 보세요.",
+      "filter": {
+        "all": "전체",
+        "occupied": "입주 중",
+        "vacant": "공실",
+        "maintenance": "유지보수"
+      },
+      "status": {
+        "occupied": "입주 중",
+        "vacant": "공실",
+        "maintenance": "유지보수"
+      },
+      "card": {
+        "unitLabel": "유닛",
+        "floor": "층",
+        "occupant": "거주자"
+      },
+      "directory": {
+        "title": "유닛 목록",
+        "description": "커뮤니티의 모든 유닛을 보고 관리하세요"
+      },
+      "table": {
+        "unitNumber": "유닛 번호",
+        "floor": "층",
+        "status": "상태",
+        "occupant": "거주자"
+      }
+    }
   }
 }

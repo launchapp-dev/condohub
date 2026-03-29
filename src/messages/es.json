@@ -164,5 +164,38 @@
     "previous": "Anterior",
     "submit": "Enviar",
     "close": "Cerrar"
+  },
+  "community": {
+    "units": {
+      "searchPlaceholder": "Buscar por n?mero de unidad...",
+      "noUnits": "No se encontraron unidades",
+      "noUnitsDescription": "Intente ajustar sus criterios de b?squeda o filtro.",
+      "filter": {
+        "all": "Todas",
+        "occupied": "Ocupadas",
+        "vacant": "Vacantes",
+        "maintenance": "Mantenimiento"
+      },
+      "status": {
+        "occupied": "Ocupada",
+        "vacant": "Vacante",
+        "maintenance": "Mantenimiento"
+      },
+      "card": {
+        "unitLabel": "Unidad",
+        "floor": "Piso",
+        "occupant": "Ocupante"
+      },
+      "directory": {
+        "title": "Directorio de Unidades",
+        "description": "Ver y gestionar todas las unidades de su comunidad"
+      },
+      "table": {
+        "unitNumber": "N?mero de Unidad",
+        "floor": "Piso",
+        "status": "Estado",
+        "occupant": "Ocupante"
+      }
+    }
   }
 }

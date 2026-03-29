@@ -164,5 +164,38 @@
     "previous": "Previous",
     "submit": "Submit",
     "close": "Close"
+  },
+  "community": {
+    "units": {
+      "searchPlaceholder": "Search by unit number...",
+      "noUnits": "No units found",
+      "noUnitsDescription": "Try adjusting your search or filter criteria.",
+      "filter": {
+        "all": "All",
+        "occupied": "Occupied",
+        "vacant": "Vacant",
+        "maintenance": "Maintenance"
+      },
+      "status": {
+        "occupied": "Occupied",
+        "vacant": "Vacant",
+        "maintenance": "Maintenance"
+      },
+      "card": {
+        "unitLabel": "Unit",
+        "floor": "Floor",
+        "occupant": "Occupant"
+      },
+      "directory": {
+        "title": "Unit Directory",
+        "description": "View and manage all units in your community"
+      },
+      "table": {
+        "unitNumber": "Unit Number",
+        "floor": "Floor",
+        "status": "Status",
+        "occupant": "Occupant"
+      }
+    }
   }
 }

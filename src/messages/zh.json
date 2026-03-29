@@ -164,5 +164,38 @@
     "previous": "上一步",
     "submit": "提交",
     "close": "关闭"
+  },
+  "community": {
+    "units": {
+      "searchPlaceholder": "按单元号搜索...",
+      "noUnits": "未找到单元",
+      "noUnitsDescription": "请尝试调整搜索或筛选条件。",
+      "filter": {
+        "all": "全部",
+        "occupied": "已入住",
+        "vacant": "空置",
+        "maintenance": "维修中"
+      },
+      "status": {
+        "occupied": "已入住",
+        "vacant": "空置",
+        "maintenance": "维修中"
+      },
+      "card": {
+        "unitLabel": "单元",
+        "floor": "楼层",
+        "occupant": "住户"
+      },
+      "directory": {
+        "title": "单元目录",
+        "description": "查看和管理社区中的所有单元"
+      },
+      "table": {
+        "unitNumber": "单元号",
+        "floor": "楼层",
+        "status": "状态",
+        "occupant": "住户"
+      }
+    }
   }
 }

@@ -164,5 +164,38 @@
     "previous": "السابق",
     "submit": "إرسال",
     "close": "إغلاق"
+  },
+  "community": {
+    "units": {
+      "searchPlaceholder": "البحث برقم الوحدة...",
+      "noUnits": "لم يتم العثور على وحدات",
+      "noUnitsDescription": "حاول تعديل معايير البحث أو الفلترة.",
+      "filter": {
+        "all": "الكل",
+        "occupied": "مشغولة",
+        "vacant": "شاغرة",
+        "maintenance": "صيانة"
+      },
+      "status": {
+        "occupied": "مشغولة",
+        "vacant": "شاغرة",
+        "maintenance": "صيانة"
+      },
+      "card": {
+        "unitLabel": "وحدة",
+        "floor": "الطابق",
+        "occupant": "المقيم"
+      },
+      "directory": {
+        "title": "دليل الوحدات",
+        "description": "عرض وإدارة جميع وحدات مجتمعك"
+      },
+      "table": {
+        "unitNumber": "رقم الوحدة",
+        "floor": "الطابق",
+        "status": "الحالة",
+        "occupant": "المقيم"
+      }
+    }
   }
 }
