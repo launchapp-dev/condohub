@@ -758,3 +758,18 @@ Each entry: `[DATE] ACTION — details`
 **Queue state**: 8 total entries after enqueue (at 8-limit capacity).
 **Idle action**: NOT dispatched — 2 new tasks enqueued this cycle, pipeline not idle.
 **Status**: 0 open PRs. TASK-070 anomalous (done in ao, no PR) — blocks TASK-071 and TASK-072. Queue at capacity (8).
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-30 morning)
+
+**Queue**: 5 entries before → unchanged (TASK-079 assigned/triage, TASK-075 assigned/triage, TASK-051 assigned/pr-reviewer, TASK-018 assigned/pr-reviewer, TASK-014 pending/pr-reviewer)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, no CHANGES_REQUESTED reviews.
+**Rework**: none (no CHANGES_REQUESTED reviews on any open PR)
+**Rebase**: none (all PRs MERGEABLE)
+**Ready tasks**: 4 — TASK-071 (critical), TASK-072 (critical), TASK-080 (medium), TASK-079 (critical — already queued), TASK-075 (medium — already queued)
+**Action**: No new enqueues — all 4 unqueued ready tasks blocked by unmet deps.
+  - TASK-071, TASK-072: depend on TASK-070 (status=done but NO PR ever created/merged) → SKIP
+  - TASK-080: depends on TASK-079 not yet merged → SKIP
+  - TASK-079, TASK-075: already in queue → SKIP
+**Idle action**: NOT dispatched — queue has 5 active entries (not idle).
+
+**Flagged issue**: TASK-070 is marked "done" in ao but has zero PRs (not even closed). Tasks depending on it (TASK-071, TASK-072) cannot be enqueued until a PR for TASK-070 is created and merged.
