@@ -28,3 +28,8 @@ Each entry: `[DATE] PR#N ACTION — details`
 - **Reason:** Branch `ao/task-051` pushed to remote with same 73 workflow-only commits (no feature implementation). Maintenance pages are stubs, no components, no actions, no i18n beyond top-level nav label.
 - **Action:** Deleted remote branch `ao/task-051`. Re-queue with `workflow_ref="triage"` for implementation from scratch.
 - **Pattern:** This task has appeared multiple times in reconciler as DONE but feature was never built. True feature implementation still needed.
+
+### 2026-03-30 (final) — TASK-051 CLOSED — Stub pages, no feature implementation
+- **Reason:** Task was cancelled but branch still only had workflow commits. All three pages (page.tsx, new/page.tsx, [id]/page.tsx) are bare stubs — no DataTable, no form, no components/maintenance/, no lib/actions/maintenance.ts, no real i18n keys. Same pattern as prior runs.
+- **Action:** Reopened task from cancelled → backlog, re-queued with `workflow_ref="triage"` for fresh implementation.
+- **Pattern:** Task has appeared DONE in reconciler runs 3+ times but feature was never built. Branch never gets proper feature commits. Root cause: workflow loop keeps running without implementing feature code.
