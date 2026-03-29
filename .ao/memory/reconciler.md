@@ -25,6 +25,22 @@ Each entry: `[DATE] ACTION — details`
 
 ## Run Log
 
+### 2026-03-29T13:53 — Reconciliation run
+
+**Pipeline state:** 57 done, 5 cancelled, 1 ready (TASK-062). 0 in-progress. Queue empty (after cleaning 2 stale entries). 2 open PRs (#3, #8).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): No backlog tasks found.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Dropped 2 stale queue entries:
+  - `TASK-063` — task is DONE, queue entry was stale/remnant.
+  - `TASK-062` — assigned 2026-03-29T05:27:40 UTC (~8.4 hours ago), no active workflow. Dropped. TASK-062 remains in ready state for daemon re-assignment.
+- STEP 5 (MARK DONE): PRs #3 and #8 still open, tasks already marked done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 1 ready task (TASK-062) exists. Did NOT dispatch product-review.
+
+**Note:** TASK-016 (PR #3) and TASK-022 (PR #8) marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
 ### 2026-03-30 — Reconciliation run (second pass)
 
 **Pipeline state:** 55 done, 4 cancelled, 4 ready (TASK-060, TASK-061, TASK-062, TASK-063). 0 in-progress. Queue empty. 2 open PRs (#3, #8).
