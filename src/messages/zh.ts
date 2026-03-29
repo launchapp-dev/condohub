@@ -34,7 +34,8 @@ export default {
     "loginWithGoogle": "使用 Google 继续",
     "loginWithGitHub": "使用 GitHub 继续",
     "common": {
-      "loading": "加载中..."
+      "loading": "加载中...",
+      "or": "或"
     },
     "errors": {
       "invalidCredentials": "电子邮箱或密码无效",
