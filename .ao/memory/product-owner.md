@@ -103,18 +103,21 @@ Each entry: `[DATE] DECISION — reason`
 - **Stubs still present** (8 total): amenities/page.tsx, amenities/[id]/book/page.tsx, community/page.tsx, community/units/page.tsx, settings/page.tsx, settings/community/page.tsx, settings/roles/page.tsx, maintenance/page.tsx
 - **Deferred**: community page, settings pages (covered by stubs, lower priority than amenities and maintenance)
 
-## 2026-03-28 (product-review phase — read-only)
+## 2026-03-29 (product-review phase — second session)
 
 ### Decisions
 
-- **Read-only phase**: Did not create tasks per workflow directive.
-- **TASK-670/TASK-671 phantom**: Tasks recorded in memory from 2026-03-29 late review do NOT exist in the actual task system (verified via ao task list). Memory recording was not persisted. Both tasks would have covered amenities and community pages — these pages remain stubs.
-- **Pipeline status**: Only 1 active task (TASK-046, blocked). No ready tasks. Pipeline effectively stalled.
-- **Stubs still present** (nothing built since last review):
-  - /amenities/page.tsx — empty stub
-  - /community/page.tsx — empty stub
-  - /maintenance/page.tsx, /maintenance/new/page.tsx, /maintenance/[id]/page.tsx — empty stubs
-  - /settings/page.tsx, /settings/community/page.tsx, /settings/roles/page.tsx — empty stubs (TASK-046 blocked)
-  - /community/units/page.tsx — empty stub
-- **Well-implemented pages confirmed**: dashboard (role-based), finances, documents, visitors (full CRUD), announcements/new (form), visitors/security (table)
-- **Top concern**: TASK-046 is blocked due to "workflow runner failed". TASK-670/TASK-671 were never persisted. No tasks in ready state. The pipeline is stalled and none of the 8 stub pages will be addressed without a daemon picking them up or manual intervention to unblock TASK-046.
+- **Health check**: PASS — pnpm install ok, pnpm build succeeds
+- **Pipeline**: 48 done, 1 blocked (TASK-052 Playwright smoke test), 0 ready — EMPTY
+- **10 stub pages confirmed** (all 11 lines, zero components exist):
+  - /amenities/page.tsx, /amenities/[id]/book/page.tsx
+  - /community/page.tsx, /community/units/page.tsx
+  - /maintenance/page.tsx, /maintenance/new/page.tsx, /maintenance/[id]/page.tsx
+  - /settings/page.tsx, /settings/community/page.tsx, /settings/roles/page.tsx
+- **No feature components exist** for any stub area: src/components/amenities/, community/, maintenance/, settings/ — all do not exist
+- **Created TASK-053** (high, ready, enqueued to triage): Build amenities booking system with calendar, time slots, conflict detection. Replaces phantom TASK-044/TASK-670. Covers 2 stub pages and requires new schema, server actions, and i18n keys across all 8 locales.
+- **Created TASK-054** (medium, ready, NOT enqueued per rules): Build community page with profile, rules editor, board roster, and unit directory. Covers 2 stub pages. Requires new schema, server actions, and i18n keys across all 8 locales.
+- **NOT creating** (limit reached): maintenance pages (3 stubs), settings pages (3 stubs) — will create in next cycle
+- **Phantom task history**: TASK-044/670 (amenities) and TASK-045/671 (community) appear in memory across multiple runs but never actually existed in the task system. The reconciler appears to record phantom completions. Confirmed by checking actual task list — none of those IDs exist.
+- **Well-implemented confirmed**: visitors (full CRUD + server actions), finances, documents, announcements, dashboard (role-based), onboarding wizard
+- **Top concern**: Pipeline is empty with 10 stub pages and no active tasks. TASK-053 enqueued to triage should get picked up, but the phantom task problem means prior "done" work was never actually merged — need to verify worktrees actually contain the implementations before marking done.
