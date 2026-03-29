@@ -105,6 +105,20 @@ Each entry: `[DATE] ACTION — details`
 
 ---
 
+## 2026-03-29 Run (evening — post-merge cycle)
+
+**Queue**: 5 entries before — TASK-080/075 (triage), TASK-051/018/014 (pr-reviewer)
+**Open PRs**: 3 — #3, #8, #18. All MERGEABLE, no CHANGES_REQUESTED reviews.
+**Rework**: none
+**Rebase**: none
+**Ready tasks**: TASK-072/071 (critical, blocked by TASK-070 no-PR), TASK-083/081/082 (eligible), TASK-084/085/086 (blocked by upstream), TASK-080/075 (already queued)
+**Action**: Enqueued TASK-083, TASK-081, TASK-082 → triage (3/cycle max).
+**Skipped**: TASK-072/071 (TASK-070 done but no merged PR), TASK-084/085/086 (upstream deps not done), TASK-080/075 (already queued).
+**Queue**: 8 entries after enqueue (at 8/8 capacity limit).
+**Idle action**: Not dispatched — queue is full.
+
+---
+
 ## 2026-03-28 Run (initial)
 
 **Queue**: 0 entries (empty)
