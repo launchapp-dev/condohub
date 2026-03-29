@@ -907,3 +907,19 @@ Each entry: `[DATE] ACTION — details`
 **Remaining unqueued**: TASK-072 (critical), TASK-080 (medium)
 **Idle action**: NOT dispatched — new work was enqueued this cycle.
 **Queue**: 6 entries after enqueue (within 8 limit).
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-31 late)
+
+**Queue**: 1 entry before → 3 after (TASK-074 → triage, TASK-075 → triage, product-review already present)
+**Open PRs**: 0 — none
+**Rework**: none (no open PRs)
+**Rebase**: none (no open PRs)
+**Ready tasks**: 5 — TASK-071 (critical), TASK-072 (critical), TASK-074 (high), TASK-075 (medium), TASK-080 (medium)
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070 (server actions). TASK-070 is "done" in ao (completed_at=2026-03-29T16:14:25) but has NO merged PR (gh pr list --merged --search "TASK-070" = empty). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED both.
+- TASK-080: depends on TASK-079. TASK-079 is "blocked" (workflow runner failed, paused=true, no merged PR) → dependency NOT met → SKIPPED.
+- TASK-074: no dependencies, not in queue → enqueued → triage.
+- TASK-075: no dependencies, not in queue → enqueued → triage.
+**Action**: Enqueued TASK-074, TASK-075 → triage. SKIPPED: TASK-071, TASK-072 (TASK-070 unmet), TASK-080 (TASK-079 blocked).
+**Idle action**: NOT dispatched — new work enqueued this cycle.
+**Status**: 0 open PRs. TASK-070 anomalous (done in ao, no PR). BLOCKER for TASK-071/TASK-072: PO must either (a) create+merge a PR for TASK-070, or (b) cancel TASK-070 so its dependents can proceed.
