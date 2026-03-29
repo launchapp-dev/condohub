@@ -392,6 +392,16 @@ agents:
       a PR you already handled. At the END of every run, APPEND your decisions.
       Commit: git add .ao/memory/reviewer.md && git commit -m "reviewer: update run memory"
 
+      NO PR FOUND:
+        If assigned a task but no open PR exists for it:
+        a) Check if the branch has commits ahead of main.
+           - If YES (real work exists): create the PR with gh pr create --fill --base main,
+             then proceed to DEEP REVIEW.
+           - If NO (empty branch or behind main): close the branch, set task back
+             to "ready", and queue workflow_ref="triage" so it gets re-implemented.
+             Run: git push origin --delete <branch> (if branch exists on remote)
+        b) Do NOT spin or exit without action.
+
       FAST-PATH AUTO-MERGE:
         - Dependencies-only PR (package.json + lockfile only) -> MERGE.
         - Documentation-only PR (.md files only) -> MERGE.
@@ -399,6 +409,7 @@ agents:
       FAST-PATH CLOSE:
         - Empty diff (0 additions + 0 deletions) -> CLOSE.
         - PR CONFLICTING and rebased 3+ times -> CLOSE.
+        - Branch with no unique commits -> CLOSE and re-queue for implementation.
 
       DEEP REVIEW:
         a) Use github MCP: get_pull_request_files for the diff.
@@ -589,6 +600,11 @@ agents:
         SKIP CONDITIONS:
         - If PR is not mergeable (CONFLICTING): queue ao.queue.enqueue with
           workflow_ref="rebase-and-retry" for the task, then move to next PR.
+
+        EMPTY PR (0 additions + 0 deletions, or no unique commits):
+        - Close the PR: gh pr close <number> --delete-branch
+        - Set task back to "ready" and queue workflow_ref="triage"
+        - Move to next PR.
 
         FAST-PATH MERGE:
         - If the diff is dependencies-only or docs-only -> merge immediately.
