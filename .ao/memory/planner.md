@@ -923,3 +923,20 @@ Each entry: `[DATE] ACTION — details`
 **Action**: Enqueued TASK-074, TASK-075 → triage. SKIPPED: TASK-071, TASK-072 (TASK-070 unmet), TASK-080 (TASK-079 blocked).
 **Idle action**: NOT dispatched — new work enqueued this cycle.
 **Status**: 0 open PRs. TASK-070 anomalous (done in ao, no PR). BLOCKER for TASK-071/TASK-072: PO must either (a) create+merge a PR for TASK-070, or (b) cancel TASK-070 so its dependents can proceed.
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-29 late)
+
+**Queue**: 3 entries before → unchanged (TASK-075/triage, TASK-051/pr-reviewer, TASK-014/pr-reviewer)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGE_STATE=CLEAN, zero reviews.
+**Rework**: none (no CHANGES_REQUESTED reviews)
+**Rebase**: none (all 3 PRs MERGE_STATE=CLEAN, no conflicts)
+**Ready tasks**: 4 — TASK-071 (critical), TASK-072 (critical), TASK-075 (medium), TASK-080 (medium)
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070. TASK-070 is "done" in ao (completed_at=2026-03-29T16:14:25) but has NO merged PR (gh pr list --merged --search "TASK-070" = empty, --closed = empty — no PR ever created). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED both.
+- TASK-080: depends on TASK-079 (status=blocked, runner failed, paused=true, no merged PR) → dependency NOT met → SKIPPED.
+- TASK-075: already in queue (assigned/triage) → SKIP (already dispatched).
+**Action**: No new enqueues — all 4 ready tasks blocked by unmet dependencies or already queued.
+**Idle action**: NOT dispatched — queue has 3 assigned entries (not idle).
+**Status**: 3 open PRs awaiting merge. All 4 ready tasks remain blocked:
+  - TASK-070: anomalous (done in ao, no PR ever created) — blocks TASK-071, TASK-072. PO must either create+merge a PR for TASK-070 or cancel TASK-070.
+  - TASK-079: blocked by runner failure — blocks TASK-080.
