@@ -141,7 +141,29 @@ export default {
     "history": "기록",
     "checkedInAt": "입실 시간",
     "checkedOutAt": "퇴실 시간",
-    "noQrPass": "사용 가능한 QR 패스가 없습니다"
+    "noQrPass": "사용 가능한 QR 패스가 없습니다",
+    "idType": "신분증 종류",
+    "idTypePassport": "여권",
+    "idTypeDriversLicense": "면허증",
+    "idTypeNationalId": "주민등록증",
+    "idTypeOther": "기타",
+    "vehiclePlate": "차량 번호판",
+    "visitorType": "방문객 유형",
+    "visitorTypeGuest": "방문객",
+    "visitorTypeDelivery": "타입",
+    "visitorTypeContractor": "업자",
+    "visitorTypeServiceProvider": "서비스 제공자",
+    "visitorTypeRealEstateAgent": "부동산 중개인",
+    "visitorTypeOther": "기타",
+    "qrCodeGenerated": "QR 코드가 생성되었습니다",
+    "qrCodeDownload": "QR 코드 다운로드",
+    "visitorRegistered": "방문객 등록이 완료되었습니다",
+    "visitorPass": "방문객 패스",
+    "formErrors": {
+      "required": "이 필드는 필수입니다",
+      "invalidTime": "잘못된 시간 형식입니다",
+      "generic": "문제가 발생했습니다"
+    }
   },
   "announcements": {
     "title": "공지사항",

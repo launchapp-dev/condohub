@@ -141,7 +141,29 @@ export default {
     "history": "History",
     "checkedInAt": "Checked in at",
     "checkedOutAt": "Checked out at",
-    "noQrPass": "No QR pass available"
+    "noQrPass": "No QR pass available",
+    "idType": "ID Type",
+    "idTypePassport": "Passport",
+    "idTypeDriversLicense": "Driver's License",
+    "idTypeNationalId": "National ID",
+    "idTypeOther": "Other",
+    "vehiclePlate": "Vehicle Plate",
+    "visitorType": "Visitor Type",
+    "visitorTypeGuest": "Guest",
+    "visitorTypeDelivery": "Delivery",
+    "visitorTypeContractor": "Contractor",
+    "visitorTypeServiceProvider": "Service Provider",
+    "visitorTypeRealEstateAgent": "Real Estate Agent",
+    "visitorTypeOther": "Other",
+    "qrCodeGenerated": "QR Code Generated",
+    "qrCodeDownload": "Download QR Code",
+    "visitorRegistered": "Visitor registered successfully",
+    "visitorPass": "Visitor Pass",
+    "formErrors": {
+      "required": "This field is required",
+      "invalidTime": "Invalid time format",
+      "generic": "Something went wrong"
+    }
   },
   "announcements": {
     "title": "Announcements",
@@ -376,7 +398,7 @@ export default {
     "confirm": "Confirm",
     "yes": "Yes",
     "no": "No",
-    "optional": "Optional",
+    "optional": "optional",
     "required": "Required"
   },
   "onboarding": {

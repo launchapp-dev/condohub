@@ -141,7 +141,29 @@ export default {
     "history": "历史记录",
     "checkedInAt": "签到时间",
     "checkedOutAt": "签退时间",
-    "noQrPass": "无可用的二维码通行码"
+    "noQrPass": "无可用的二维码通行码",
+    "idType": "证件类型",
+    "idTypePassport": "护照",
+    "idTypeDriversLicense": "驾驶证",
+    "idTypeNationalId": "身份证",
+    "idTypeOther": "其他",
+    "vehiclePlate": "车牌号",
+    "visitorType": "访客类型",
+    "visitorTypeGuest": "访客",
+    "visitorTypeDelivery": "快递",
+    "visitorTypeContractor": "承包商",
+    "visitorTypeServiceProvider": "服务提供商",
+    "visitorTypeRealEstateAgent": "房地产经纪",
+    "visitorTypeOther": "其他",
+    "qrCodeGenerated": "二维码已生成",
+    "qrCodeDownload": "下载二维码",
+    "visitorRegistered": "访客登记成功",
+    "visitorPass": "访客通行证",
+    "formErrors": {
+      "required": "此字段为必填项",
+      "invalidTime": "无效的时间格式",
+      "generic": "发生了错误"
+    }
   },
   "announcements": {
     "title": "公告",
