@@ -25,6 +25,20 @@ Each entry: `[DATE] ACTION — details`
 
 ## Run Log
 
+### 2026-03-29 — Reconciliation run (second pass)
+
+**Pipeline state:** 46 done, 3 cancelled, 2 ready (TASK-050, TASK-051). 2 assigned queue entries (TASK-050, TASK-051). 2 open PRs (#3, #8).
+
+**Actions:**
+- STEP 1 (UNBLOCK): No blocked tasks found.
+- STEP 2 (PROMOTE): TASK-050 already shows "ready" via task get (backlog listing was stale). No backlog promotion needed.
+- STEP 3 (RE-ROUTE): No failed tasks found.
+- STEP 4 (CLEAN QUEUE): Queue has 2 active entries (TASK-050, TASK-051 — both ready, recently assigned ~04:12 UTC). Not stale.
+- STEP 5 (MARK DONE): PRs #3 and #8 still open, tasks already marked done — AO daemon pattern, no action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 2 ready tasks with active queue entries. Did NOT dispatch product-review.
+
+**Note:** TASK-016 and TASK-022 marked done with open PRs — AO daemon pattern (task done when branch work complete, before PR merge review).
+
 ### 2026-03-29 — Reconciliation run
 
 **Pipeline state:** All tasks done or cancelled. 2 open PRs (PR #3 for TASK-016, PR #8 for TASK-022 — both tasks marked done but PRs unmerged, not a reconciliation issue).
