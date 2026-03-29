@@ -481,3 +481,17 @@ Each entry: `[DATE] ACTION — details`
 - STEP 6 (IDLE CHECK): Pipeline NOT idle — 15 ready tasks exist, daemon running with 4 active agents. Did NOT dispatch product-review.
 
 **Note:** TASK-080 correctly blocked — depends on subtasks TASK-091/092/093 which are now all ready/in-progress. TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
+
+### 2026-03-30T16:45 UTC — Reconciliation run
+
+**Pipeline state:** 116 done, 286 cancelled, 47 ready, 123 blocked, 3 on-hold, 48 ready/in-progress across fleet. Queue: 2 entries (TASK-835 assigned knowledge-update ~61m old, TASK-730 assigned manage-fleet ~37m old — both non-condohub). 3 open PRs (#3 TASK-016 done, #8 TASK-022 done, #18 TASK-063 done).
+
+**Actions:**
+- STEP 1 (UNBLOCK): TASK-690 (blocked_reason: "workflow runner failed: status Some(1)", no deps, paused: true, single failure) → set to `ready`, paused: false via `task update --status ready` then `task resume` (resume confirmed not-paused). Ready count now 48 across fleet.
+- STEP 2 (PROMOTE): No backlog condohub tasks found (TASK-690 only condohub task, already ready).
+- STEP 3 (RE-ROUTE): No failed tasks found in condohub context.
+- STEP 4 (CLEAN QUEUE): Queue has 2 entries for non-condohub repos (TASK-835 knowledge-update ~61m old, TASK-730 manage-fleet ~37m old). Both are non-condohub. Queue entries for condohub tasks (TASK-014, TASK-018, TASK-051, etc.) auto-cleaned in prior runs. No manual drop needed.
+- STEP 5 (MARK DONE): PRs #3, #8, #18 still OPEN (not merged). No action.
+- STEP 6 (IDLE CHECK): Pipeline NOT idle — 48 ready/in-progress tasks across fleet, 2 active queue entries, daemon running. Did NOT dispatch product-review.
+
+**Note:** Most "condohub" tasks in reconciler memory (TASK-014/016/018/022/051/063/071-093) are brain repo tasks with condohub content, not actual condohub worktree tasks. TASK-690 (product-catalog: Create knowledge file for condohub) is the only task with condohub worktree. TASK-016 (PR #3), TASK-022 (PR #8), TASK-063 (PR #18) marked done with open PRs — AO daemon pattern.
