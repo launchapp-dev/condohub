@@ -991,3 +991,22 @@ Each entry: `[DATE] ACTION — details`
 **Status**: 3 open PRs awaiting review/merge. 3 ready tasks remain blocked:
   - TASK-070: anomalous (done in ao, no PR, work not in codebase) — blocks TASK-071, TASK-072. PO must either create+merge a PR for TASK-070 or cancel TASK-070.
   - TASK-079: blocked by runner failure — blocks TASK-080.
+
+---
+
+## 2026-03-29 Run (work-planner cycle)
+
+**Queue**: 1 before → 4 after (TASK-078, TASK-076, TASK-081 enqueued → triage)
+**Open PRs**: 3 — #3, #8, #18. All MERGEABLE, zero reviews. (< 5 → continue)
+**Rework**: none (no CHANGES_REQUESTED reviews)
+**Rebase**: none (all MERGEABLE, no conflicts)
+**Ready tasks**: 9 total — TASK-071, TASK-072 (critical, blocked), TASK-078, TASK-076, TASK-081, TASK-074, TASK-075, TASK-080
+**Dependencies check**:
+- TASK-071, TASK-072: depend on TASK-070. TASK-070 is "done" in ao but has NO merged PR (gh pr list --merged --search "TASK-070" = empty). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED.
+- TASK-078: no dependencies → ENQUEUED.
+- TASK-076: no dependencies → ENQUEUED.
+- TASK-081: no dependencies → ENQUEUED.
+- TASK-074, TASK-075, TASK-080: skipped (max 3/cycle limit reached).
+**Action**: Enqueued TASK-078, TASK-076, TASK-081 → triage. SKIPPED: TASK-071, TASK-072 (TASK-070 no merged PR), TASK-074, TASK-075, TASK-080 (max 3 reached).
+**Idle action**: NOT dispatched — 3 new tasks enqueued this cycle.
+**Queue**: 4 entries (TASK-079 assigned/standard, +3 pending triage)
