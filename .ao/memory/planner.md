@@ -1561,3 +1561,24 @@ Each entry: `[DATE] ACTION — details`
 **Queue**: 7 entries after enqueue (within 8 limit).
 **Idle action**: NOT dispatched — 3 new tasks enqueued this cycle, pipeline not idle.
 **Status**: TASK-070 anomalous (done, no merged PR) blocks TASK-071/072 but those already queued. TASK-083 anomalous (done, no merged PR) blocks TASK-084/085/086. TASK-091 blocked (runner failed) blocks TASK-092/093/080. Queue at 7/8.
+
+---
+
+## 2026-03-29 Run (work-planner cycle — 2026-03-30)
+
+**Queue**: 1 entry (TASK-082 assigned/triage)
+**Open PRs**: 3 — #3 (TASK-016), #8 (TASK-022), #18 (TASK-063). All MERGEABLE, 0 reviews. 3 < 5 → continue.
+**Rework**: none (no CHANGES_REQUESTED reviews on any open PR)
+**Rebase**: none (all 3 MERGEABLE, no conflicts)
+**Ready tasks**: 7 — critical: TASK-093, TASK-092; high: TASK-084, TASK-085, TASK-086; medium: TASK-080
+**Dependencies check**:
+  - TASK-084: depends on TASK-083. TASK-083 is "done" in ao but has NO merged PR (gh pr list --merged --search "TASK-083" = empty). Per rule: never treat as done if PR never merged → dependency NOT met → SKIPPED.
+  - TASK-085: depends on TASK-083 and TASK-084. TASK-083 unmet, TASK-084 not done → SKIPPED.
+  - TASK-086: depends on TASK-084 and TASK-085. All unmet → SKIPPED.
+  - TASK-092: depends on TASK-091. TASK-091 is "blocked" (runner failed), not done/cancelled → dependency NOT met → SKIPPED.
+  - TASK-093: depends on TASK-091. Same blocker → SKIPPED.
+  - TASK-080: depends on TASK-091 (blocked), TASK-092, TASK-093. All unmet → SKIPPED.
+**Action**: No new enqueues — all 6 checked tasks have unmet dependencies.
+**Queue**: 1 entry after (unchanged — TASK-082 still in triage).
+**Idle action**: NOT dispatched — queue has 1 active entry (not idle).
+**Status**: TASK-083 anomalous (done in ao, no merged PR) — blocks amenities chain (084/085/086). TASK-091 blocked (runner failed) — blocks community chain (092/093/080). Queue at 1/8.
